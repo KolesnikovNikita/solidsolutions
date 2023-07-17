@@ -1,0 +1,78 @@
+@import './variables';
+// List Styles
+
+%vertical-list {
+	padding: 0;
+	list-style: none;
+	cursor: pointer;
+}
+
+%horizontal-list {
+	padding: 0;
+	list-style: none;
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+}
+
+// Button Styles
+
+%middle-button {
+	font-style: normal;
+	text-align: center;
+	padding: 8px 28px;
+	border-radius: 40px;
+	cursor: pointer;
+
+	font-size: 14px;
+}
+
+%big-button {
+	font-style: normal;
+	text-align: center;
+	padding: 12px 32px;
+	border-radius: 40px;
+	cursor: pointer;
+}
+
+%small-button {
+	font-style: normal;
+	text-align: center;
+	padding: 6px 10px;
+	border-radius: 27px;
+	cursor: pointer;
+}
+
+// Blur Styles
+
+%box-blur {
+	border-radius: 18px;
+	background: rgba(255, 255, 255, 0.38);
+	box-shadow: -32.68181228637695px 32.68181228637695px 32.68181228637695px 0px
+			rgba(255, 255, 255, 0.1) inset,
+		32.68181228637695px -32.68181228637695px 32.68181228637695px 0px rgba(
+				194,
+				194,
+				194,
+				0.1
+			) inset;
+	backdrop-filter: blur(32.68181228637695px);
+}
+
+// Text Style
+
+%page-text {
+	font-family: Inter;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	color: $main-text-color;
+}
+
+%page-header {
+	font-size: 24px;
+	font-style: normal;
+	color: $main--dark-header-color;
+	line-height: normal;
+	margin: 0;
+}
