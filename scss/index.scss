@@ -1,3 +1,6 @@
+@import './fonts';
+@import './variables';
+
 html {
 	box-sizing: border-box;
 }
@@ -18,8 +21,16 @@ img {
 	height: auto;
 }
 
-.button {
-	background-color: aqua;
-	border: none;
-	cursor: pointer;
+body {
+	font-family: 'Inter', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	font-weight: 400;
+	overflow-wrap: break-word;
+	color: black;
+	background-color: white;
+}
+
+p {
+	font-weight: medium;
 }

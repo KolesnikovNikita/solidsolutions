@@ -4,15 +4,28 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Main Page</title>
-		<link rel="stylesheet" href="./../styles/style.css" />
+
+		<link rel="stylesheet" href="../styles/style.css" />
 	</head>
 	<body>
 		<div class="page-header">
 			<div class="page-header__navigation">
+				<!-- <div class="list">
+					<ul>
+						<li>Main</li>
+						<li>Services</li>
+						<li>Projects</li>
+						<li>About Us</li>
+					</ul>
+				</div> -->
 				<div class="logo">
 					<img src="../assets/images/Logo.png" width="85" height="25" />
 				</div>
-				<div class="list">
+				<div class="burger" id="burgerButton">
+					<!-- Иконка бургера -->
+					<div class="burger-icon"></div>
+				</div>
+				<div class="mobile-list">
 					<ul>
 						<li>Main</li>
 						<li>Services</li>
@@ -25,6 +38,32 @@
 				</div>
 			</div>
 			<div class="page-header__presentation">
+				<div class="team-info">
+					<div class="team-info__container">
+						<div>
+							Professional team
+							<img src="../assets/images/Arrow.png" width="25" height="25" />
+						</div>
+						<div class="team-list">
+							<ul>
+								<li><img src="" alt="icon" /></li>
+								<li><img src="" alt="icon" /></li>
+								<li><img src="" alt="icon" /></li>
+								<li><img src="" alt="icon" /></li>
+								<li><img src="" alt="icon" /></li>
+								<li><img src="" alt="icon" /></li>
+							</ul>
+						</div>
+					</div>
+					<div class="team-info__container">
+						<div>
+							Successful projects
+							<img src="../assets/images/Arrow.png" width="25" height="25" />
+						</div>
+						<div><span>100%</span><span>Average</span></div>
+						<div>line</div>
+					</div>
+				</div>
 				<div>
 					<h1>
 						Custom Web-Development and Unique Interface Design<span>.</span>
@@ -38,16 +77,390 @@
 						<a>Learn more</a>
 					</div>
 				</div>
-				<div class="team-info">
-					<div class="team-info__container">
-						<div>
-							Professional team
-							<img src="../assets/images/Arrow.png" width="25" height="25" />
+				<section class="main-video">
+					<img
+						src="../assets/images/mobile video.png"
+						width="366"
+						alt="#"
+						height="320"
+					/>
+				</section>
+			</div>
+			<section class="projects">
+				<h2>Our latest and greatest.</h2>
+				<div class="projects__examples">
+					<div class="card">
+						<div class="card__header">
+							<h3>LMCT+</h3>
+							<p>IOS and Android apps for an Australian rewards club.</p>
+							<div class="technoligies">
+								<ul>
+									<li>Mobile App</li>
+									<li>IOS</li>
+									<li>Android</li>
+									<li>Automotive</li>
+								</ul>
+							</div>
+						</div>
+						<div class="card__body">
+							<img src="../assets/images/projects_images/proj1.png" />
 						</div>
 					</div>
-					<div class="team-info__container"></div>
+					<div class="card">
+						<div class="card__header">
+							<h3>CRM for dentists</h3>
+							<p>
+								A system that lets dental practices automate a lot of processes
+								and run their business more efficiently.
+							</p>
+							<div class="technoligies">
+								<ul>
+									<li>CRM</li>
+									<li>Medical</li>
+								</ul>
+							</div>
+						</div>
+						<div class="card__body">
+							<img src="../assets/images/projects_images/proj3.png" />
+						</div>
+					</div>
+					<div class="card">
+						<div class="card__header">
+							<h3>Lawzilla</h3>
+							<p>
+								Lawzilla is a platform where lawyers can post and search for
+								legal case referrals.
+							</p>
+							<div class="technoligies">
+								<ul>
+									<li>Landing</li>
+									<li>Platform</li>
+									<li>Legal</li>
+								</ul>
+							</div>
+						</div>
+						<div class="card__body">
+							<img src="../assets/images/projects_images/proj2.png" />
+						</div>
+					</div>
+				</div>
+				<div class="project__cases">
+					<h3>Check out all of our cases</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+						amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
+						Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
+						tristique iaculis.
+					</p>
+					<a href="#">Explore all cases</a>
+				</div>
+			</section>
+			<section class="technoligies">
+				<ul>
+					<li>
+						<img
+							src="../assets/images/technoligies/css.png"
+							height="32"
+							width="32"
+						/>CSS
+					</li>
+					<li>
+						<img
+							src="../assets/images/technoligies/html5.png"
+							height="32"
+							width="32"
+						/>HTML
+					</li>
+					<li>
+						<img
+							src="../assets/images/technoligies/js.png"
+							height="32"
+							width="32"
+						/>JS
+					</li>
+					<li>
+						<img
+							height="32"
+							width="32"
+							src="../assets/images/technoligies/nextjs.png"
+						/>
+						NextJS
+					</li>
+				</ul>
+				<!-- NEW -->
+				<ul>
+					<li>
+						<img
+							src="../assets/images/technoligies/figma.png"
+							height="32"
+							width="32"
+						/>Figma
+					</li>
+					<li>
+						<img
+							src="../assets/images/technoligies/nodejs.png"
+							height="32"
+							width="32"
+						/>Node JS
+					</li>
+					<li>
+						<img
+							src="../assets/images/technoligies/php.png"
+							height="32"
+							width="32"
+						/>PHP
+					</li>
+					<li>
+						<img
+							height="32"
+							width="32"
+							src="../assets/images/technoligies/python.png"
+						/>
+						Python
+					</li>
+				</ul>
+			</section>
+			<section class="advantages">
+				<h3>Why Solid Solutions?</h3>
+				<div class="advantages__recall">
+					<span>Fast processes</span>
+					<h4>Saving Time</h4>
+					<p>
+						The time spent on project development is important for any customer.
+						We reduce the time for the development of web applications by using
+						pre-developed modules created with popular frameworks.
+					</p>
+					<div class="chat-image">
+						<img src="../assets/images/advantages.png" />
+					</div>
+				</div>
+			</section>
+		</div>
+		<section class="services">
+			<h3>Our Services</h3>
+			<div class="services__tabs">
+				<button
+					class="tablink"
+					onclick="openCity('London', this, 'red')"
+					id="defaultOpen"
+				>
+					Web-Development
+				</button>
+				<button class="tablink" onclick="openCity('Paris', this, 'green')">
+					Maintenance
+				</button>
+				<button class="tablink" onclick="openCity('Tokyo', this, 'blue')">
+					Consulting and Analytics
+				</button>
+
+				<div id="Paris" class="tabcontent">
+					<h3>Web-Development</h3>
+					<p>
+						We provide full-stack development of websites and web applications
+						of any complexity from brochure websites to large ERP systems. Our
+						team carries out projects from scratch and turnkey ready covering
+						all the critical aspects of security, performance, and scalability.
+						We develop individual cross-platform, responsive design and follow
+						the best methodologies and design architecture concepts.
+					</p>
+				</div>
+
+				<div id="Tokyo" class="tabcontent">
+					<h3>Maintenance</h3>
+					<p>
+						In our company, IT maintenance plays a crucial role in ensuring the
+						smooth operation of our technology infrastructure. From computer
+						systems to network devices and servers, regular maintenance is
+						essential to keep everything running efficiently and prevent any
+						potential issues or downtime. Our IT maintenance team is responsible
+						for performing routine checks, updates, and repairs to address any
+						hardware or software issues. They follow a proactive approach,
+						conducting regular inspections, monitoring
+					</p>
+				</div>
+
+				<div id="Oslo" class="tabcontent">
+					<h3>Consulting and Analytics</h3>
+					<p>
+						In the world of business, consulting and analytics play integral
+						roles in helping companies make informed decisions and drive growth.
+						Consulting involves providing expert advice and guidance to
+						organizations on various business aspects, while analytics focuses
+						on analyzing data to gain insights and make data-driven decisions.
+						Consulting firms offer a wide range of services tailored to the
+						specific needs of their clients. They work closely
+					</p>
 				</div>
 			</div>
-		</div>
+		</section>
+		<section class="about">
+			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+			<div class="about__images">
+				<div class="block">
+					<img src="../assets/images/about_company/1.jpeg" />
+					<img src="../assets/images/about_company/2.jpeg" />
+				</div>
+				<div class="block">
+					<img src="../assets/images/about_company/3.jpeg" />
+					<img src="../assets/images/about_company/4.jpeg" />
+				</div>
+				<div class="block">
+					<img src="../assets/images/about_company/5.jpeg" />
+					<img src="../assets/images/about_company/6.jpeg" />
+				</div>
+				<div class="block">
+					<img src="../assets/images/about_company/7.jpeg" />
+					<img src="../assets/images/about_company/8.jpeg" />
+					<a href="#">Learn More</a>
+				</div>
+			</div>
+		</section>
+		<section class="custumer">
+			<h3>What our customer say.</h3>
+			<div class="customer_swipping">
+				<a href="#">left</a>
+				<a href="#">Right</a>
+			</div>
+			<div class="custumer__cards">
+				<div class="card">
+					<div class="card__header">
+						<div class="rate"></div>
+						<div class="service">In</div>
+					</div>
+					<div class="card__body">
+						<h4>CRM system development</h4>
+						<p>
+							Integer lobortis lorem lorem, id accumsan arcu tempor id.
+							Suspendisse vitae accumsan massa. Duis porttitor, mauris et
+							faucibus sollicitudin, tellus sem tristique risus, nec gravida
+							velit diam aliquet enim. Curabitur eleifend ligula quis convallis
+							interdum. Sed vitae condimentum urna, nec suscipit purus.
+						</p>
+					</div>
+					<div class="card__footer">
+						<div class="card__custumer">
+							<div class="custumer-image">
+								<img
+									src="../assets/images/custumer_image.jpeg"
+									alt="customer-image"
+								/>
+							</div>
+							<div class="custumer-info">
+								<p>Ronda Rhodes</p>
+								<span>Project Name</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="feedback">
+			<h3>We sure you have an amazing idea</h3>
+			<p>Let’s discuss how to bring it to life.</p>
+			<div class="feedback__contacts">
+				<div>
+					<img src="../assets/images/feedback/phone.png" />+38 (096) 830 87 08
+				</div>
+				<div>
+					<img src="../assets/images/feedback/email.png" />+38 (096) 830 87 08
+				</div>
+				<div>
+					<img src="../assets/images/feedback/location.png" />+38 (096) 830 87
+					08
+				</div>
+			</div>
+			<div class="feedback__form">
+				<p>I'm looking for help with:</p>
+				<form>
+					<div class="checkbox-container">
+						<label class="checkbox-button">
+							<input type="checkbox" />
+							Development
+						</label>
+						<label class="checkbox-button">
+							<input type="checkbox" />
+							Design
+						</label>
+						<label class="checkbox-button">
+							<input type="checkbox" />
+							Other
+						</label>
+					</div>
+					<div class="input-container">
+						<input type="text" placeholder="Your full name" />
+						<input type="email" placeholder="email_example@gmail.com" />
+						<textarea>
+							About your project idea
+						</textarea
+						>
+					</div>
+					<div class="button-container">
+						<button type="submit">Enter</button>
+					</div>
+				</form>
+			</div>
+		</section>
+		<footer class="footer" style="background-color: black">
+			<h3>Solid Solutions</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet
+				justo ipsum.
+			</p>
+			<div class="footer__social">
+				<div>
+					<a
+						><img
+							src="../assets/images/footer_img/instagram.png"
+							width="32"
+							height="32"
+					/></a>
+				</div>
+				<div>
+					<a
+						><img
+							src="../assets/images/footer_img/linkedln.png"
+							width="32"
+							height="32"
+					/></a>
+				</div>
+				<div>
+					<a
+						><img
+							src="../assets/images/footer_img/facebook.png"
+							width="32"
+							height="32"
+					/></a>
+				</div>
+				<div>
+					<a
+						><img
+							src="../assets/images/footer_img/skype.png"
+							width="32"
+							height="32"
+					/></a>
+				</div>
+			</div>
+			<div class="footer__explore">
+				<h4>Explore</h4>
+				<div>
+					<a>Main</a>
+					<a>Services</a>
+				</div>
+				<div>
+					<a>Projects</a>
+					<a>About Us</a>
+				</div>
+			</div>
+			<div class="footer__in-touch">
+				<div><a>+38 (096) 830 87 08</a></div>
+				<div>office@solid-sl.com</div>
+				<div>3024 Joes Road, Albany, NY 12207</div>
+			</div>
+			<hr />
+			<div class="footer__rigthts" style="background-color: aliceblue">
+				<p>Made with Love by Solid Solutions</p>
+				<p>All rights reserved <span>&#183;</span> Privacy Policy</p>
+			</div>
+		</footer>
 	</body>
 </html>

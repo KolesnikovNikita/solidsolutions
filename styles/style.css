@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url("./../assets/fonts/Inter/Inter-Bold.ttf") format("WOFF2");
+  font-weight: 700;
+  font-style: bold;
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url("./../assets/fonts/Inter/Inter-Medium.ttf") format("WOFF2");
+  font-weight: 500;
+  font-style: medium;
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url("./../assets/fonts/Inter/Inter-Regular.ttf") format("WOFF2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url("./../assets/fonts/Inter/Inter-SemiBold.ttf") format("WOFF2");
+  font-weight: 600;
+  font-style: semibold;
+}
 html {
   box-sizing: border-box;
 }
@@ -18,10 +42,18 @@ img {
   height: auto;
 }
 
-.button {
-  background-color: aqua;
-  border: none;
-  cursor: pointer;
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  overflow-wrap: break-word;
+  color: black;
+  background-color: white;
+}
+
+p {
+  font-weight: medium;
 }
 
 /*# sourceMappingURL=style.css.map */
