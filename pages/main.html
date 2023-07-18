@@ -79,7 +79,7 @@
 				</section>
 			</div>
 			<section class="projects">
-				<h2>Our latest and greatest.</h2>
+				<h2>Our latest and greatest<span class="dot-blue">.</span></h2>
 				<div class="projects__examples">
 					<div class="card">
 						<div class="card__header">
@@ -136,18 +136,18 @@
 						</div>
 					</div>
 				</div>
-				<div class="project__cases">
-					<h3>Check out all of our cases</h3>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-						amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
-						Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
-						tristique iaculis.
-					</p>
-					<a href="#">Explore all cases</a>
-				</div>
 			</section>
-			<section class="technoligies">
+			<section class="projects-cases">
+				<h3>Check out all of our cases</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet
+					justo ipsum. Sed accumsan quam vitae est varius fringilla.
+					Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
+					tristique iaculis.
+				</p>
+				<a href="#">Explore all cases</a>
+			</section>
+			<section class="technologies">
 				<ul>
 					<li>
 						<img
@@ -284,39 +284,55 @@
 					</p>
 				</div>
 			</div>
+			<div class="services-image">
+				<img src="../assets/images/services-img.png" alt="web" />
+			</div>
 		</section>
 		<section class="about">
 			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
 			<div class="about__images">
-				<div class="block">
-					<img src="../assets/images/about_company/1.jpeg" />
-					<img src="../assets/images/about_company/2.jpeg" />
+				<div class="grid-block">
+					<div class="block">
+						<img src="../assets/images/about_company/1.jpeg" />
+						<img src="../assets/images/about_company/2.jpeg" />
+					</div>
+					<div class="block">
+						<img src="../assets/images/about_company/3.jpeg" />
+						<img src="../assets/images/about_company/4.jpeg" />
+					</div>
 				</div>
-				<div class="block">
-					<img src="../assets/images/about_company/3.jpeg" />
-					<img src="../assets/images/about_company/4.jpeg" />
-				</div>
-				<div class="block">
-					<img src="../assets/images/about_company/5.jpeg" />
-					<img src="../assets/images/about_company/6.jpeg" />
-				</div>
-				<div class="block">
-					<img src="../assets/images/about_company/7.jpeg" />
-					<img src="../assets/images/about_company/8.jpeg" />
-					<a href="#">Learn More</a>
+				<div class="grid-block">
+					<div class="block">
+						<img src="../assets/images/about_company/5.jpeg" />
+						<img src="../assets/images/about_company/6.jpeg" />
+					</div>
+					<div class="block">
+						<img src="../assets/images/about_company/7.jpeg" />
+						<img src="../assets/images/about_company/8.jpeg" />
+						<div class="about-button"><a href="#">Learn More</a></div>
+					</div>
 				</div>
 			</div>
 		</section>
-		<section class="custumer">
-			<h3>What our customer say.</h3>
-			<div class="customer_swipping">
-				<a href="#">left</a>
-				<a href="#">Right</a>
+		<section class="customer">
+			<div class="customer__navigation">
+				<div>
+					<h3>
+						What our customer <br />
+						say<span class="dot-blue">.</span>
+					</h3>
+				</div>
+				<div class="customer_swipping">
+					<a href="#">left</a>
+					<a href="#">Right</a>
+				</div>
 			</div>
-			<div class="custumer__cards">
+			<div class="customer__cards">
 				<div class="card">
 					<div class="card__header">
-						<div class="rate"></div>
+						<div class="rate">
+							<img src="../assets/images/Stars.png" />
+						</div>
 						<div class="service">In</div>
 					</div>
 					<div class="card__body">
@@ -330,14 +346,14 @@
 						</p>
 					</div>
 					<div class="card__footer">
-						<div class="card__custumer">
-							<div class="custumer-image">
+						<div class="card__customer">
+							<div class="customer-image">
 								<img
 									src="../assets/images/custumer_image.jpeg"
 									alt="customer-image"
 								/>
 							</div>
-							<div class="custumer-info">
+							<div class="customer-info">
 								<p>Ronda Rhodes</p>
 								<span>Project Name</span>
 							</div>
@@ -347,7 +363,10 @@
 			</div>
 		</section>
 		<section class="feedback">
-			<h3>We sure you have an amazing idea</h3>
+			<h3>
+				We sure you have<br />
+				an amazing idea
+			</h3>
 			<p>Let’s discuss how to bring it to life.</p>
 			<div class="feedback__contacts">
 				<div>
@@ -392,7 +411,7 @@
 				</form>
 			</div>
 		</section>
-		<footer class="footer" style="background-color: black">
+		<footer class="footer">
 			<h3>Solid Solutions</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet
@@ -444,14 +463,16 @@
 				</div>
 			</div>
 			<div class="footer__in-touch">
-				<div><a>+38 (096) 830 87 08</a></div>
+				<div>+38 (096) 830 87 08</div>
 				<div>office@solid-sl.com</div>
 				<div>3024 Joes Road, Albany, NY 12207</div>
 			</div>
-			<hr />
-			<div class="footer__rigthts" style="background-color: aliceblue">
-				<p>Made with Love by Solid Solutions</p>
-				<p>All rights reserved <span>&#183;</span> Privacy Policy</p>
+			<hr class="footer__underline" />
+			<div class="footer__rights">
+				<div class="container">
+					<div>Made with Love by Solid Solutions</div>
+					<div>All rights reserved <span>&#183;</span> Privacy Policy</div>
+				</div>
 			</div>
 		</footer>
 	</body>

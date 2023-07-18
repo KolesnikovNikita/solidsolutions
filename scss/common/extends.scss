@@ -1,4 +1,21 @@
 @import './variables';
+
+// Blur Styles
+
+%box-blur {
+	border-radius: 18px;
+	background: rgba(255, 255, 255, 0.38);
+	box-shadow: -32.68181228637695px 32.68181228637695px 32.68181228637695px 0px
+			rgba(255, 255, 255, 0.1) inset,
+		32.68181228637695px -32.68181228637695px 32.68181228637695px 0px rgba(
+				194,
+				194,
+				194,
+				0.1
+			) inset;
+	backdrop-filter: blur(32.68181228637695px);
+}
+
 // List Styles
 
 %vertical-list {
@@ -43,36 +60,41 @@
 	cursor: pointer;
 }
 
-// Blur Styles
-
-%box-blur {
-	border-radius: 18px;
-	background: rgba(255, 255, 255, 0.38);
-	box-shadow: -32.68181228637695px 32.68181228637695px 32.68181228637695px 0px
-			rgba(255, 255, 255, 0.1) inset,
-		32.68181228637695px -32.68181228637695px 32.68181228637695px 0px rgba(
-				194,
-				194,
-				194,
-				0.1
-			) inset;
-	backdrop-filter: blur(32.68181228637695px);
-}
-
 // Text Style
 
 %page-text {
-	font-family: Inter;
 	font-size: 14px;
-	font-style: normal;
 	font-weight: 400;
 	color: $main-text-color;
+	margin: 0;
 }
 
 %page-header {
 	font-size: 24px;
 	font-style: normal;
 	color: $main--dark-header-color;
-	line-height: normal;
+	font-weight: 500;
 	margin: 0;
+}
+
+%project-header {
+	font-size: 18px;
+	font-weight: 600;
+	color: $project-header-color;
+	margin: 0;
+}
+
+%large-header {
+	font-size: 24px;
+	font-weight: 600;
+	color: $header-dark-color;
+	margin: 0;
+}
+
+// Page Rights
+
+%page-rights {
+	color: $footer-rights-color;
+	font-size: 14px;
+	font-weight: 400;
 }

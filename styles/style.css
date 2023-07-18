@@ -22,13 +22,20 @@
   font-weight: 600;
   font-style: semibold;
 }
+.team-info__content {
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.38);
+  box-shadow: -32.6818122864px 32.6818122864px 32.6818122864px 0px rgba(255, 255, 255, 0.1) inset, 32.6818122864px -32.6818122864px 32.6818122864px 0px rgba(194, 194, 194, 0.1) inset;
+  backdrop-filter: blur(32.6818122864px);
+}
+
 .page-header__navigation .mobile-list ul {
   padding: 0;
   list-style: none;
   cursor: pointer;
 }
 
-.team-info__content .team-list ul {
+.technologies ul, .projects .technoligies ul, .team-info__content .team-list ul {
   padding: 0;
   list-style: none;
   cursor: pointer;
@@ -45,7 +52,7 @@
   font-size: 14px;
 }
 
-.invitation__link-container a {
+.projects-cases a, .invitation__link-container a {
   font-style: normal;
   text-align: center;
   padding: 12px 32px;
@@ -53,27 +60,39 @@
   cursor: pointer;
 }
 
-.team-info__content {
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.38);
-  box-shadow: -32.6818122864px 32.6818122864px 32.6818122864px 0px rgba(255, 255, 255, 0.1) inset, 32.6818122864px -32.6818122864px 32.6818122864px 0px rgba(194, 194, 194, 0.1) inset;
-  backdrop-filter: blur(32.6818122864px);
-}
-
-.invitation p {
-  font-family: Inter;
+.feedback p, .advantages__recall p, .projects-cases p, .projects p, .invitation p {
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
   color: #565672;
+  margin: 0;
 }
 
-.projects h2 {
+.footer h3, .projects h2 {
   font-size: 24px;
   font-style: normal;
   color: #2f2f2f;
-  line-height: normal;
+  font-weight: 500;
   margin: 0;
+}
+
+.projects h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #262549;
+  margin: 0;
+}
+
+.feedback h3, .customer h3, .about h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0b103d;
+  margin: 0;
+}
+
+.footer__rights {
+  color: #818181;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 html {
@@ -151,6 +170,151 @@ p {
   color: #fff;
   font-size: 14px;
   font-style: normal;
+}
+
+.projects h2 {
+  text-align: center;
+}
+
+.dot-blue {
+  color: #3769f1;
+}
+
+.projects h3 {
+  margin-bottom: 14px;
+}
+.projects-cases h3 {
+  font-size: 20px;
+  color: #2f2f2f;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+.projects-cases p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.projects-cases a {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.advantages h3 {
+  font-weight: 600;
+  font-size: 24px;
+  color: #0b103d;
+  text-align: center;
+  margin-bottom: 45px;
+}
+.advantages__recall span {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #fcca13;
+  font-weight: 700;
+}
+.advantages__recall h4 {
+  font-size: 18px;
+  color: #0b103d;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.advantages__recall p {
+  margin-top: 0;
+  margin-bottom: 55px;
+}
+
+.about .about-button {
+  padding: 25px;
+  font-size: 16px;
+  color: #1a1a1a;
+  font-weight: 600;
+  background-color: #ffeb6b;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.about h3 {
+  margin-bottom: 25px;
+}
+.about__images .grid-block {
+  display: flex;
+  flex-direction: row;
+}
+.about__images .block {
+  display: flex;
+  flex-direction: column;
+}
+
+.customer__navigation {
+  display: flex;
+  flex-direction: row;
+}
+.customer__cards .card__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.customer__cards .card__customer {
+  display: flex;
+  flex-direction: row;
+}
+.customer__cards .card__customer .customer-info p {
+  margin-top: 0;
+  margin-bottom: 3px;
+}
+
+.feedback h3 {
+  margin-bottom: 16px;
+}
+.feedback p {
+  margin-bottom: 40px;
+}
+.feedback__form .input-container input,
+.feedback__form .input-container textarea {
+  width: 100%;
+}
+
+.footer {
+  background-color: #1a1a1a;
+}
+.footer h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.footer p {
+  color: #fff;
+  opacity: 0.6;
+}
+.footer__social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.footer__explore div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer__explore div a {
+  color: #fff;
+}
+.footer__explore h4 {
+  color: #fff;
+  opacity: 0.6;
+  font-size: 16px;
+  font-weight: 400;
+}
+.footer__in-touch {
+  color: #fff;
+}
+.footer__underline {
+  background-color: #666;
+  width: 350px;
+}
+.footer__rights {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
