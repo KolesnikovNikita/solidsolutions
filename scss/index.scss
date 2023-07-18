@@ -4,6 +4,8 @@
 
 html {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 *,
@@ -38,26 +40,66 @@ p {
 
 .page-header {
 	&__navigation {
-		.mobile-list {
-			ul {
-				@extend %vertical-list;
-				li:not(:last-child) {
-					margin-bottom: 32px;
-				}
-			}
-			&__button {
-				@extend %middle-button;
-				background-color: #000;
-				color: #fff;
-				display: flex;
-				justify-content: center;
-				text-align: center;
-				max-width: 130px;
-				margin-left: auto;
-				margin-right: auto;
-			}
+		position: fixed;
+		top: 10px;
+		left: 16px;
+		right: 16px;
+		z-index: 2;
+
+		padding: 16px;
+		border-radius: 56px;
+		@extend %header-navigation;
+		width: 100%;
+
+		.container-list {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.burger {
+			cursor: pointer;
 		}
 	}
+
+	.mobile-list {
+		display: none;
+		position: relative;
+
+		.list-container {
+			padding-left: 16px;
+			padding-right: 16px;
+			padding-bottom: 20px;
+			border-radius: 0 0 24px 24px;
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			@extend %header-navigation;
+			z-index: 12;
+		}
+		ul {
+			@extend %vertical-list;
+			li:not(:last-child) {
+				margin-bottom: 32px;
+			}
+		}
+		&__button {
+			@extend %middle-button;
+			background-color: #000;
+			color: #fff;
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			max-width: 130px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+.page-content {
+	margin-top: 90px;
 }
 
 .team-info {

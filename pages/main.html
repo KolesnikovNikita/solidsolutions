@@ -4,32 +4,39 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Main Page</title>
-
 		<link rel="stylesheet" href="../styles/style.css" />
 	</head>
 	<body>
 		<div class="page-header">
 			<div class="page-header__navigation">
-				<div class="logo">
-					<img src="../assets/images/Logo.png" width="85" height="25" />
-				</div>
-				<div class="burger" id="burgerButton">
-					<!-- Иконка бургера -->
-					<div class="burger-icon"></div>
+				<div class="container-list">
+					<div class="logo">
+						<img src="../assets/images/Logo.png" width="85" height="25" />
+					</div>
+					<div class="burger" id="burgerButton">
+						<div class="burger-icon">
+							<img src="../assets/images/burger-open.png" />
+						</div>
+					</div>
 				</div>
 				<div class="mobile-list">
-					<ul>
-						<li>Main</li>
-						<li>Services</li>
-						<li>Projects</li>
-						<li>About Us</li>
-					</ul>
-					<div class="mobile-list__button">
-						<a href="#">Book a Call</a>
+					<div class="list-container">
+						<div>
+							<ul>
+								<li>Main</li>
+								<li>Services</li>
+								<li>Projects</li>
+								<li>About Us</li>
+							</ul>
+						</div>
+						<div class="mobile-list__button">
+							<a href="#">Book a Call</a>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="page-header__presentation">
+
+			<section class="page-content">
 				<div class="team-info">
 					<div class="team-info__content">
 						<div>
@@ -77,7 +84,7 @@
 						height="320"
 					/>
 				</section>
-			</div>
+			</section>
 			<section class="projects">
 				<h2>Our latest and greatest<span class="dot-blue">.</span></h2>
 				<div class="projects__examples">
@@ -475,5 +482,6 @@
 				</div>
 			</div>
 		</footer>
+		<script src="../js/index.js"></script>
 	</body>
 </html>

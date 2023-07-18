@@ -29,7 +29,7 @@
   backdrop-filter: blur(32.6818122864px);
 }
 
-.page-header__navigation .mobile-list ul {
+.page-header .mobile-list ul {
   padding: 0;
   list-style: none;
   cursor: pointer;
@@ -43,7 +43,7 @@
   flex-direction: row;
 }
 
-.page-header__navigation .mobile-list__button {
+.page-header .mobile-list__button {
   font-style: normal;
   text-align: center;
   padding: 8px 28px;
@@ -95,8 +95,14 @@
   font-weight: 400;
 }
 
+.page-header .mobile-list .list-container, .page-header__navigation {
+  background-color: #6e6e86;
+}
+
 html {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 *,
@@ -129,10 +135,44 @@ p {
   font-weight: medium;
 }
 
-.page-header__navigation .mobile-list ul li:not(:last-child) {
+.page-header__navigation {
+  position: fixed;
+  top: 10px;
+  left: 16px;
+  right: 16px;
+  z-index: 2;
+  padding: 16px;
+  border-radius: 56px;
+  width: 100%;
+}
+.page-header__navigation .container-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-header__navigation .burger {
+  cursor: pointer;
+}
+.page-header .mobile-list {
+  display: none;
+  position: relative;
+}
+.page-header .mobile-list .list-container {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 20px;
+  border-radius: 0 0 24px 24px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 12;
+}
+.page-header .mobile-list ul li:not(:last-child) {
   margin-bottom: 32px;
 }
-.page-header__navigation .mobile-list__button {
+.page-header .mobile-list__button {
   background-color: #000;
   color: #fff;
   display: flex;
@@ -141,6 +181,10 @@ p {
   max-width: 130px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.page-content {
+  margin-top: 90px;
 }
 
 .team-info {
