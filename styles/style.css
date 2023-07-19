@@ -22,7 +22,7 @@
   font-weight: 600;
   font-style: semibold;
 }
-.team-info__content {
+.page-content .team-info__container .content {
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.38);
   box-shadow: -32.6818122864px 32.6818122864px 32.6818122864px 0px rgba(255, 255, 255, 0.1) inset, 32.6818122864px -32.6818122864px 32.6818122864px 0px rgba(194, 194, 194, 0.1) inset;
@@ -35,7 +35,7 @@
   cursor: pointer;
 }
 
-.technologies ul, .projects .technoligies ul, .team-info__content .team-list ul {
+.technologies ul, .projects .technoligies ul, .page-content .team-info__container .content .team-list ul {
   padding: 0;
   list-style: none;
   cursor: pointer;
@@ -52,7 +52,7 @@
   font-size: 14px;
 }
 
-.projects-cases a, .invitation__link-container a {
+.projects-cases a, .page-content .invitation__link-container a {
   font-style: normal;
   text-align: center;
   padding: 12px 32px;
@@ -60,14 +60,22 @@
   cursor: pointer;
 }
 
-.feedback p, .advantages__recall p, .projects-cases p, .projects p, .invitation p {
+.projects .card .technoligies ul li {
+  font-style: normal;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 27px;
+  cursor: pointer;
+}
+
+.feedback p, .advantages__recall p, .projects-cases p, .projects p, .page-content .invitation p {
   font-size: 14px;
   font-weight: 400;
   color: #565672;
   margin: 0;
 }
 
-.footer h3, .projects h2 {
+.footer h3 {
   font-size: 24px;
   font-style: normal;
   color: #2f2f2f;
@@ -82,7 +90,7 @@
   margin: 0;
 }
 
-.feedback h3, .customer h3, .about h3 {
+.feedback h3, .customer h3, .about h3, .projects h2 {
   font-size: 24px;
   font-weight: 600;
   color: #0b103d;
@@ -96,7 +104,9 @@
 }
 
 .page-header .mobile-list .list-container, .page-header__navigation {
-  background-color: #6e6e86;
+  box-shadow: -45px 45px 45px 0px rgba(255, 255, 255, 0.1019607843) inset;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 45px -45px 45px 0px rgba(194, 194, 194, 0.1019607843) inset;
 }
 
 html {
@@ -129,10 +139,7 @@ body {
   overflow-wrap: break-word;
   color: black;
   background-color: white;
-}
-
-p {
-  font-weight: medium;
+  margin: 0;
 }
 
 .page-header__navigation {
@@ -141,22 +148,24 @@ p {
   left: 16px;
   right: 16px;
   z-index: 2;
-  padding: 16px;
   border-radius: 56px;
-  width: 100%;
 }
 .page-header__navigation .container-list {
+  padding: 16px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 3;
 }
 .page-header__navigation .burger {
   cursor: pointer;
 }
 .page-header .mobile-list {
-  display: none;
   position: relative;
+  top: -34px;
+  max-height: 0;
 }
 .page-header .mobile-list .list-container {
   padding-left: 16px;
@@ -167,7 +176,12 @@ p {
   display: flex;
   flex-direction: column;
   width: 100%;
-  z-index: 12;
+  z-index: 1;
+}
+.page-header .mobile-list ul {
+  margin-top: 21px;
+  padding-left: 16px;
+  margin-bottom: 10px;
 }
 .page-header .mobile-list ul li:not(:last-child) {
   margin-bottom: 32px;
@@ -185,47 +199,155 @@ p {
 
 .page-content {
   margin-top: 90px;
+  background-color: gray;
+  padding-bottom: 75px;
 }
-
-.team-info {
+.page-content .team-info {
+  background-image: url("../assets/images/main-page-photo.svg");
+  background-repeat: no-repeat;
+  min-height: 320px;
+  align-content: center;
+  gap: 32px;
+}
+.page-content .team-info__container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  position: relative;
 }
-.team-info__content {
-  max-width: 200px;
+.page-content .team-info__container .content {
+  max-width: 205px;
+  padding: 20px;
 }
-.team-info__content:first-child {
-  margin-left: auto;
+.page-content .team-info__container .content .successful {
+  font-size: 18px;
+  font-weight: 700;
 }
-.invitation h1 {
-  font-weight: normal;
+.page-content .team-info__container .content .average {
+  color: #e3e3e3;
+  font-size: 9px;
+  font-weight: 600;
+}
+.page-content .team-info__container .content .progress {
+  width: 100%;
+  background-color: #3769f1;
+  height: 4px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+.page-content .team-info__container .content:first-child {
+  margin-top: 20px;
+  margin-right: -45%;
+}
+.page-content .team-info__container .content:last-child {
+  margin-left: -45%;
+}
+.page-content .team-info__container .content .team-list ul li {
+  margin-right: -5px;
+}
+.page-content .team-info .name {
+  font-size: 14px;
+  font-weight: 700;
+}
+.page-content .team-info .name img {
+  vertical-align: middle;
+}
+.page-content .main-video img {
+  width: 100%;
+}
+.page-content .invitation {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.page-content .invitation h1 {
+  font-weight: 600;
   font-size: 26px;
   margin-top: 0;
   margin-bottom: 32px;
 }
-.invitation__link-container a:first-child {
+.page-content .invitation p {
+  margin-bottom: 32px;
+}
+.page-content .invitation__link-container {
+  margin-bottom: 88px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.page-content .invitation__link-container a {
+  display: inline-block;
+  width: 100%;
+}
+.page-content .invitation__link-container a:first-child {
   background-color: #000;
   color: #fff;
   font-size: 14px;
   font-style: normal;
+  width: 100%;
 }
-.invitation__link-container a:last-child {
+.page-content .invitation__link-container a:last-child {
+  padding-left: 25px;
+  position: relative;
   background-color: #ffeb6b;
-  color: #fff;
+  color: #000;
   font-size: 14px;
   font-style: normal;
 }
-
-.projects h2 {
-  text-align: center;
+.page-content .invitation__link-container a:last-child img {
+  position: absolute;
+  top: 9px;
 }
 
 .dot-blue {
   color: #3769f1;
 }
 
+.projects {
+  background-color: #fff;
+  border-radius: 20px 20px 0 0;
+  margin-top: -20px;
+  padding-top: 55px;
+}
+.projects__examples {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.projects .card {
+  background-color: #666;
+  border-radius: 16px;
+}
+.projects .card__header {
+  padding-left: 27px;
+  padding-top: 27px;
+}
+.projects .card__body {
+  display: flex;
+  justify-content: center;
+}
+.projects .card .technoligies ul {
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+.projects .card .technoligies ul li {
+  font-size: 9.615px;
+  color: #fff;
+  font-weight: 500;
+  background-color: #3769f1;
+}
+.projects .card .technoligies ul li:not(:last-child) {
+  margin-right: 6px;
+}
+.projects h2 {
+  text-align: center;
+  margin-bottom: 32px;
+}
 .projects h3 {
   margin-bottom: 14px;
+}
+.projects p {
+  margin-bottom: 12px;
 }
 .projects-cases h3 {
   font-size: 20px;

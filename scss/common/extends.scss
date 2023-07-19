@@ -102,5 +102,7 @@
 // Header Navigation
 
 %header-navigation {
-	background-color: $main-header-color;
+	box-shadow: -45px 45px 45px 0px #ffffff1a inset;
+	background: #ffffffcc;
+	box-shadow: 45px -45px 45px 0px #c2c2c21a inset;
 }
