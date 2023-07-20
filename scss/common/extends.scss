@@ -69,12 +69,24 @@
 	margin: 0;
 }
 
+%alt-page-text {
+	font-size: 14px;
+	font-weight: 400;
+	color: $alt-text-color;
+}
+
 %page-header {
 	font-size: 24px;
 	font-style: normal;
 	color: $main--dark-header-color;
 	font-weight: 500;
 	margin: 0;
+}
+
+%card-text {
+	font-size: 14px;
+	color: $main--dark-header-color;
+	font-weight: 400;
 }
 
 %project-header {
@@ -105,4 +117,13 @@
 	box-shadow: -45px 45px 45px 0px #ffffff1a inset;
 	background: #ffffffcc;
 	box-shadow: 45px -45px 45px 0px #c2c2c21a inset;
+}
+
+// Active link
+
+%active-link {
+	color: $header-dark-color;
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: -0.36px;
 }

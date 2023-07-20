@@ -29,13 +29,13 @@
   backdrop-filter: blur(32.6818122864px);
 }
 
-.page-header .mobile-list ul {
+.services__tabs ul, .page-header .mobile-list ul {
   padding: 0;
   list-style: none;
   cursor: pointer;
 }
 
-.technologies ul, .projects .technoligies ul, .page-content .team-info__container .content .team-list ul {
+.projects .technoligies ul, .page-content .team-info__container .content .team-list ul {
   padding: 0;
   list-style: none;
   cursor: pointer;
@@ -52,7 +52,7 @@
   font-size: 14px;
 }
 
-.projects-cases a, .page-content .invitation__link-container a {
+.page-content .invitation__link-container a {
   font-style: normal;
   text-align: center;
   padding: 12px 32px;
@@ -68,11 +68,17 @@
   cursor: pointer;
 }
 
-.feedback p, .advantages__recall p, .projects-cases p, .projects p, .page-content .invitation p {
+.advantages__recall p, .projects p, .page-content .invitation p {
   font-size: 14px;
   font-weight: 400;
   color: #565672;
   margin: 0;
+}
+
+.about p, .services p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #6e6e86;
 }
 
 .footer h3 {
@@ -83,6 +89,12 @@
   margin: 0;
 }
 
+.customer__cards .card__body p {
+  font-size: 14px;
+  color: #2f2f2f;
+  font-weight: 400;
+}
+
 .projects h3 {
   font-size: 18px;
   font-weight: 600;
@@ -90,7 +102,7 @@
   margin: 0;
 }
 
-.feedback h3, .customer h3, .about h3, .projects h2 {
+.feedback h3, .customer h3, .about h3, .services h3, .projects h2 {
   font-size: 24px;
   font-weight: 600;
   color: #0b103d;
@@ -107,6 +119,13 @@
   box-shadow: -45px 45px 45px 0px rgba(255, 255, 255, 0.1019607843) inset;
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 45px -45px 45px 0px rgba(194, 194, 194, 0.1019607843) inset;
+}
+
+.active-link {
+  color: #0b103d;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.36px;
 }
 
 html {
@@ -199,7 +218,7 @@ body {
 
 .page-content {
   margin-top: 90px;
-  background-color: gray;
+  background-color: #f8f8f8;
   padding-bottom: 75px;
 }
 .page-content .team-info {
@@ -313,10 +332,19 @@ body {
 .projects__examples {
   padding-left: 16px;
   padding-right: 16px;
+  margin-bottom: 40px;
 }
 .projects .card {
-  background-color: #666;
   border-radius: 16px;
+}
+.projects .card:not(:last-child) {
+  margin-bottom: 16px;
+}
+.projects .card:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+.projects .card:nth-child(even) {
+  background-color: #3769f1;
 }
 .projects .card__header {
   padding-left: 27px;
@@ -349,6 +377,11 @@ body {
 .projects p {
   margin-bottom: 12px;
 }
+.projects-cases {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 60px;
+}
 .projects-cases h3 {
   font-size: 20px;
   color: #2f2f2f;
@@ -357,26 +390,70 @@ body {
   margin-top: 0;
 }
 .projects-cases p {
+  color: #6e6e86;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .projects-cases a {
+  padding-left: 32px;
+  padding-right: 62px;
+  font-size: 16px;
+  font-weight: 500;
+  width: 220px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border-radius: 40px;
   background-color: #1a1a1a;
   color: #fff;
+  position: relative;
+}
+.projects-cases a img {
+  position: absolute;
+  top: 10px;
+  right: 35px;
 }
 
+.technologies {
+  padding-top: 55px;
+  padding-bottom: 55px;
+  background-color: #f8f8f8;
+}
+.technologies ul {
+  padding: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.technologies ul li {
+  flex-shrink: 0;
+}
+
+.advantages {
+  padding-bottom: 40px;
+  padding-left: 45px;
+  padding-right: 45px;
+  border-radius: 20px 20px 0 0;
+  margin-top: -39px;
+  background-color: #fff;
+  padding-top: 55px;
+}
 .advantages h3 {
   font-weight: 600;
   font-size: 24px;
   color: #0b103d;
   text-align: center;
   margin-bottom: 45px;
+  margin-top: 0;
 }
 .advantages__recall span {
   text-transform: uppercase;
   font-size: 12px;
   color: #fcca13;
   font-weight: 700;
+  margin-bottom: 8px;
 }
 .advantages__recall h4 {
   font-size: 18px;
@@ -384,12 +461,58 @@ body {
   font-weight: 500;
   margin-top: 0;
   margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 .advantages__recall p {
+  color: #6e6e86;
   margin-top: 0;
   margin-bottom: 55px;
 }
 
+.tab-content {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.active-link {
+  padding-left: 24px;
+}
+
+.services {
+  padding-top: 72px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #f8f8f8;
+  padding-bottom: 72px;
+  margin-bottom: 72px;
+}
+.services p {
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+.services__tabs ul li .tab-item {
+  position: relative;
+}
+.services__tabs ul li:not(:last-child) {
+  margin-bottom: 16px;
+}
+.services h3 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.about {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 120px;
+}
 .about .about-button {
   padding: 25px;
   font-size: 16px;
@@ -402,38 +525,112 @@ body {
 .about h3 {
   margin-bottom: 25px;
 }
+.about p {
+  margin-top: 0;
+  margin-bottom: 56px;
+}
 .about__images .grid-block {
   display: flex;
+  gap: 8px;
   flex-direction: row;
+}
+.about__images .grid-block:first-child {
+  margin-bottom: 8px;
 }
 .about__images .block {
   display: flex;
+  gap: 8px;
   flex-direction: column;
 }
 
+.customer {
+  padding-left: 20px;
+  margin-bottom: 100px;
+}
 .customer__navigation {
   display: flex;
   flex-direction: row;
+}
+.customer h3 {
+  margin-bottom: 32px;
+}
+.customer__cards {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+.customer__cards .card {
+  border-radius: 8px;
+  flex-shrink: 0;
+  margin-bottom: 20px;
+  margin-right: 28px;
+  width: 310px;
+  min-height: 342px;
+  padding: 20px;
+  background-color: rgba(228, 228, 228, 0.2392156863);
 }
 .customer__cards .card__header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+.customer__cards .card__body p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.customer__cards .card__footer .customer-info p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  color: #2f2f2f;
+}
+.customer__cards .card__footer .customer-info span {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  color: #3769f1;
+}
 .customer__cards .card__customer {
   display: flex;
   flex-direction: row;
 }
+.customer__cards .card__customer .customer-image {
+  margin-right: 8px;
+}
 .customer__cards .card__customer .customer-info p {
   margin-top: 0;
-  margin-bottom: 3px;
+  margin-bottom: -3px;
 }
 
+.feedback {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.feedback__contacts {
+  color: #3769f1;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 45px;
+}
 .feedback h3 {
   margin-bottom: 16px;
 }
 .feedback p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
   margin-bottom: 40px;
+  color: #494b5b;
+}
+.feedback__form p {
+  margin-bottom: 16px;
+  margin-top: 0;
+  font-size: 16px;
+  color: #565672;
+  font-weight: 500;
 }
 .feedback__form .input-container input,
 .feedback__form .input-container textarea {
