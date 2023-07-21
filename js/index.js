@@ -1,14 +1,17 @@
 function dropDownMenu() {
 	const btn = document.querySelector('.burger');
 	const burgerImg = document.querySelector('.burger-icon img');
+	const header = document.querySelector('.page-header__navigation');
 
 	btn.addEventListener('click', function () {
 		const menu = document.querySelector('.mobile-list');
 		if (menu.style.display == 'none') {
+			header.classList.add('active-header');
 			menu.style.display = 'block';
 			burgerImg.src = '../assets/images/burger-close.svg';
 		} else {
 			menu.style.display = 'none';
+			header.classList.remove('active-header');
 			burgerImg.src = '../assets/images/burger-open.svg';
 		}
 	});
@@ -38,9 +41,25 @@ function initTabs() {
 	});
 }
 
+function initCheckbox() {
+	const checkboxContainer = document.querySelector('.checkbox-container');
+	const btns = checkboxContainer.querySelectorAll('.checkbox-button');
+
+	btns.forEach(function (btn) {
+		btn.addEventListener('click', function () {
+			if (!btn.classList.contains('active-checkbox')) {
+				btn.classList.add('active-checkbox');
+			} else {
+				btn.classList.remove('active-checkbox');
+			}
+		});
+	});
+}
+
 function initComponents() {
 	dropDownMenu();
 	initTabs();
+	initCheckbox();
 }
 
 initComponents();
