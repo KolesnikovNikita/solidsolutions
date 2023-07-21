@@ -215,7 +215,7 @@ body {
 					position: relative;
 					img {
 						position: absolute;
-						top: 9px;
+						top: 11px;
 					}
 					background-color: $main-yellow-color;
 					color: #000;
@@ -362,6 +362,7 @@ body {
 
 		li {
 			flex-shrink: 0;
+			margin-right: 24px;
 		}
 	}
 }
@@ -427,32 +428,49 @@ body {
 	}
 }
 
-.active-link {
-	@extend %active-link;
-	padding-left: 24px;
-}
-
 .services {
 	padding-top: 72px;
 	padding-left: 20px;
 	padding-right: 20px;
 	background-color: $header-background-color;
-	padding-bottom: 72px;
-	margin-bottom: 72px;
+	padding-bottom: 76px;
 
 	p {
 		margin-top: 0;
 		margin-bottom: 32px;
+		max-height: 170px;
+		overflow-y: auto;
 		@extend %alt-page-text;
 	}
 
 	&__tabs {
 		ul {
 			@extend %vertical-list;
-
+			margin-top: 0;
+			margin-bottom: 40px;
 			li {
 				.tab-item {
 					position: relative;
+					font-size: 16px;
+					font-weight: 400;
+					color: $tab-link-color;
+					letter-spacing: -0.32px;
+
+					&.active-link {
+						@extend %active-link;
+						padding-left: 34px;
+
+						&::before {
+							position: absolute;
+							content: '';
+							height: 4px;
+							width: 20px;
+							background-color: $sun-yellow-color;
+							border-radius: 14px;
+							left: 0;
+							bottom: 8px;
+						}
+					}
 				}
 				&:not(:last-child) {
 					margin-bottom: 16px;
@@ -465,12 +483,21 @@ body {
 		text-align: center;
 		margin-bottom: 24px;
 	}
+
+	&__image {
+		img {
+			background-size: cover;
+			width: 100%;
+		}
+	}
 }
 
 .about {
+	padding-top: 72px;
+	background-color: #fff;
 	padding-left: 20px;
 	padding-right: 20px;
-	margin-bottom: 120px;
+	padding-bottom: 120px;
 	.about-button {
 		img {
 			position: absolute;
@@ -514,9 +541,14 @@ body {
 	}
 }
 
+.special-gradient {
+	background-image: linear-gradient(11deg, $deep-dark-color 50%, white 50%);
+}
+
 .customer {
+	background-color: #fff;
 	padding-left: 20px;
-	margin-bottom: 100px;
+	padding-bottom: 100px;
 
 	&__navigation {
 		display: flex;
@@ -589,7 +621,9 @@ body {
 }
 
 .feedback {
-	margin-bottom: 32px;
+	background-color: #fff;
+	border-bottom-left-radius: 20px;
+	padding-bottom: 128px;
 	&__contacts {
 		.container {
 			&:not(:last-child) {
@@ -700,6 +734,7 @@ body {
 }
 
 .footer {
+	border-top-right-radius: 40px;
 	padding-top: 60px;
 	background-color: $deep-dark-color;
 	h3 {

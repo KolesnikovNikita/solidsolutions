@@ -134,7 +134,7 @@
   box-shadow: 45px -45px 45px 0px rgba(194, 194, 194, 0.1019607843) inset;
 }
 
-.active-link {
+.services__tabs ul li .tab-item.active-link {
   color: #0b103d;
   font-size: 18px;
   font-weight: 500;
@@ -331,7 +331,7 @@ body {
 }
 .page-content .invitation__link-container a:last-child img {
   position: absolute;
-  top: 9px;
+  top: 11px;
 }
 
 .dot-blue {
@@ -446,6 +446,7 @@ body {
 }
 .technologies ul li {
   flex-shrink: 0;
+  margin-right: 24px;
 }
 
 .advantages {
@@ -501,24 +502,42 @@ body {
     opacity: 1;
   }
 }
-.active-link {
-  padding-left: 24px;
-}
-
 .services {
   padding-top: 72px;
   padding-left: 20px;
   padding-right: 20px;
   background-color: #f8f8f8;
-  padding-bottom: 72px;
-  margin-bottom: 72px;
+  padding-bottom: 76px;
 }
 .services p {
   margin-top: 0;
   margin-bottom: 32px;
+  max-height: 170px;
+  overflow-y: auto;
+}
+.services__tabs ul {
+  margin-top: 0;
+  margin-bottom: 40px;
 }
 .services__tabs ul li .tab-item {
   position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  color: #87869a;
+  letter-spacing: -0.32px;
+}
+.services__tabs ul li .tab-item.active-link {
+  padding-left: 34px;
+}
+.services__tabs ul li .tab-item.active-link::before {
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 20px;
+  background-color: #ffde45;
+  border-radius: 14px;
+  left: 0;
+  bottom: 8px;
 }
 .services__tabs ul li:not(:last-child) {
   margin-bottom: 16px;
@@ -527,11 +546,17 @@ body {
   text-align: center;
   margin-bottom: 24px;
 }
+.services__image img {
+  background-size: cover;
+  width: 100%;
+}
 
 .about {
+  padding-top: 72px;
+  background-color: #fff;
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 120px;
+  padding-bottom: 120px;
 }
 .about .about-button {
   position: relative;
@@ -569,9 +594,14 @@ body {
   flex-direction: column;
 }
 
+.special-gradient {
+  background-image: linear-gradient(11deg, #1a1a1a 50%, white 50%);
+}
+
 .customer {
+  background-color: #fff;
   padding-left: 20px;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 .customer__navigation {
   display: flex;
@@ -629,7 +659,9 @@ body {
 }
 
 .feedback {
-  margin-bottom: 32px;
+  background-color: #fff;
+  border-bottom-left-radius: 20px;
+  padding-bottom: 128px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -733,6 +765,7 @@ body {
 }
 
 .footer {
+  border-top-right-radius: 40px;
   padding-top: 60px;
   background-color: #1a1a1a;
 }
