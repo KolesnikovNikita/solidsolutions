@@ -44,7 +44,7 @@
   flex-direction: row;
 }
 
-.page-header .mobile-list__button {
+.page-header .mobile-list__button, .page-header__desktop .desktop-container .desktop__button {
   font-style: normal;
   text-align: center;
   padding: 8px 28px;
@@ -54,7 +54,7 @@
   font-size: 14px;
 }
 
-.page-content .invitation__link-container a, .page-header__desktop .desktop-container .desktop__button {
+.page-content .invitation__link-container a {
   font-style: normal;
   text-align: center;
   padding: 12px 32px;
@@ -129,7 +129,7 @@
   font-weight: 400;
 }
 
-.page-header .mobile-list .list-container, .page-header__navigation {
+.page-header .mobile-list .list-container, .page-header__navigation, .page-header__desktop .desktop-container {
   box-shadow: -45px 45px 45px 0px rgba(255, 255, 255, 0.1019607843) inset;
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 45px -45px 45px 0px rgba(194, 194, 194, 0.1019607843) inset;
@@ -174,17 +174,26 @@ body {
   color: black;
   margin: 0;
 }
+@media (min-width: 768px) {
+  body {
+    background-image: url("../assets/images/tablet.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
 
 .page-header__desktop {
   padding-top: 25px;
   padding-left: 35px;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
   padding-right: 35px;
 }
 .page-header__desktop .desktop-container {
   padding-top: 12px;
   padding-bottom: 12px;
-  border-radius: 40px;
-  background-color: #fff;
+  border-radius: 56px;
   padding-left: 24px;
   padding-right: 12px;
   display: flex;
@@ -222,6 +231,11 @@ body {
   right: 16px;
   z-index: 2;
   border-radius: 36px;
+}
+@media (min-width: 768px) {
+  .page-header__navigation {
+    display: none;
+  }
 }
 .page-header__navigation.active-header {
   border-radius: 36px 36px 0 0;
@@ -349,6 +363,11 @@ body {
   padding-left: 16px;
   padding-right: 16px;
 }
+@media (min-width: 768px) {
+  .page-content .invitation {
+    padding-left: 38px;
+  }
+}
 .page-content .invitation h2 {
   font-weight: 600;
   font-size: 26px;
@@ -358,6 +377,8 @@ body {
 @media (min-width: 768px) {
   .page-content .invitation h2 {
     font-size: 48px;
+    max-width: 600px;
+    margin-bottom: 40px;
   }
 }
 .page-content .invitation p {
@@ -366,6 +387,8 @@ body {
 @media (min-width: 768px) {
   .page-content .invitation p {
     font-size: 18px;
+    max-width: 530px;
+    margin-bottom: 40px;
   }
 }
 .page-content .invitation__link-container {
@@ -373,15 +396,22 @@ body {
   display: flex;
   flex-direction: row;
   gap: 8px;
+  justify-content: flex-start;
 }
 @media (min-width: 768px) {
   .page-content .invitation__link-container {
-    flex-direction: column;
+    width: 50%;
   }
 }
 .page-content .invitation__link-container a {
   display: inline-block;
   width: 100%;
+}
+@media (min-width: 768px) {
+  .page-content .invitation__link-container a {
+    font-size: 16px;
+    font-weight: 500;
+  }
 }
 .page-content .invitation__link-container a:first-child {
   background-color: #000;
@@ -404,25 +434,17 @@ body {
 }
 
 .main-video {
-  padding-left: 38px;
-  padding-right: 38px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+@media (min-width: 768px) {
+  .main-video {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
 }
 .main-video img {
   width: 100%;
-}
-
-@media (max-width: 767px) {
-  .desktop-background {
-    display: none;
-  }
-}
-@media (min-width: 768px) {
-  .desktop-background {
-    background-image: url("../assets/images/tablet.png");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
-  }
 }
 
 .dot-blue {

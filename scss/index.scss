@@ -33,23 +33,31 @@ body {
 	overflow-wrap: break-word;
 	color: black;
 	margin: 0;
+
+	@media (min-width: 768px) {
+		background-image: url('../assets/images/tablet.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
 }
 
 .page-header {
 	&__desktop {
 		padding-top: 25px;
 		padding-left: 35px;
-
+		position: fixed;
+		z-index: 3;
+		width: 100%;
 		padding-right: 35px;
 		.desktop-container {
 			padding-top: 12px;
 			padding-bottom: 12px;
-			border-radius: 40px;
-			background-color: #fff;
+			border-radius: 56px;
+			@extend %header-navigation;
 			padding-left: 24px;
 			padding-right: 12px;
 			.desktop__button {
-				@extend %big-button;
+				@extend %middle-button;
 				background-color: $deep-dark-color;
 				font-size: 14px;
 				color: #fff;
@@ -83,6 +91,10 @@ body {
 		left: 16px;
 		right: 16px;
 		z-index: 2;
+
+		@media (min-width: 768px) {
+			display: none;
+		}
 
 		&.active-header {
 			border-radius: 36px 36px 0 0;
@@ -228,6 +240,9 @@ body {
 	.invitation {
 		padding-left: 16px;
 		padding-right: 16px;
+		@media (min-width: 768px) {
+			padding-left: 38px;
+		}
 		h2 {
 			font-weight: 600;
 			font-size: 26px;
@@ -235,12 +250,16 @@ body {
 			margin-bottom: 32px;
 			@media (min-width: 768px) {
 				font-size: 48px;
+				max-width: 600px;
+				margin-bottom: 40px;
 			}
 		}
 		p {
 			@extend %page-text;
 			@media (min-width: 768px) {
 				font-size: 18px;
+				max-width: 530px;
+				margin-bottom: 40px;
 			}
 			margin-bottom: 32px;
 		}
@@ -250,10 +269,15 @@ body {
 			display: flex;
 			flex-direction: row;
 			gap: 8px;
+			justify-content: flex-start;
 			@media (min-width: 768px) {
-				flex-direction: column;
+				width: 50%;
 			}
 			a {
+				@media (min-width: 768px) {
+					font-size: 16px;
+					font-weight: 500;
+				}
 				display: inline-block;
 				width: 100%;
 				@extend %big-button;
@@ -282,22 +306,14 @@ body {
 }
 
 .main-video {
-	padding-left: 38px;
-	padding-right: 38px;
+	padding-left: 12px;
+	padding-right: 12px;
+	@media (min-width: 768px) {
+		padding-left: 38px;
+		padding-right: 38px;
+	}
 	img {
 		width: 100%;
-	}
-}
-
-.desktop-background {
-	@media (max-width: 767px) {
-		display: none;
-	}
-	@media (min-width: 768px) {
-		background-image: url('../assets/images/tablet.png');
-		background-repeat: no-repeat;
-		background-position: 50% 50%;
-		background-size: contain;
 	}
 }
 
@@ -364,6 +380,9 @@ body {
 		@extend %large-header;
 		text-align: center;
 		margin-bottom: 32px;
+
+		@media (min-width: 768px) {
+		}
 	}
 	h3 {
 		@extend %project-header;
