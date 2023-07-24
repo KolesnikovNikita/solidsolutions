@@ -4,6 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Main Page</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+		/>
 		<link rel="stylesheet" href="../styles/style.css" />
 	</head>
 	<body>
@@ -410,7 +414,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="customer slider">
+		<section class="customer swiper">
 			<div class="customer__navigation">
 				<div>
 					<h3>
@@ -419,24 +423,24 @@
 					</h3>
 				</div>
 				<div class="buttons-container">
-					<div class="prev-button">
-						<img
+					<div class="swiper-button-prev">
+						<!-- <img
 							src="../assets/images/swiper-backward-button.svg"
 							width="32"
 							height="32"
-						/>
+						> -->
 					</div>
-					<div class="next-button">
-						<img
+					<div class="swiper-button-next">
+						<!-- <img
 							src="../assets/images/swiper-forward-button.svg"
 							width="32"
 							height="32"
-						/>
+						> -->
 					</div>
 				</div>
 			</div>
-			<div class="customer__cards">
-				<div class="card">
+			<div class="customer__cards swiper-wrapper">
+				<div class="card swiper-slide">
 					<div class="card__header">
 						<div class="rate">
 							<img src="../assets/images/Stars.png" />
@@ -472,7 +476,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="card">
+				<div class="card swiper-slide">
 					<div class="card__header">
 						<div class="rate">
 							<img src="../assets/images/Stars.png" />
@@ -508,7 +512,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="card">
+				<div class="card swiper-slide">
 					<div class="card__header">
 						<div class="rate">
 							<img src="../assets/images/Stars.png" />
@@ -544,7 +548,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="card">
+				<div class="card swiper-slide">
 					<div class="card__header">
 						<div class="rate">
 							<img src="../assets/images/Stars.png" />
@@ -706,6 +710,8 @@
 				</div>
 			</footer>
 		</section>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script src="../js/swiper.js"></script>
 		<script src="../js/index.js"></script>
 	</body>
 </html>

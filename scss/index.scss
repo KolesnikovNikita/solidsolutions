@@ -166,11 +166,11 @@ body {
 	}
 
 	.team-info {
-		background-image: url('../assets/images/main-page-photo.svg');
 		@media (min-width: 768px) {
 			background-image: none;
 		}
-		background-position: 50% 50%;
+		background-image: url('../assets/images/Bg_Mobile.png');
+		background-position: 0 22%;
 		background-size: cover;
 		background-repeat: no-repeat;
 		min-height: 320px;
@@ -265,13 +265,13 @@ body {
 		}
 
 		&__link-container {
-			margin-bottom: 88px;
 			display: flex;
 			flex-direction: row;
 			gap: 8px;
 			justify-content: flex-start;
 			@media (min-width: 768px) {
 				width: 50%;
+				margin-bottom: 130px;
 			}
 			a {
 				@media (min-width: 768px) {

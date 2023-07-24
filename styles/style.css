@@ -297,8 +297,8 @@ body {
   }
 }
 .page-content .team-info {
-  background-image: url("../assets/images/main-page-photo.svg");
-  background-position: 50% 50%;
+  background-image: url("../assets/images/Bg_Mobile.png");
+  background-position: 0 22%;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 320px;
@@ -392,7 +392,6 @@ body {
   }
 }
 .page-content .invitation__link-container {
-  margin-bottom: 88px;
   display: flex;
   flex-direction: row;
   gap: 8px;
@@ -401,6 +400,7 @@ body {
 @media (min-width: 768px) {
   .page-content .invitation__link-container {
     width: 50%;
+    margin-bottom: 130px;
   }
 }
 .page-content .invitation__link-container a {
