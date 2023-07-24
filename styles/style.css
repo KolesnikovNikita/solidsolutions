@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Inter";
   src: local("Inter"), url("./../assets/fonts/Inter/Inter-Bold.ttf") format("WOFF2");
@@ -35,7 +36,7 @@
   cursor: pointer;
 }
 
-.projects .technoligies ul, .page-content .team-info__container .content .team-list ul {
+.projects .technoligies ul, .page-content .team-info__container .content .team-list ul, .page-header__desktop .desktop-container ul {
   padding: 0;
   list-style: none;
   cursor: pointer;
@@ -53,7 +54,7 @@
   font-size: 14px;
 }
 
-.page-content .invitation__link-container a {
+.page-content .invitation__link-container a, .page-header__desktop .desktop-container .desktop__button {
   font-style: normal;
   text-align: center;
   padding: 12px 32px;
@@ -174,6 +175,40 @@ body {
   margin: 0;
 }
 
+.page-header__desktop {
+  padding-top: 25px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+.page-header__desktop .desktop-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-header__desktop .desktop-container .desktop__button {
+  background-color: #1a1a1a;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+}
+.page-header__desktop .desktop-container ul {
+  display: flex;
+  justify-content: center;
+}
+.page-header__desktop .desktop-container ul li:not(:last-child) {
+  margin-right: 40px;
+}
+@media (max-width: 768px) {
+  .page-header__desktop {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .page-header__desktop {
+    display: block;
+  }
+}
 .page-header__navigation {
   position: fixed;
   top: 10px;
@@ -181,6 +216,11 @@ body {
   right: 16px;
   z-index: 2;
   border-radius: 36px;
+}
+@media (min-width: 767px) {
+  .page-header__navigation {
+    display: none;
+  }
 }
 .page-header__navigation.active-header {
   border-radius: 36px 36px 0 0;
@@ -624,6 +664,9 @@ body {
   display: flex;
   flex-direction: row;
   overflow-x: auto;
+  /* Добавляем overflow: hidden, чтобы скрыть часть карточек за пределами контейнера */
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 .customer__cards .card {
   border-radius: 8px;
