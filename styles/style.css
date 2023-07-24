@@ -181,6 +181,12 @@ body {
   padding-right: 35px;
 }
 .page-header__desktop .desktop-container {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 40px;
+  background-color: #fff;
+  padding-left: 24px;
+  padding-right: 12px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -199,7 +205,7 @@ body {
 .page-header__desktop .desktop-container ul li:not(:last-child) {
   margin-right: 40px;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .page-header__desktop {
     display: none;
   }
@@ -216,11 +222,6 @@ body {
   right: 16px;
   z-index: 2;
   border-radius: 36px;
-}
-@media (min-width: 767px) {
-  .page-header__navigation {
-    display: none;
-  }
 }
 .page-header__navigation.active-header {
   border-radius: 36px 36px 0 0;
@@ -275,6 +276,12 @@ body {
   margin-top: 90px;
   padding-bottom: 75px;
 }
+@media (min-width: 768px) {
+  .page-content {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+}
 .page-content .team-info {
   background-image: url("../assets/images/main-page-photo.svg");
   background-position: 50% 50%;
@@ -283,13 +290,23 @@ body {
   min-height: 320px;
   gap: 32px;
 }
+@media (min-width: 768px) {
+  .page-content .team-info {
+    background-image: none;
+  }
+}
 .page-content .team-info__container {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 22px;
   position: relative;
+}
+@media (min-width: 1024px) {
+  .page-content .team-info__container {
+    display: flex;
+  }
 }
 .page-content .team-info__container .content {
   max-width: 205px;
@@ -328,27 +345,39 @@ body {
 .page-content .team-info .name img {
   vertical-align: middle;
 }
-.page-content .main-video img {
-  width: 100%;
-}
 .page-content .invitation {
   padding-left: 16px;
   padding-right: 16px;
 }
-.page-content .invitation h1 {
+.page-content .invitation h2 {
   font-weight: 600;
   font-size: 26px;
   margin-top: 0;
   margin-bottom: 32px;
 }
+@media (min-width: 768px) {
+  .page-content .invitation h2 {
+    font-size: 48px;
+  }
+}
 .page-content .invitation p {
   margin-bottom: 32px;
+}
+@media (min-width: 768px) {
+  .page-content .invitation p {
+    font-size: 18px;
+  }
 }
 .page-content .invitation__link-container {
   margin-bottom: 88px;
   display: flex;
   flex-direction: row;
   gap: 8px;
+}
+@media (min-width: 768px) {
+  .page-content .invitation__link-container {
+    flex-direction: column;
+  }
 }
 .page-content .invitation__link-container a {
   display: inline-block;
@@ -372,6 +401,28 @@ body {
 .page-content .invitation__link-container a:last-child img {
   position: absolute;
   top: 11px;
+}
+
+.main-video {
+  padding-left: 38px;
+  padding-right: 38px;
+}
+.main-video img {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .desktop-background {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .desktop-background {
+    background-image: url("../assets/images/tablet.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
 }
 
 .dot-blue {

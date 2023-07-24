@@ -32,7 +32,6 @@ body {
 	font-weight: 400;
 	overflow-wrap: break-word;
 	color: black;
-
 	margin: 0;
 }
 
@@ -40,8 +39,15 @@ body {
 	&__desktop {
 		padding-top: 25px;
 		padding-left: 35px;
+
 		padding-right: 35px;
 		.desktop-container {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			border-radius: 40px;
+			background-color: #fff;
+			padding-left: 24px;
+			padding-right: 12px;
 			.desktop__button {
 				@extend %big-button;
 				background-color: $deep-dark-color;
@@ -64,7 +70,7 @@ body {
 				}
 			}
 		}
-		@media (max-width: 768px) {
+		@media (max-width: 767px) {
 			display: none;
 		}
 		@media (min-width: 768px) {
@@ -77,10 +83,6 @@ body {
 		left: 16px;
 		right: 16px;
 		z-index: 2;
-
-		@media (min-width: 767px) {
-			display: none;
-		}
 
 		&.active-header {
 			border-radius: 36px 36px 0 0;
@@ -146,8 +148,16 @@ body {
 	margin-top: 90px;
 	padding-bottom: 75px;
 
+	@media (min-width: 768px) {
+		margin-top: 0;
+		padding-bottom: 0;
+	}
+
 	.team-info {
 		background-image: url('../assets/images/main-page-photo.svg');
+		@media (min-width: 768px) {
+			background-image: none;
+		}
 		background-position: 50% 50%;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -156,7 +166,10 @@ body {
 		gap: 32px;
 
 		&__container {
-			display: flex;
+			@media (min-width: 1024px) {
+				display: flex;
+			}
+			display: none;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
@@ -212,23 +225,23 @@ body {
 		}
 	}
 
-	.main-video {
-		img {
-			width: 100%;
-		}
-	}
-
 	.invitation {
 		padding-left: 16px;
 		padding-right: 16px;
-		h1 {
+		h2 {
 			font-weight: 600;
 			font-size: 26px;
 			margin-top: 0;
 			margin-bottom: 32px;
+			@media (min-width: 768px) {
+				font-size: 48px;
+			}
 		}
 		p {
 			@extend %page-text;
+			@media (min-width: 768px) {
+				font-size: 18px;
+			}
 			margin-bottom: 32px;
 		}
 
@@ -237,6 +250,9 @@ body {
 			display: flex;
 			flex-direction: row;
 			gap: 8px;
+			@media (min-width: 768px) {
+				flex-direction: column;
+			}
 			a {
 				display: inline-block;
 				width: 100%;
@@ -262,6 +278,26 @@ body {
 				}
 			}
 		}
+	}
+}
+
+.main-video {
+	padding-left: 38px;
+	padding-right: 38px;
+	img {
+		width: 100%;
+	}
+}
+
+.desktop-background {
+	@media (max-width: 767px) {
+		display: none;
+	}
+	@media (min-width: 768px) {
+		background-image: url('../assets/images/tablet.png');
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: contain;
 	}
 }
 
