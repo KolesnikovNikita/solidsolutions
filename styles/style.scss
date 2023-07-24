@@ -606,15 +606,10 @@ body {
 .customer__navigation {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding-right: 20px;
 }
 .customer__navigation .buttons-container {
   display: flex;
   flex-direction: row;
-  gap: 8px;
-  cursor: pointer;
   justify-content: space-between;
 }
 .customer h3 {
@@ -848,4 +843,4 @@ body {
   padding-top: 20px;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.scss.map */
