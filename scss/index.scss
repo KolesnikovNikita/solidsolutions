@@ -1,6 +1,7 @@
 @import './fonts';
 @import '../scss/common/variables';
 @import '../scss/common/extends.scss';
+@import '../scss/common/mixins.scss';
 
 html {
 	box-sizing: border-box;
@@ -42,6 +43,10 @@ body {
 }
 
 .page-header {
+	.active-header .mobile-list {
+		visibility: visible;
+		opacity: 1;
+	}
 	&__desktop {
 		padding-top: 25px;
 		padding-left: 35px;
@@ -119,7 +124,9 @@ body {
 
 	.mobile-list {
 		position: relative;
-		max-height: 0;
+		visibility: hidden;
+		opacity: 0;
+		transition: opacity 0.38s;
 
 		.list-container {
 			padding-left: 16px;
@@ -255,9 +262,9 @@ body {
 			}
 		}
 		p {
-			@extend %page-text;
+			@include page-text(16px);
 			@media (min-width: 768px) {
-				font-size: 18px;
+				@include page-text(18px);
 				max-width: 530px;
 				margin-bottom: 40px;
 			}
@@ -330,9 +337,25 @@ body {
 	&__examples {
 		padding-left: 16px;
 		padding-right: 16px;
-
 		background-color: #fff;
 		padding-bottom: 40px;
+
+		@media (min-width: 768px) {
+			padding-left: 35px;
+			padding-right: 35px;
+			display: flex;
+			flex-direction: row;
+			gap: 16px;
+		}
+	}
+
+	&__container {
+		@media (min-width: 768px) {
+			width: 50%;
+			&:last-child {
+				margin-top: auto;
+			}
+		}
 	}
 
 	.card {
@@ -390,7 +413,7 @@ body {
 	}
 
 	p {
-		@extend %page-text;
+		@include page-text(16px);
 		margin-bottom: 12px;
 	}
 
@@ -406,6 +429,10 @@ body {
 	padding-right: 20px;
 	padding-bottom: 60px;
 	background-color: #fff;
+
+	@media (min-width: 768px) {
+		padding-bottom: 5px;
+	}
 
 	h3 {
 		font-size: 20px;
@@ -475,6 +502,10 @@ body {
 		text-align: center;
 		margin-bottom: 45px;
 		margin-top: 0;
+
+		@media (min-width: 768px) {
+			font-size: 34px;
+		}
 	}
 
 	&__recall {
@@ -484,6 +515,9 @@ body {
 			color: $main-orange-color;
 			font-weight: 700;
 			margin-bottom: 8px;
+			@media (min-width: 768px) {
+				font-size: 14px;
+			}
 		}
 
 		h4 {
@@ -493,13 +527,27 @@ body {
 			margin-top: 0;
 			margin-bottom: 12px;
 			margin-bottom: 12px;
+			@media (min-width: 768px) {
+				font-size: 28px;
+			}
 		}
 
 		p {
-			@extend %page-text;
+			@include page-text(16px);
 			color: $main-header-color;
 			margin-top: 0;
 			margin-bottom: 55px;
+		}
+	}
+
+	&__desktop {
+		@media (min-width: 768px) {
+			.text-info {
+				width: 50%;
+			}
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: space-between;
 		}
 	}
 }
@@ -527,6 +575,10 @@ body {
 	padding-right: 20px;
 	background-color: $header-background-color;
 	padding-bottom: 76px;
+
+	@media (min-width: 768px) {
+		padding-top: 100px;
+	}
 
 	p {
 		margin-top: 0;
@@ -575,6 +627,12 @@ body {
 		@extend %large-header;
 		text-align: center;
 		margin-bottom: 24px;
+
+		@media (min-width: 768px) {
+			font-size: 32px;
+			text-align: left;
+			font-weight: 500;
+		}
 	}
 
 	&__image {
@@ -664,14 +722,6 @@ body {
 	}
 
 	&__cards {
-		display: flex;
-		flex-direction: row;
-		overflow-x: auto;
-		/* Добавляем overflow: hidden, чтобы скрыть часть карточек за пределами контейнера */
-		overflow: hidden;
-
-		transition: transform 0.3s ease;
-
 		.card {
 			border-radius: 8px;
 			flex-shrink: 0;
