@@ -341,7 +341,7 @@
 				</ul>
 
 				<div id="web-development" class="tab-content">
-					<h3><span>&#8249;</span> Web-Development <span>&#8250;</span></h3>
+					<h4><span>&#8249;</span> Web-Development <span>&#8250;</span></h4>
 					<p>
 						We provide full-stack development of websites and web applications
 						of any complexity from brochure websites to large ERP systems. Our
@@ -353,7 +353,7 @@
 				</div>
 
 				<div id="maintenance" class="tab-content">
-					<h3><span>&#8249;</span> Maintenance <span>&#8250;</span></h3>
+					<h4><span>&#8249;</span> Maintenance <span>&#8250;</span></h4>
 					<p>
 						In our company, IT maintenance plays a crucial role in ensuring the
 						smooth operation of our technology infrastructure. From computer
@@ -367,9 +367,9 @@
 				</div>
 
 				<div id="consulting-and-analytics" class="tab-content">
-					<h3>
+					<h4>
 						<span>&#8249;</span> Consulting and Analytics <span>&#8250;</span>
-					</h3>
+					</h4>
 					<p>
 						In the world of business, consulting and analytics play integral
 						roles in helping companies make informed decisions and drive growth.
@@ -386,15 +386,23 @@
 			</div>
 		</section>
 		<section class="about">
-			<h3>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit
-				<span class="dot-blue">.</span>
-			</h3>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet
-				justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque
-				placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis.
-			</p>
+			<div class="desktop-container">
+				<div>
+					<h3>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit
+						<span class="dot-blue">.</span>
+					</h3>
+				</div>
+				<div>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+						amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
+						Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
+						tristique iaculis.
+					</p>
+				</div>
+			</div>
+
 			<div class="about__images">
 				<div class="grid-block">
 					<div class="block">
@@ -432,26 +440,11 @@
 		<section class="customer swiper">
 			<div class="customer__navigation">
 				<div>
-					<h3>
-						What our customer <br />
-						say<span class="dot-blue">.</span>
-					</h3>
+					<h3>What our customer say<span class="dot-blue">.</span></h3>
 				</div>
 				<div class="buttons-container">
-					<div class="swiper-button-prev">
-						<img
-							src="../assets/images/swiper-backward-button.svg"
-							width="32"
-							height="32"
-						/>
-					</div>
-					<div class="swiper-button-next">
-						<img
-							src="../assets/images/swiper-forward-button.svg"
-							width="32"
-							height="32"
-						/>
-					</div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
 				</div>
 			</div>
 
@@ -545,119 +538,134 @@
 				</div>
 			</div>
 		</section>
+
 		<section class="special-gradient">
 			<section class="feedback">
-				<h3>
-					We sure you have<br />
-					an amazing idea
-				</h3>
-				<p>Let’s discuss how to bring it to life.</p>
-				<div class="feedback__contacts">
-					<div class="container">
-						<img
-							src="../assets/images/feedback/phone.svg"
-							width="24"
-							height="24"
-						/>+38 (096) 830 87 08
-					</div>
-					<div class="container">
-						<img
-							src="../assets/images/feedback/email.svg"
-							width="24"
-							height="24"
-						/>+38 (096) 830 87 08
-					</div>
-					<div class="container">
-						<img
-							src="../assets/images/feedback/location.svg"
-							width="24"
-							height="24"
-						/>+38 (096) 830 87 08
+				<div class="container">
+					<h3>
+						We sure you have<br />
+						an amazing idea
+					</h3>
+					<p>Let’s discuss how to bring it to life.</p>
+					<div class="feedback__contacts">
+						<div class="container">
+							<img
+								src="../assets/images/feedback/phone.svg"
+								width="24"
+								height="24"
+							/>+38 (096) 830 87 08
+						</div>
+						<div class="container">
+							<img
+								src="../assets/images/feedback/email.svg"
+								width="24"
+								height="24"
+							/>+38 (096) 830 87 08
+						</div>
+						<div class="container">
+							<img
+								src="../assets/images/feedback/location.svg"
+								width="24"
+								height="24"
+							/>+38 (096) 830 87 08
+						</div>
 					</div>
 				</div>
-				<div class="feedback__form">
-					<p>I'm looking for help with:</p>
-					<form>
-						<div class="checkbox-container">
-							<label for="development" class="checkbox-button"
-								>Development</label
-							>
-							<input id="development" value="development" type="checkbox" />
+				<div class="container">
+					<div class="feedback__form">
+						<p>I'm looking for help with:</p>
+						<form>
+							<div class="checkbox-container">
+								<label for="development" class="checkbox-button"
+									>Development</label
+								>
+								<input id="development" value="development" type="checkbox" />
 
-							<label for="design" class="checkbox-button">Design </label>
-							<input id="design" value="design" type="checkbox" />
+								<label for="design" class="checkbox-button">Design </label>
+								<input id="design" value="design" type="checkbox" />
 
-							<label for="other" class="checkbox-button">Other</label>
-							<input id="other" value="other" type="checkbox" />
-						</div>
-						<div class="input-container">
-							<input type="text" placeholder="Your full name" />
-							<input type="email" placeholder="email_example@gmail.com" />
-							<textarea placeholder="About your project idea"></textarea>
-						</div>
-						<div class="button-container">
-							<button type="submit">Enter</button>
-						</div>
-					</form>
+								<label for="other" class="checkbox-button">Other</label>
+								<input id="other" value="other" type="checkbox" />
+							</div>
+							<div class="input-container">
+								<input type="text" placeholder="Your full name" />
+								<input type="email" placeholder="email_example@gmail.com" />
+								<textarea placeholder="About your project idea"></textarea>
+							</div>
+							<div class="button-container">
+								<button type="submit">Enter</button>
+							</div>
+						</form>
+					</div>
 				</div>
 			</section>
+
 			<footer class="footer">
-				<h3>Solid Solutions</h3>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet
-					justo ipsum.
-				</p>
-				<div class="footer__social">
+				<div class="container">
 					<div>
-						<a
-							><img
-								src="../assets/images/footer_img/instagram.svg"
-								width="32"
-								height="32"
-						/></a>
+						<h3>Solid Solutions</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+							amet justo ipsum.
+						</p>
+						<div class="footer__social">
+							<div>
+								<a
+									><img
+										src="../assets/images/footer_img/instagram.svg"
+										width="32"
+										height="32"
+								/></a>
+							</div>
+							<div>
+								<a
+									><img
+										src="../assets/images/footer_img/linkedln.svg"
+										width="32"
+										height="32"
+								/></a>
+							</div>
+							<div>
+								<a
+									><img
+										src="../assets/images/footer_img/facebook 01.svg"
+										width="32"
+										height="32"
+								/></a>
+							</div>
+							<div>
+								<a
+									><img
+										src="../assets/images/footer_img/skype.svg"
+										width="32"
+										height="32"
+								/></a>
+							</div>
+						</div>
 					</div>
 					<div>
-						<a
-							><img
-								src="../assets/images/footer_img/linkedln.svg"
-								width="32"
-								height="32"
-						/></a>
+						<div class="footer__explore">
+							<h4>Explore</h4>
+							<div>
+								<a>Main</a>
+								<a>Services</a>
+							</div>
+							<div>
+								<a>Projects</a>
+								<a>About Us</a>
+							</div>
+						</div>
 					</div>
 					<div>
-						<a
-							><img
-								src="../assets/images/footer_img/facebook 01.svg"
-								width="32"
-								height="32"
-						/></a>
-					</div>
-					<div>
-						<a
-							><img
-								src="../assets/images/footer_img/skype.svg"
-								width="32"
-								height="32"
-						/></a>
+						<div class="footer__in-touch">
+							<h4>Get in touch</h4>
+							<div>+38 (096) 830 87 08</div>
+							<div>office@solid-sl.com</div>
+							<div>3024 Joes Road, Albany, NY 12207</div>
+						</div>
 					</div>
 				</div>
-				<div class="footer__explore">
-					<h4>Explore</h4>
-					<div>
-						<a>Main</a>
-						<a>Services</a>
-					</div>
-					<div>
-						<a>Projects</a>
-						<a>About Us</a>
-					</div>
-				</div>
-				<div class="footer__in-touch">
-					<h4>Get in touch</h4>
-					<div>+38 (096) 830 87 08</div>
-					<div>office@solid-sl.com</div>
-					<div>3024 Joes Road, Albany, NY 12207</div>
-				</div>
+
 				<hr class="footer__underline" />
 				<div class="footer__rights">
 					<div class="container">

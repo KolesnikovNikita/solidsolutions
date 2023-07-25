@@ -578,6 +578,7 @@ body {
 
 	@media (min-width: 768px) {
 		padding-top: 100px;
+		padding-left: 35px;
 	}
 
 	p {
@@ -586,6 +587,9 @@ body {
 		max-height: 170px;
 		overflow-y: auto;
 		@extend %alt-page-text;
+		@media (min-width: 768px) {
+			font-size: 16px;
+		}
 	}
 
 	&__tabs {
@@ -601,6 +605,10 @@ body {
 					color: $tab-link-color;
 					letter-spacing: -0.32px;
 
+					@media (min-width: 768px) {
+						font-size: 18px;
+					}
+
 					&.active-link {
 						@extend %active-link;
 						padding-left: 34px;
@@ -614,6 +622,9 @@ body {
 							border-radius: 14px;
 							left: 0;
 							bottom: 8px;
+							@media (min-width: 768px) {
+								bottom: 12px;
+							}
 						}
 					}
 				}
@@ -635,6 +646,19 @@ body {
 		}
 	}
 
+	h4 {
+		text-align: center;
+		color: $header-dark-color;
+		font-size: 20px;
+		font-weight: 500;
+		letter-spacing: -0.4px;
+		@media (min-width: 768px) {
+			text-align: left;
+			font-size: 28px;
+			letter-spacing: -0.56px;
+		}
+	}
+
 	&__image {
 		img {
 			background-size: cover;
@@ -644,11 +668,23 @@ body {
 }
 
 .about {
+	@media (min-width: 768px) {
+		.desktop-container {
+			display: flex;
+			flex-direction: row;
+			gap: 20px;
+		}
+	}
+
 	padding-top: 72px;
 	background-color: #fff;
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-bottom: 120px;
+	@media (min-width: 768px) {
+		padding-left: 35px;
+		padding-right: 35px;
+	}
 	.about-button {
 		img {
 			position: absolute;
@@ -667,15 +703,30 @@ body {
 	h3 {
 		@extend %large-header;
 		margin-bottom: 25px;
+		@media (min-width: 768px) {
+			width: 360px;
+			font-size: 34px;
+			font-weight: 500;
+			margin-bottom: 0;
+		}
 	}
 
 	p {
 		margin-top: 0;
 		margin-bottom: 56px;
 		@extend %alt-page-text;
+		@media (min-width: 768px) {
+			font-size: 16px;
+			font-weight: 400;
+		}
 	}
 
 	&__images {
+		@media (min-width: 768px) {
+			display: flex;
+			flex-direction: row;
+			gap: 7px;
+		}
 		.grid-block {
 			display: flex;
 			gap: 8px;
@@ -700,6 +751,9 @@ body {
 	background-color: #fff;
 	padding-left: 20px;
 	padding-bottom: 100px;
+	@media (min-width: 768px) {
+		padding-bottom: 120px;
+	}
 
 	&__navigation {
 		display: flex;
@@ -709,25 +763,27 @@ body {
 		padding-right: 20px;
 
 		.buttons-container {
-			display: flex;
-			flex-direction: row;
-			gap: 8px;
-			cursor: pointer;
-			justify-content: space-between;
+			position: relative;
+			padding-right: 23px;
 		}
 	}
 	h3 {
 		@extend %large-header;
 		margin-bottom: 32px;
+		width: 260px;
+
+		@media (min-width: 768px) {
+			font-size: 34px;
+			font-weight: 500;
+			width: 100%;
+		}
 	}
 
 	&__cards {
 		.card {
 			border-radius: 8px;
-			flex-shrink: 0;
 			margin-bottom: 20px;
 			margin-right: 28px;
-			width: 310px;
 			min-height: 342px;
 			padding: 20px;
 			background-color: $customer-card-color;
@@ -737,6 +793,11 @@ body {
 				justify-content: space-between;
 			}
 			&__body {
+				 h4 {
+					font-size: 16px;
+					color: $main--dark-header-color;
+					font-weight: 700;
+				}
 				p {
 					margin-top: 0;
 					margin-bottom: 20px;
@@ -779,6 +840,19 @@ body {
 }
 
 .feedback {
+	@media (min-width: 768px) {
+		padding-left: 37px;
+		padding-right: 37px;
+		display: flex;
+		flex-direction: row;
+		gap: 48px;
+		justify-content: center;
+		.container {
+			&:first-child {
+				width: 70%;
+			}
+		}
+	}
 	background-color: #fff;
 	border-bottom-left-radius: 20px;
 	padding-bottom: 128px;
@@ -801,12 +875,21 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		margin-bottom: 45px;
+
+		@media (min-width: 768px) {
+			font-size: 16px;
+		}
 	}
 	padding-left: 20px;
 	padding-right: 20px;
 	h3 {
 		@extend %large-header;
 		margin-bottom: 16px;
+		@media (min-width: 768px) {
+			font-size: 34px;
+			font-weight: 500;
+			color: $button-tech-color;
+		}
 	}
 
 	p {
@@ -892,6 +975,18 @@ body {
 }
 
 .footer {
+	padding-left: 20px;
+	padding-right: 20px;
+	@media (min-width: 768px) {
+		padding-left: 35px;
+		padding-right: 35px;
+	}
+	.container {
+		@media (min-width: 768px) {
+			display: flex;
+			flex-direction: row;
+		}
+	}
 	border-top-right-radius: 40px;
 	padding-top: 60px;
 	background-color: $deep-dark-color;
@@ -899,7 +994,6 @@ body {
 		@extend %page-header;
 		color: #fff;
 		margin-bottom: 20px;
-		padding-left: 20px;
 	}
 
 	p {
@@ -908,7 +1002,7 @@ body {
 		font-weight: 400;
 		opacity: 0.6;
 		margin-top: 0;
-		padding-left: 20px;
+
 		padding-right: 20px;
 		margin-bottom: 32px;
 	}
@@ -978,4 +1072,27 @@ body {
 		padding-top: 20px;
 		@extend %page-rights;
 	}
+}
+
+/* Styles for custom navigation arrows */
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+	font-size: 0;
+}
+.swiper-button-next,
+.swiper-button-prev {
+	width: 32px;
+	height: 32px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.swiper-button-next {
+	background-image: url('../assets/images/swiper-forward-button.svg');
+}
+
+.swiper-button-prev {
+	left: -60px;
+	background-image: url('../assets/images/swiper-backward-button.svg');
 }
