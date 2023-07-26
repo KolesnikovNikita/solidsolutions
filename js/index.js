@@ -15,7 +15,7 @@ function dropDownMenu() {
 	});
 }
 
-function initTabs() {
+function selectService() {
 	function switchTab(newIndex) {
 		tabPanels.forEach(function (tabPanel, index) {
 			tabPanel.hidden = !(index === newIndex);
@@ -39,6 +39,25 @@ function initTabs() {
 	});
 }
 
+function activateLink() {
+	const links = document.querySelectorAll('.link-item');
+
+	function chooseLink(linkElement) {
+		links.forEach(link => {
+			link.classList.remove('active-item');
+		});
+		linkElement.classList.add('active-item');
+	}
+
+	links.forEach(link => {
+		link.addEventListener('click', function () {
+			chooseLink(this);
+		});
+	});
+
+	chooseLink(links[0]);
+}
+
 function initCheckbox() {
 	const checkboxContainer = document.querySelector('.checkbox-container');
 	const btns = checkboxContainer.querySelectorAll('.checkbox-button');
@@ -56,8 +75,9 @@ function initCheckbox() {
 
 function initComponents() {
 	dropDownMenu();
-	initTabs();
+	selectService();
 	initCheckbox();
+	activateLink();
 }
 
 initComponents();
