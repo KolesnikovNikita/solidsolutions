@@ -1,7 +1,11 @@
 const swiper = new Swiper('.swiper', {
 	// Optional parameters
 	direction: 'horizontal',
-	loop: false,
+	loop: true,
+
+	// autoplay: {
+	// 	delay: 5000,
+	// },
 
 	// Navigation arrows
 	navigation: {
