@@ -317,9 +317,13 @@ body {
 }
 
 .page-content {
-  padding-top: 220px;
   margin-top: 90px;
   padding-bottom: 75px;
+}
+@media (min-width: 1200px) {
+  .page-content {
+    padding-top: 220px;
+  }
 }
 @media (min-width: 768px) {
   .page-content__container {
@@ -340,12 +344,16 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 320px;
-  width: 50%;
   gap: 32px;
 }
 @media (min-width: 768px) {
   .page-content .team-info {
     background-image: none;
+  }
+}
+@media (min-width: 1200px) {
+  .page-content .team-info {
+    width: 50%;
   }
 }
 .page-content .team-info__container {
@@ -372,7 +380,7 @@ body {
 }
 .page-content .team-info__container .content .average {
   color: #e3e3e3;
-  font-size: 9px;
+  font-size: 14px;
   font-weight: 600;
 }
 .page-content .team-info__container .content .progress {

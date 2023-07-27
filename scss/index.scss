@@ -189,7 +189,10 @@ body {
 }
 
 .page-content {
-	padding-top: 220px;
+	@media (min-width: 1200px) {
+		padding-top: 220px;
+	}
+
 	&__container {
 		@media (min-width: 768px) {
 			display: flex;
@@ -214,8 +217,12 @@ body {
 		background-size: cover;
 		background-repeat: no-repeat;
 		min-height: 320px;
-		width: 50%;
+
 		gap: 32px;
+
+		@media (min-width: 1200px) {
+			width: 50%;
+		}
 
 		&__container {
 			@media (min-width: 1024px) {
@@ -239,7 +246,7 @@ body {
 				}
 				.average {
 					color: #e3e3e3;
-					font-size: 9px;
+					font-size: 14px;
 					font-weight: 600;
 				}
 				.progress {
