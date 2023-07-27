@@ -322,7 +322,7 @@ body {
 			gap: 8px;
 			justify-content: flex-start;
 			@media (min-width: 768px) {
-				width: 50%;
+				width: 53%;
 				margin-bottom: 130px;
 			}
 			a {
@@ -530,6 +530,14 @@ body {
 }
 
 .technologies-used {
+	.scroll-right {
+		margin-bottom: 32px;
+	}
+	marquee {
+		img {
+			margin-right: 32px;
+		}
+	}
 	@media (min-width: 1200px) {
 		padding-left: 190px;
 		padding-right: 190px;
@@ -537,19 +545,6 @@ body {
 	padding-top: 55px;
 	padding-bottom: 55px;
 	background-color: $header-background-color;
-	ul {
-		padding: 0;
-		overflow-x: auto;
-
-		display: flex;
-		flex-direction: row;
-		list-style: none;
-
-		li {
-			flex-shrink: 0;
-			margin-right: 24px;
-		}
-	}
 }
 
 .advantages {
