@@ -73,41 +73,6 @@ function initCheckbox() {
 	});
 }
 
-function runString() {
-	window.addEventListener('DOMContentLoaded', () => {
-		const marqueeContainer = document.querySelector('.marquee-container');
-		const marqueeList = document.getElementById('marquee');
-		const marqueeItems = marqueeList.querySelectorAll('li');
-
-		// Дублируем элементы для бесконечной прокрутки
-		marqueeItems.forEach(item => {
-			marqueeList.appendChild(item.cloneNode(true));
-		});
-
-		let animationOffset = 0;
-
-		function startMarquee() {
-			animationOffset -= 1;
-			marqueeList.style.transform = `translateX(${animationOffset}px)`;
-
-			// Если прокрутка достигла конца одной копии списка, переместим начало списка в конец
-			const firstItemWidth = marqueeItems[0].offsetWidth;
-			if (Math.abs(animationOffset) >= firstItemWidth) {
-				animationOffset = 0;
-				marqueeList.style.transform = `translateX(${animationOffset}px)`;
-			}
-
-			requestAnimationFrame(startMarquee);
-		}
-
-		// Устанавливаем ширину контейнера равной ширине прокручиваемого списка
-		marqueeContainer.style.width = marqueeList.offsetWidth + 'px';
-
-		// Запускаем анимацию после загрузки контента
-		startMarquee();
-	});
-}
-
 function initComponents() {
 	dropDownMenu();
 	selectService();
