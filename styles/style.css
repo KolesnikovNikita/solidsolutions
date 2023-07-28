@@ -1435,4 +1435,26 @@ body {
   background-image: url("../assets/images/swiper-backward-button.svg");
 }
 
+.projects-list {
+  margin-top: 150px;
+  background-color: #fff;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.projects-list .techs-container {
+  margin-bottom: 32px;
+}
+.projects-list .techs-container .select-button {
+  cursor: pointer;
+  border: 1px solid #b7b6c2;
+  padding: 8px 12px;
+  border-radius: 40px;
+  font-size: 14px;
+  color: #b7b6c2;
+  font-weight: 500;
+}
+.projects-list input {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */

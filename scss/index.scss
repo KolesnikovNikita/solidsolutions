@@ -1315,3 +1315,28 @@ body {
 	left: -60px;
 	background-image: url('../assets/images/swiper-backward-button.svg');
 }
+
+// OUR PROJECTS PAGE
+
+.projects-list {
+	margin-top: 150px;
+	background-color: #fff;
+	padding-left: 16px;
+	padding-right: 16px;
+
+	.techs-container {
+		margin-bottom: 32px;
+		.select-button {
+			cursor: pointer;
+			border: 1px solid $input-text-color;
+			padding: 8px 12px;
+			border-radius: 40px;
+			font-size: 14px;
+			color: $input-text-color;
+			font-weight: 500;
+		}
+	}
+	input {
+		display: none;
+	}
+}
