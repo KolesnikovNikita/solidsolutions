@@ -64,10 +64,18 @@ function initCheckbox() {
 
 	btns.forEach(function (btn) {
 		btn.addEventListener('click', function () {
-			if (!btn.classList.contains('active-checkbox')) {
-				btn.classList.add('active-checkbox');
+			if (btn.getAttribute('for') == 'other') {
+				btns.forEach(function (otherBtn) {
+					if (otherBtn != btn) {
+						otherBtn.classList.remove('active-checkbox');
+					}
+				});
 			} else {
-				btn.classList.remove('active-checkbox');
+				if (!btn.classList.contains('active-checkbox')) {
+					btn.classList.add('active-checkbox');
+				} else {
+					btn.classList.remove('active-checkbox');
+				}
 			}
 		});
 	});

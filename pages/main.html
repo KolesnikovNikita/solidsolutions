@@ -109,6 +109,11 @@
 									<ul>
 										<li>
 											<img
+												style="
+													border-radius: 50%;
+													border-width: 4px;
+													border-color: #fff;
+												"
 												src="../assets/images/mate1.png"
 												width="30"
 												height="30"
@@ -117,6 +122,7 @@
 										</li>
 										<li>
 											<img
+												style="border-radius: 50%"
 												src="../assets/images/mate2.png"
 												width="30"
 												height="30"
@@ -125,6 +131,7 @@
 										</li>
 										<li>
 											<img
+												style="border-radius: 50%"
 												src="../assets/images/mate3.png"
 												width="30"
 												height="30"
@@ -133,6 +140,7 @@
 										</li>
 										<li>
 											<img
+												style="border-radius: 50%"
 												src="../assets/images/mate4.png"
 												width="30"
 												height="30"
@@ -141,7 +149,8 @@
 										</li>
 										<li>
 											<img
-												src="../assets/images/mate5.png"
+												style="border-radius: 50%"
+												src="../assets/images/mate5.svg"
 												width="30"
 												height="30"
 												alt="mate"
@@ -190,10 +199,7 @@
 						<div class="card">
 							<div class="card__header">
 								<h3>LMCT+</h3>
-								<p>
-									IOS and Android apps for an Australian <br />
-									rewards club.
-								</p>
+								<p>IOS and Android apps for an Australian rewards club.</p>
 								<div class="technoligies">
 									<ul>
 										<li>Mobile App</li>
@@ -240,15 +246,16 @@
 					<div class="projects__container">
 						<div class="card">
 							<div class="card__header">
-								<h3 style="color: #262549">CRM for dentists</h3>
+								<h3 style="color: #262549">Lawzilla</h3>
 								<p style="color: #565672">
-									A system that lets dental practices automate a lot of
-									processes and run their business more efficiently.
+									Lawzilla is a platform where lawyers can post and search for
+									legal case referrals.
 								</p>
 								<div class="technoligies">
 									<ul>
-										<li style="background-color: #0e0d35">CRM</li>
-										<li style="background-color: #0e0d35">Medical</li>
+										<li>Loading</li>
+										<li>Platform</li>
+										<li>Legal</li>
 									</ul>
 								</div>
 							</div>
@@ -322,7 +329,7 @@
 						<img
 							src="../assets/images/solid-chat.png"
 							height="350"
-							width="283"
+							width="350"
 						/>
 					</div>
 				</div>
@@ -436,15 +443,8 @@
 					<div class="block">
 						<img src="../assets/images/about_company/img7.jpeg" />
 						<img src="../assets/images/about_company/img8.jpeg" />
-						<div class="about-button">
-							<a href="#"
-								>Learn More
-								<img
-									src="../assets/images/thin-arrow-right.svg"
-									width="25"
-									height="30"
-								/>
-							</a>
+						<div id="learnLinkContainer" class="about-button">
+							<a id="learnLink">Learn More &nbsp &nbsp </a>
 						</div>
 					</div>
 				</div>
@@ -457,12 +457,169 @@
 					<h3>What our customer say<span class="dot-blue">.</span></h3>
 				</div>
 				<div class="buttons-container">
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev">
+						<svg
+							width="32"
+							height="32"
+							viewBox="0 0 32 32"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<rect
+								x="-0.5"
+								y="0.5"
+								width="31"
+								height="31"
+								rx="15.5"
+								transform="matrix(-1 0 0 1 31 0)"
+								fill="white"
+							/>
+							<path
+								d="M14.3333 19.3333L11 15.9999M11 15.9999L14.3333 12.6666M11 15.9999L21 15.9999"
+								stroke="#2F2F2F"
+								stroke-width="1.5"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<rect
+								x="-0.5"
+								y="0.5"
+								width="31"
+								height="31"
+								rx="15.5"
+								transform="matrix(-1 0 0 1 31 0)"
+								stroke="#B5B5C3"
+							/>
+						</svg>
+					</div>
+					<div class="swiper-button-next">
+						<svg
+							width="32"
+							height="32"
+							viewBox="0 0 32 32"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<rect
+								x="-0.5"
+								y="0.5"
+								width="31"
+								height="31"
+								rx="15.5"
+								transform="matrix(-1 0 0 1 31 0)"
+								fill="white"
+							/>
+							<path
+								d="M14.3333 19.3333L11 15.9999M11 15.9999L14.3333 12.6666M11 15.9999L21 15.9999"
+								stroke="#2F2F2F"
+								stroke-width="1.5"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								transform="rotate(180 16 16)"
+							/>
+							<rect
+								x="-0.5"
+								y="0.5"
+								width="31"
+								height="31"
+								rx="15.5"
+								transform="matrix(-1 0 0 1 31 0)"
+								stroke="#B5B5C3"
+							/>
+						</svg>
+					</div>
 				</div>
 			</div>
 
 			<div class="customer__cards swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="card">
+						<div class="card__header">
+							<div class="rate">
+								<img src="../assets/images/Stars.png" />
+							</div>
+							<div class="service">
+								<img
+									src="../assets/images/linkedin.svg"
+									height="20"
+									width="20"
+								/>
+							</div>
+						</div>
+						<div class="card__body">
+							<h4>CRM system development</h4>
+							<p>
+								Integer lobortis lorem lorem, id accumsan arcu tempor id.
+								Suspendisse vitae accumsan massa. Duis porttitor, mauris et
+								faucibus sollicitudin, tellus sem tristique risus, nec gravida
+								velit diam aliquet enim. Curabitur eleifend ligula quis
+								convallis interdum. Sed vitae condimentum urna, nec suscipit
+								purus.
+							</p>
+						</div>
+						<div class="card__footer">
+							<div class="card__customer">
+								<div class="customer-image">
+									<img
+										src="../assets/images/customer-image-svg.svg"
+										alt="customer-image"
+										width="40"
+										height="40"
+									/>
+								</div>
+								<div class="customer-info">
+									<p>Ronda Rhodes</p>
+									<span>Project Name</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div class="card">
+						<div class="card__header">
+							<div class="rate">
+								<img src="../assets/images/Stars.png" />
+							</div>
+							<div class="service">
+								<img
+									src="../assets/images/linkedin.svg"
+									height="20"
+									width="20"
+								/>
+							</div>
+						</div>
+						<div class="card__body">
+							<h4>CRM system development</h4>
+							<p>
+								Integer lobortis lorem lorem, id accumsan arcu tempor id.
+								Suspendisse vitae accumsan massa. Duis porttitor, mauris et
+								faucibus sollicitudin, tellus sem tristique risus, nec gravida
+								velit diam aliquet enim. Curabitur eleifend ligula quis
+								convallis interdum. Sed vitae condimentum urna, nec suscipit
+								purus.
+							</p>
+						</div>
+						<div class="card__footer">
+							<div class="card__customer">
+								<div class="customer-image">
+									<img
+										src="../assets/images/customer-image-svg.svg"
+										alt="customer-image"
+										width="40"
+										height="40"
+									/>
+								</div>
+								<div class="customer-info">
+									<p>Ronda Rhodes</p>
+									<span>Project Name</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<div class="swiper-slide">
 					<div class="card">
 						<div class="card__header">
@@ -574,14 +731,14 @@
 								src="../assets/images/feedback/email.svg"
 								width="24"
 								height="24"
-							/>+38 (096) 830 87 08
+							/>office@solid-sl.com
 						</div>
 						<div class="container">
 							<img
 								src="../assets/images/feedback/location.svg"
 								width="24"
 								height="24"
-							/>+38 (096) 830 87 08
+							/>3024 Joes Road, Albany, NY 12207
 						</div>
 					</div>
 				</div>
@@ -661,11 +818,12 @@
 						<div class="footer__explore">
 							<h4>Explore</h4>
 							<div>
-								<a>Main</a>
+								<a>Home</a>
 								<a>Services</a>
 							</div>
 							<div>
 								<a>Projects</a>
+								<a>Process</a>
 								<a>About Us</a>
 							</div>
 						</div>

@@ -1,15 +1,31 @@
+function updateSlidesPerView() {
+	var windowWidth = window.innerWidth;
+	var slidesPerView = 1;
+
+	if (windowWidth >= 1024) {
+		slidesPerView = 2;
+	}
+
+	if (windowWidth >= 1200) {
+		slidesPerView = 3;
+	}
+
+	swiper.params.slidesPerView = slidesPerView;
+	swiper.update();
+}
+
 const swiper = new Swiper('.swiper', {
-	// Optional parameters
 	direction: 'horizontal',
 	loop: true,
 
-	// autoplay: {
-	// 	delay: 5000,
-	// },
+	slidesPerView: 1,
+	slidesPerGroup: 1,
 
-	// Navigation arrows
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	},
 });
+
+window.addEventListener('resize', updateSlidesPerView);
+updateSlidesPerView();

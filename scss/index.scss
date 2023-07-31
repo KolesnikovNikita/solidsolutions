@@ -248,20 +248,21 @@ body {
 				min-height: 126px;
 				padding: 20px;
 				.successful {
-					font-size: 18px;
+					font-size: 25px;
 					font-weight: 700;
+					color: #fff;
 				}
 				.average {
 					color: #e3e3e3;
-					font-size: 14px;
+					font-size: 12px;
 					font-weight: 600;
 				}
 				.progress {
 					width: 100%;
 					background-color: $main-dark-blue-color;
-					height: 4px;
+					height: 6px;
 					border-radius: 4px;
-					margin-top: 10px;
+					margin-top: 12px;
 				}
 
 				&:first-child {
@@ -395,6 +396,9 @@ body {
 		padding-top: 120px;
 	}
 	&__examples {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
 		padding-left: 16px;
 		padding-right: 16px;
 		background-color: #fff;
@@ -404,12 +408,9 @@ body {
 			padding-bottom: 100px;
 			padding-left: 35px;
 			padding-right: 35px;
-			display: flex;
-			flex-direction: row;
-			gap: 16px;
 		}
 
-		@media (min-width: 1200px) {
+		@media (min-width: 1400px) {
 			padding-left: 190px;
 			padding-right: 190px;
 		}
@@ -417,7 +418,8 @@ body {
 
 	&__container {
 		@media (min-width: 768px) {
-			width: 50%;
+			display: flex;
+			gap: 16px;
 			&:last-child {
 				margin-top: auto;
 			}
@@ -425,14 +427,28 @@ body {
 	}
 
 	.card {
+		max-width: 370px;
+
+		@media (min-width: 768px) {
+			min-width: 312px;
+		}
+
+		@media (min-width: 1200px) {
+			min-width: 520px;
+		}
 		&:not(:last-child) {
 			margin-bottom: 16px;
+			@media (min-width: 768px) {
+				margin-bottom: 0;
+			}
 		}
 		&:nth-child(odd) {
 			background-color: $project-background-color;
 		}
 		&:nth-child(even) {
 			background-color: $main-dark-blue-color;
+			@media (min-width: 768px) {
+			}
 		}
 		border-radius: 16px;
 		&__header {
@@ -456,6 +472,14 @@ body {
 					color: #fff;
 					font-weight: 500;
 					background-color: $main-dark-blue-color;
+
+					@media (min-width: 768px) {
+						font-size: 10px;
+					}
+
+					@media (min-width: 1200px) {
+						font-size: 14px;
+					}
 
 					&:not(:last-child) {
 						margin-right: 6px;
@@ -501,6 +525,7 @@ body {
 
 	@media (min-width: 768px) {
 		padding-bottom: 5px;
+		margin-top: auto;
 	}
 
 	h3 {
@@ -517,7 +542,7 @@ body {
 	}
 	a {
 		padding-left: 32px;
-		padding-right: 62px;
+		padding-right: 53px;
 		font-size: 16px;
 		font-weight: 500;
 		width: 220px;
@@ -619,28 +644,27 @@ body {
 
 	&__desktop {
 		@media (min-width: 768px) {
+			justify-content: center;
 			.text-info {
 				@media (min-width: 1200px) {
 					padding-top: 10%;
 				}
-				width: 50%;
+				width: 44%;
+				margin-left: 50px;
 			}
 			display: flex;
 			flex-direction: row-reverse;
-			justify-content: space-between;
 		}
 		@media (min-width: 1200px) {
-			max-width: 885px;
-			margin-left: auto;
-			margin-right: auto;
-			gap: 185px;
+			padding-left: 218px;
+			padding-right: 218px;
 		}
 
 		.chat-image {
 			img {
 				@media (min-width: 1200px) {
-					width: 550px;
-					height: 400px;
+					width: 600px;
+					height: 495px;
 				}
 			}
 		}
@@ -666,11 +690,18 @@ body {
 
 .services {
 	.content-list-box {
+		.services-image {
+			text-align: center;
+		}
 		@media (min-width: 1200px) {
 			display: flex;
 			flex-direction: column;
 
 			width: 55%;
+		}
+
+		@media (min-width: 1400px) {
+			width: 60%;
 		}
 	}
 	padding-top: 72px;
@@ -685,8 +716,8 @@ body {
 	}
 
 	@media (min-width: 1200px) {
-		padding-left: 135px;
-		padding-right: 135px;
+		padding-left: 130px;
+		padding-right: 130px;
 		display: flex;
 		padding-bottom: 143px;
 	}
@@ -776,6 +807,7 @@ body {
 		margin-bottom: 24px;
 
 		@media (min-width: 768px) {
+			margin-bottom: 56px;
 			font-size: 32px;
 			text-align: left;
 			font-weight: 500;
@@ -850,20 +882,67 @@ body {
 		padding-right: 35px;
 	}
 	.about-button {
+		position: relative;
+		&::after {
+			position: absolute;
+			content: '';
+			background-image: url('../assets/images/thin-arrow-right.svg');
+			background-repeat: repeat;
+			width: 32px;
+			height: 32px;
+			bottom: 20px;
+			left: 124px;
+
+			@media (min-width: 768px) {
+				bottom: 21px;
+			}
+
+			@media (min-width: 768px) {
+				left: 120px;
+			}
+
+			@media (min-width: 1024px) {
+				left: 140px;
+			}
+
+			@media (min-width: 1200px) {
+				left: 240px;
+				bottom: 24px;
+			}
+		}
 		img {
 			position: absolute;
 			top: 25px;
-			right: 12px;
+			@media (min-width: 768px) {
+				top: 11px;
+			}
+
+			@media (min-width: 1200px) {
+				top: 25px;
+			}
 		}
-		text-align: center;
+
 		position: relative;
-		padding: 25px;
+		padding-left: 24px;
+		padding-top: 26px;
+		padding-bottom: 26px;
 		font-size: 16px;
 		color: $deep-dark-color;
 		font-weight: 600;
 		background-color: $main-yellow-color;
 		border-radius: 8px;
 		cursor: pointer;
+
+		@media (min-width: 768px) {
+		}
+		@media (min-width: 768px) {
+			padding-top: 27px;
+			padding-bottom: 27px;
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 20px;
+		}
 	}
 	h3 {
 		@extend %large-header;
@@ -954,6 +1033,7 @@ body {
 	}
 
 	&__cards {
+		padding-right: 16px;
 		.card {
 			border-radius: 8px;
 			margin-bottom: 20px;
@@ -1017,6 +1097,7 @@ body {
 	@media (min-width: 768px) {
 		padding-left: 37px;
 		padding-right: 37px;
+		padding-bottom: 106px;
 		display: flex;
 		flex-direction: row;
 		gap: 48px;
@@ -1026,6 +1107,12 @@ body {
 			width: 68%;
 		}
 	}
+
+	@media (min-width: 1200px) {
+		padding-left: 82px;
+		padding-right: 82px;
+		padding-bottom: 106px;
+	}
 	background-color: #fff;
 	border-bottom-left-radius: 20px;
 	padding-bottom: 128px;
@@ -1033,6 +1120,9 @@ body {
 		.container {
 			&:not(:last-child) {
 				margin-bottom: 24px;
+				@media (min-width: 768px) {
+					margin-bottom: 31px;
+				}
 			}
 			display: flex;
 			align-items: center;
@@ -1056,12 +1146,20 @@ body {
 	padding-left: 20px;
 	padding-right: 20px;
 	h3 {
+		margin-top: -13px;
 		@extend %large-header;
 		margin-bottom: 16px;
 		@media (min-width: 768px) {
 			font-size: 34px;
 			font-weight: 500;
 			color: $button-tech-color;
+			margin-bottom: 20px;
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 48px;
+
+			font-weight: 500;
 		}
 	}
 
@@ -1071,8 +1169,14 @@ body {
 		font-weight: 400;
 		margin-bottom: 40px;
 		color: $dark-green-color-text;
+		@media (min-width: 768px) {
+			margin-bottom: 83px;
+		}
 	}
 	&__form {
+		::placeholder {
+			color: $input-text-color;
+		}
 		.button-container {
 			button {
 				cursor: pointer;
@@ -1122,6 +1226,9 @@ body {
 		.input-container {
 			input,
 			textarea {
+				::placeholder {
+					color: $input-text-color;
+				}
 				&:last-child {
 					height: 130px;
 					resize: none;
@@ -1205,6 +1312,7 @@ body {
 		margin-bottom: 32px;
 		@media (min-width: 768px) {
 			margin-bottom: auto;
+			max-width: 322px;
 		}
 	}
 	&__social {
@@ -1308,12 +1416,10 @@ body {
 }
 
 .swiper-button-next {
-	background-image: url('../assets/images/swiper-forward-button.svg');
 }
 
 .swiper-button-prev {
 	left: -60px;
-	background-image: url('../assets/images/swiper-backward-button.svg');
 }
 
 // OUR PROJECTS PAGE
