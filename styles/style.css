@@ -169,7 +169,6 @@ svg {
 }
 
 body {
-  background-color: #f8f8f8;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -178,15 +177,19 @@ body {
   color: black;
   margin: 0;
 }
+
+body#main-page {
+  background-color: #f8f8f8;
+}
 @media (min-width: 768px) {
-  body {
+  body#main-page {
     background-image: url("../assets/images/tablet.png");
     background-repeat: no-repeat;
     background-size: contain;
   }
 }
 @media (min-width: 1200px) {
-  body {
+  body#main-page {
     background-image: url("../assets/images/Bg_Desktop.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -341,6 +344,7 @@ body {
 }
 @media (min-width: 768px) {
   .page-content__container {
+    padding-top: 250px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -1412,6 +1416,12 @@ body {
     padding-right: 35px;
   }
 }
+@media (min-width: 1200px) {
+  .footer {
+    padding-left: 82px;
+    padding-right: 82px;
+  }
+}
 .footer .container {
   display: flex;
   flex-direction: column;
@@ -1576,6 +1586,9 @@ body {
 }
 .projects-list .techs-container {
   margin-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 .projects-list .techs-container .select-button {
   cursor: pointer;

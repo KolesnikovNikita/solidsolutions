@@ -28,7 +28,6 @@ svg {
 }
 
 body {
-	background-color: $header-background-color;
 	font-family: 'Inter', sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
@@ -36,7 +35,10 @@ body {
 	overflow-wrap: break-word;
 	color: black;
 	margin: 0;
+}
 
+body#main-page {
+	background-color: $header-background-color;
 	@media (min-width: 768px) {
 		background-image: url('../assets/images/tablet.png');
 		background-repeat: no-repeat;
@@ -203,6 +205,7 @@ body {
 
 	&__container {
 		@media (min-width: 768px) {
+			padding-top: 250px;
 			display: flex;
 			flex-direction: row-reverse;
 			justify-content: space-between;
@@ -1262,6 +1265,11 @@ body {
 		padding-left: 35px;
 		padding-right: 35px;
 	}
+
+	@media (min-width: 1200px) {
+		padding-left: 82px;
+		padding-right: 82px;
+	}
 	.container {
 		display: flex;
 		flex-direction: column;
@@ -1440,8 +1448,14 @@ body {
 	padding-left: 16px;
 	padding-right: 16px;
 
+	&__cards {
+	}
+
 	.techs-container {
 		margin-bottom: 32px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
 		.select-button {
 			cursor: pointer;
 			border: 1px solid $input-text-color;
