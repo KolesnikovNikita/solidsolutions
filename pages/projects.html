@@ -90,16 +90,35 @@
 				<label for="educate" class="select-button">Educational Platform</label>
 				<input id="educate" value="educate" type="select" />
 			</div>
-			<div class="project-list__cards">
+			<div class="projects-list__cards">
 				<div class="card">
-					<div class="card__image">
+					<div
+						class="card__image"
+						style="
+							display: flex;
+							justify-content: center;
+							background-color: #e7e7eb;
+						"
+					>
 						<img
 							src="../assets/images/projects_images/proj1.png"
 							width="205"
 							height="440"
 							alt="card"
 						/>
+						<div class="card__hover-wrapper">
+							<div class="card-hover">
+								<ul>
+									<li>Development</li>
+									<li>Service Name</li>
+									<li>Service Name</li>
+									<li>Service Name</li>
+								</ul>
+								<a><img src="../assets/images/Open.svg" alt="link-site" /></a>
+							</div>
+						</div>
 					</div>
+
 					<div class="card__body">
 						<div class="card__options">
 							<label for="mobileApp" class="select-button">Mobile App</label>
@@ -118,8 +137,27 @@
 					</div>
 				</div>
 				<div class="card">
-					<div class="card__image">
+					<div
+						class="card__image"
+						style="
+							background-color: #bbff92;
+							display: flex;
+							justify-content: flex-start;
+						"
+					>
 						<img src="../assets/images/projects_images/proj2.png" alt="card" />
+
+						<div class="card__hover-wrapper">
+							<div class="card-hover">
+								<ul>
+									<li>Development</li>
+									<li>Service Name</li>
+									<li>Service Name</li>
+									<li>Service Name</li>
+								</ul>
+								<a><img src="../assets/images/Open.svg" alt="link-site" /></a>
+							</div>
+						</div>
 					</div>
 					<div class="card__body">
 						<div class="card__options">
@@ -139,8 +177,26 @@
 					</div>
 				</div>
 				<div class="card">
-					<div class="card__image">
+					<div
+						class="card__image"
+						style="
+							display: flex;
+							justify-content: flex-end;
+							background-color: #3769f1;
+						"
+					>
 						<img src="../assets/images/projects_images/proj3.png" alt="card" />
+						<div class="card__hover-wrapper">
+							<div class="card-hover">
+								<ul>
+									<li>Development</li>
+									<li>Service Name</li>
+									<li>Service Name</li>
+									<li>Service Name</li>
+								</ul>
+								<a><img src="../assets/images/Open.svg" alt="link-site" /></a>
+							</div>
+						</div>
 					</div>
 					<div class="card__body">
 						<div class="card__options">
@@ -198,17 +254,17 @@
 					<div class="feedback__form">
 						<p>I'm looking for help with:</p>
 						<form>
-							<div class="select-container">
-								<label for="development" class="select-button"
+							<div class="checkbox-container">
+								<label for="development" class="checkbox-button"
 									>Development</label
 								>
-								<input id="development" value="development" type="select" />
+								<input id="development" value="development" type="checkbox" />
 
-								<label for="design" class="select-button">Design </label>
-								<input id="design" value="design" type="select" />
+								<label for="design" class="checkbox-button">Design </label>
+								<input id="design" value="design" type="checkbox" />
 
-								<label for="other" class="select-button">Other</label>
-								<input id="other" value="other" type="select" />
+								<label for="other" class="checkbox-button">Other</label>
+								<input id="other" value="other" type="checkbox" />
 							</div>
 							<div class="input-container">
 								<input type="text" placeholder="Your full name" />

@@ -81,11 +81,27 @@ function initCheckbox() {
 	});
 }
 
+function initTech() {
+	const checkboxContainer = document.querySelector('.techs-container');
+	const btns = checkboxContainer.querySelectorAll('.select-button');
+
+	btns.forEach(function (btn) {
+		btn.addEventListener('click', function () {
+			if (!btn.classList.contains('active-select')) {
+				btn.classList.add('active-select');
+			} else {
+				btn.classList.remove('active-select');
+			}
+		});
+	});
+}
+
 function initComponents() {
 	dropDownMenu();
 	selectService();
 	initCheckbox();
 	activateLink();
+	initTech();
 }
 
 initComponents();

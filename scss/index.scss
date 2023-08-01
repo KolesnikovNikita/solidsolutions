@@ -1447,8 +1447,112 @@ body#main-page {
 	background-color: #fff;
 	padding-left: 16px;
 	padding-right: 16px;
+	margin-bottom: 80px;
+
+	.techs-container {
+	}
+
+	h1 {
+		@extend %large-header;
+		margin-bottom: 32px;
+		color: #000;
+	}
 
 	&__cards {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		@media (min-width: 768px) {
+		}
+		.card {
+			max-width: 410px;
+			@media (min-width: 768px) {
+				min-width: 350px;
+			}
+			&__body {
+				margin-top: 16px;
+			}
+			&__image {
+				padding-top: 30px;
+				padding-bottom: 30px;
+				border-radius: 14px;
+				position: relative;
+			}
+			&__hover-wrapper {
+				display: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: $button-tech-color;
+				border-radius: 14px;
+				opacity: 0.800000011920929;
+
+				padding-top: 45px;
+
+				.card-hover {
+					ul {
+						display: block;
+						padding-left: 50px;
+						color: #fff;
+
+						li {
+							cursor: pointer;
+							&:not(:last-child) {
+								margin-bottom: 12px;
+								font-size: 16px;
+								font-weight: 500;
+								letter-spacing: 0.32px;
+							}
+						}
+					}
+					a {
+						position: absolute;
+						bottom: 25px;
+						right: 25px;
+						cursor: pointer;
+					}
+				}
+			}
+			&__options {
+				input {
+					display: none;
+				}
+				.select-button {
+					cursor: pointer;
+					border: 1px solid #b7b6c2;
+					padding: 8px 12px;
+					border-radius: 40px;
+					font-size: 14px;
+					color: #b7b6c2;
+					font-weight: 500;
+
+					&.active-select {
+						background-color: $main-dark-blue-color;
+						color: #fff;
+						border-color: transparent;
+					}
+				}
+			}
+			&__footer {
+			}
+			&__name {
+				font-size: 24px;
+				font-weight: 500;
+				margin-top: 10px;
+			}
+			&__time {
+				font-size: 12px;
+				font-style: normal;
+				font-weight: 400;
+				opacity: 0.5;
+			}
+		}
+
+		.card__image:hover .card__hover-wrapper {
+			display: block;
+		}
 	}
 
 	.techs-container {
@@ -1464,6 +1568,12 @@ body#main-page {
 			font-size: 14px;
 			color: $input-text-color;
 			font-weight: 500;
+
+			&.active-select {
+				background-color: $main-dark-blue-color;
+				color: #fff;
+				border-color: transparent;
+			}
 		}
 	}
 	input {
