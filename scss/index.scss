@@ -21,7 +21,8 @@ a {
 	color: inherit;
 }
 
-img {
+img,
+svg {
 	max-width: 100%;
 	height: auto;
 }
@@ -1411,11 +1412,20 @@ body {
 .swiper-button-prev {
 	width: 32px;
 	height: 32px;
+
 	background-size: contain;
 	background-repeat: no-repeat;
-}
 
-.swiper-button-next {
+	transition: background-color 0.3s ease;
+
+	:hover {
+		background-color: #2f2f2f; /* Background color on hover */
+		border-radius: 50%;
+	}
+
+	:hover path {
+		stroke: #ffffff; /* Arrow color on hover */
+	}
 }
 
 .swiper-button-prev {
