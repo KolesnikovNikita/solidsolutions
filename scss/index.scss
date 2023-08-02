@@ -245,8 +245,11 @@ body {
 
 			.content {
 				@extend %box-blur;
-				max-width: 230px;
-				min-height: 126px;
+				&:nth-child(2) {
+					width: 252px;
+					height: 148px;
+				}
+
 				padding: 20px;
 				.successful {
 					font-size: 25px;
@@ -275,10 +278,18 @@ body {
 				}
 
 				.team-list {
+					height: 40px;
 					ul {
 						@extend %horizontal-list;
+						justify-content: center;
 						li {
 							margin-right: -5px;
+							height: 40px;
+							width: 40px;
+							img {
+								height: 40px;
+								width: 38px;
+							}
 						}
 					}
 				}
@@ -409,6 +420,17 @@ body {
 			padding-bottom: 100px;
 			padding-left: 35px;
 			padding-right: 35px;
+			flex-direction: row;
+			gap: 16px;
+		}
+		@media (min-width: 1024px) {
+			padding-left: 120px;
+			padding-right: 120px;
+		}
+
+		@media (min-width: 1200px) {
+			padding-left: 100px;
+			padding-right: 100px;
 		}
 
 		@media (min-width: 1400px) {
@@ -420,9 +442,10 @@ body {
 	&__container {
 		@media (min-width: 768px) {
 			display: flex;
+			flex-direction: column;
 			gap: 16px;
 			&:last-child {
-				margin-top: auto;
+				margin-top: 15%;
 			}
 		}
 	}
@@ -431,7 +454,11 @@ body {
 		max-width: 370px;
 
 		@media (min-width: 768px) {
-			min-width: 312px;
+			min-width: 340px;
+		}
+
+		@media (min-width: 1024px) {
+			min-width: 380px;
 		}
 
 		@media (min-width: 1200px) {
@@ -454,6 +481,7 @@ body {
 		border-radius: 16px;
 		&__header {
 			padding-left: 27px;
+			padding-right: 16px;
 			padding-top: 27px;
 		}
 
@@ -498,6 +526,7 @@ body {
 		@media (min-width: 1200px) {
 			font-size: 48px;
 			font-weight: 500;
+			margin-bottom: 72px;
 			letter-spacing: -0.96px;
 		}
 	}
@@ -546,13 +575,18 @@ body {
 		padding-right: 53px;
 		font-size: 16px;
 		font-weight: 500;
-		width: 220px;
+
 		padding-top: 11px;
 		padding-bottom: 11px;
 		border-radius: 40px;
 		background-color: $deep-dark-color;
 		color: #fff;
 		position: relative;
+
+		@media (min-width: 1200px) {
+			padding-top: 14px;
+			padding-bottom: 14px;
+		}
 
 		img {
 			position: absolute;
@@ -563,6 +597,25 @@ body {
 }
 
 .technologies-used {
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 232px;
+		background: linear-gradient(
+			90deg,
+			#f8f8f8 0%,
+			rgba(248, 248, 248, 0) 26.35%,
+			rgba(248, 248, 248, 0.01) 77.4%,
+			#f8f8f8 100%
+		);
+		transition: opacity 0.38s ease, visibility 0.38s ease;
+	}
+
 	.scroll-right {
 		margin-bottom: 32px;
 	}
@@ -571,10 +624,7 @@ body {
 			margin-right: 32px;
 		}
 	}
-	@media (min-width: 1200px) {
-		padding-left: 190px;
-		padding-right: 190px;
-	}
+
 	padding-top: 55px;
 	padding-bottom: 55px;
 	background-color: $header-background-color;
@@ -664,8 +714,8 @@ body {
 		.chat-image {
 			img {
 				@media (min-width: 1200px) {
-					width: 600px;
-					height: 495px;
+					width: 425px;
+					height: 400px;
 				}
 			}
 		}
@@ -862,6 +912,10 @@ body {
 					margin-bottom: 0;
 				}
 			}
+
+			@media (min-width: 1200px) {
+				padding-right: 45px;
+			}
 		}
 
 		@media (min-width: 1200px) {
@@ -907,7 +961,12 @@ body {
 			}
 
 			@media (min-width: 1200px) {
-				left: 240px;
+				left: 235px;
+				bottom: 24px;
+			}
+
+			@media (min-width: 1400px) {
+				left: 245px;
 				bottom: 24px;
 			}
 		}
@@ -1030,6 +1089,11 @@ body {
 			font-size: 34px;
 			font-weight: 500;
 			width: 100%;
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 48px;
+			font-weight: 500;
 		}
 	}
 

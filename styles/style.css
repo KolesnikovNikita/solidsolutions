@@ -384,9 +384,11 @@ body {
   }
 }
 .page-content .team-info__container .content {
-  max-width: 230px;
-  min-height: 126px;
   padding: 20px;
+}
+.page-content .team-info__container .content:nth-child(2) {
+  width: 252px;
+  height: 148px;
 }
 .page-content .team-info__container .content .successful {
   font-size: 25px;
@@ -412,8 +414,20 @@ body {
 .page-content .team-info__container .content:last-child {
   margin-left: -45%;
 }
+.page-content .team-info__container .content .team-list {
+  height: 40px;
+}
+.page-content .team-info__container .content .team-list ul {
+  justify-content: center;
+}
 .page-content .team-info__container .content .team-list ul li {
   margin-right: -5px;
+  height: 40px;
+  width: 40px;
+}
+.page-content .team-info__container .content .team-list ul li img {
+  height: 40px;
+  width: 38px;
 }
 .page-content .team-info .name {
   font-size: 16px;
@@ -558,6 +572,20 @@ body {
     padding-bottom: 100px;
     padding-left: 35px;
     padding-right: 35px;
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  .projects__examples {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media (min-width: 1200px) {
+  .projects__examples {
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
 @media (min-width: 1400px) {
@@ -569,10 +597,11 @@ body {
 @media (min-width: 768px) {
   .projects__container {
     display: flex;
+    flex-direction: column;
     gap: 16px;
   }
   .projects__container:last-child {
-    margin-top: auto;
+    margin-top: 15%;
   }
 }
 .projects .card {
@@ -581,7 +610,12 @@ body {
 }
 @media (min-width: 768px) {
   .projects .card {
-    min-width: 312px;
+    min-width: 340px;
+  }
+}
+@media (min-width: 1024px) {
+  .projects .card {
+    min-width: 380px;
   }
 }
 @media (min-width: 1200px) {
@@ -605,6 +639,7 @@ body {
 }
 .projects .card__header {
   padding-left: 27px;
+  padding-right: 16px;
   padding-top: 27px;
 }
 .projects .card__body {
@@ -642,6 +677,7 @@ body {
   .projects h2 {
     font-size: 48px;
     font-weight: 500;
+    margin-bottom: 72px;
     letter-spacing: -0.96px;
   }
 }
@@ -684,13 +720,18 @@ body {
   padding-right: 53px;
   font-size: 16px;
   font-weight: 500;
-  width: 220px;
   padding-top: 11px;
   padding-bottom: 11px;
   border-radius: 40px;
   background-color: #1a1a1a;
   color: #fff;
   position: relative;
+}
+@media (min-width: 1200px) {
+  .projects-cases a {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
 }
 .projects-cases a img {
   position: absolute;
@@ -699,21 +740,26 @@ body {
 }
 
 .technologies-used {
+  position: relative;
   padding-top: 55px;
   padding-bottom: 55px;
   background-color: #f8f8f8;
+}
+.technologies-used::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 232px;
+  background: linear-gradient(90deg, #f8f8f8 0%, rgba(248, 248, 248, 0) 26.35%, rgba(248, 248, 248, 0.01) 77.4%, #f8f8f8 100%);
+  transition: opacity 0.38s ease, visibility 0.38s ease;
 }
 .technologies-used .scroll-right {
   margin-bottom: 32px;
 }
 .technologies-used marquee img {
   margin-right: 32px;
-}
-@media (min-width: 1200px) {
-  .technologies-used {
-    padding-left: 190px;
-    padding-right: 190px;
-  }
 }
 
 .advantages {
@@ -809,8 +855,8 @@ body {
 }
 @media (min-width: 1200px) {
   .advantages__desktop .chat-image img {
-    width: 600px;
-    height: 495px;
+    width: 425px;
+    height: 400px;
   }
 }
 
@@ -1013,6 +1059,11 @@ body {
   }
 }
 @media (min-width: 1200px) {
+  .about .desktop-container .text {
+    padding-right: 45px;
+  }
+}
+@media (min-width: 1200px) {
   .about .desktop-container {
     margin-bottom: 88px;
   }
@@ -1068,7 +1119,13 @@ body {
 }
 @media (min-width: 1200px) {
   .about .about-button::after {
-    left: 240px;
+    left: 235px;
+    bottom: 24px;
+  }
+}
+@media (min-width: 1400px) {
+  .about .about-button::after {
+    left: 245px;
     bottom: 24px;
   }
 }
@@ -1184,6 +1241,12 @@ body {
     font-size: 34px;
     font-weight: 500;
     width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .customer h3 {
+    font-size: 48px;
+    font-weight: 500;
   }
 }
 .customer__cards {

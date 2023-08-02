@@ -64,21 +64,41 @@ function initCheckbox() {
 
 	btns.forEach(function (btn) {
 		btn.addEventListener('click', function () {
-			if (btn.getAttribute('for') == 'other') {
+			const forValue = btn.getAttribute('for');
+
+			if (forValue === 'other') {
 				btns.forEach(function (otherBtn) {
-					if (otherBtn != btn) {
+					if (otherBtn !== btn) {
 						otherBtn.classList.remove('active-checkbox');
 					}
 				});
 			} else {
-				if (!btn.classList.contains('active-checkbox')) {
-					btn.classList.add('active-checkbox');
-				} else {
-					btn.classList.remove('active-checkbox');
+				const otherBtn = checkboxContainer.querySelector('label[for="other"]');
+				if (otherBtn) {
+					otherBtn.classList.remove('active-checkbox');
 				}
+			}
+
+			if (!btn.classList.contains('active-checkbox')) {
+				btn.classList.add('active-checkbox');
+			} else {
+				btn.classList.remove('active-checkbox');
 			}
 		});
 	});
+}
+
+function changeButtonText() {
+	const btn = document.getElementById('learnLink');
+	const windowWidth = 1200;
+	console.log(typeof windowWidth);
+	if (window.innerWidth > windowWidth) {
+		btn.innerText = 'Learn More about us';
+	} else {
+		btn.innerText = 'Learn more';
+	}
+	window.addEventListener('load', changeButtonText);
+	window.addEventListener('resize', changeButtonText);
 }
 
 function initComponents() {
@@ -86,6 +106,7 @@ function initComponents() {
 	selectService();
 	initCheckbox();
 	activateLink();
+	changeButtonText();
 }
 
 initComponents();
