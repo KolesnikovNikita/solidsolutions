@@ -71,8 +71,10 @@
 		</section>
 		<section class="projects-list">
 			<h1>Our Projects</h1>
-			<div class="techs-container">
-				<label for="mobileApp" class="select-button">Mobile App</label>
+			<div id="techs-container">
+				<label for="mobileApp" class="select-button active-select"
+					>Mobile App</label
+				>
 				<input id="mobileApp" value="mobile-app" type="select" />
 
 				<label for="ios" class="select-button">IOS</label>
@@ -101,6 +103,141 @@
 						"
 					>
 						<img
+							class="project-img"
+							src="../assets/images/projects_images/proj1.png"
+							width="205"
+							alt="card"
+						/>
+						<div class="card__hover-wrapper">
+							<div class="card-hover">
+								<ul>
+									<li>Development</li>
+									<li>Service Name</li>
+									<li>Service Name</li>
+									<li>Service Name</li>
+								</ul>
+								<a><img src="../assets/images/Open.svg" alt="link-site" /></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="card__body">
+						<div class="card__options">
+							<label for="mobileApp" class="select-button active-select"
+								>Mobile App</label
+							>
+							<input id="mobileApp" value="mobile-app" type="select" />
+
+							<label for="ios" class="select-button">IOS</label>
+							<input id="ios" value="ios" type="select" />
+
+							<label for="android" class="select-button">Android</label>
+							<input id="android" value="android" type="select" />
+						</div>
+					</div>
+					<div class="card__footer">
+						<div class="card__name">LMCT+</div>
+						<div class="card__time">03 May 2023</div>
+					</div>
+				</div>
+				<div class="card">
+					<div
+						class="card__image"
+						style="
+							background-color: #bbff92;
+							display: flex;
+							justify-content: flex-start;
+						"
+					>
+						<img
+							class="project-img"
+							src="../assets/images/projects_images/proj2.png"
+							alt="card"
+						/>
+
+						<div class="card__hover-wrapper">
+							<div class="card-hover">
+								<ul>
+									<li>Development</li>
+									<li>Service Name</li>
+									<li>Service Name</li>
+									<li>Service Name</li>
+								</ul>
+								<a><img src="../assets/images/Open.svg" alt="link-site" /></a>
+							</div>
+						</div>
+					</div>
+					<div class="card__body">
+						<div class="card__options">
+							<label for="mobileApp" class="select-button">Landing</label>
+							<input id="mobileApp" value="mobile-app" type="select" />
+
+							<label for="ios" class="select-button">IOS</label>
+							<input id="ios" value="ios" type="select" />
+
+							<label for="android" class="select-button">Android</label>
+							<input id="android" value="android" type="select" />
+						</div>
+					</div>
+					<div class="card__footer">
+						<div class="card__name">Lawzilla</div>
+						<div class="card__time">03 May 2023</div>
+					</div>
+				</div>
+				<div class="card">
+					<div
+						class="card__image"
+						style="
+							display: flex;
+							justify-content: flex-end;
+							background-color: #3769f1;
+						"
+					>
+						<img
+							class="project-img"
+							src="../assets/images/projects_images/proj3.png"
+							alt="card"
+						/>
+						<div class="card__hover-wrapper">
+							<div class="card-hover">
+								<ul>
+									<li>Development</li>
+									<li>Service Name</li>
+									<li>Service Name</li>
+									<li>Service Name</li>
+								</ul>
+								<a><img src="../assets/images/Open.svg" alt="link-site" /></a>
+							</div>
+						</div>
+					</div>
+					<div class="card__body">
+						<div class="card__options">
+							<label for="mobileApp" class="select-button">Landing</label>
+							<input id="mobileApp" value="mobile-app" type="select" />
+
+							<label for="ios" class="select-button">IOS</label>
+							<input id="ios" value="ios" type="select" />
+
+							<label for="android" class="select-button">Android</label>
+							<input id="android" value="android" type="select" />
+						</div>
+					</div>
+					<div class="card__footer">
+						<div class="card__name">CRM for dentists</div>
+						<div class="card__time">03 May 2023</div>
+					</div>
+				</div>
+				<div class="card">
+					<div
+						class="card__image"
+						style="
+							display: flex;
+							justify-content: center;
+							background-color: #e7e7eb;
+						"
+					>
+						<img
+							class="project-img"
 							src="../assets/images/projects_images/proj1.png"
 							width="205"
 							height="440"
@@ -145,7 +282,11 @@
 							justify-content: flex-start;
 						"
 					>
-						<img src="../assets/images/projects_images/proj2.png" alt="card" />
+						<img
+							class="project-img"
+							src="../assets/images/projects_images/proj2.png"
+							alt="card"
+						/>
 
 						<div class="card__hover-wrapper">
 							<div class="card-hover">
@@ -185,7 +326,11 @@
 							background-color: #3769f1;
 						"
 					>
-						<img src="../assets/images/projects_images/proj3.png" alt="card" />
+						<img
+							class="project-img"
+							src="../assets/images/projects_images/proj3.png"
+							alt="card"
+						/>
 						<div class="card__hover-wrapper">
 							<div class="card-hover">
 								<ul>
@@ -357,5 +502,6 @@
 			</footer>
 		</section>
 		<script src="../js/index.js"></script>
+		<script src="../js/projects.js"></script>
 	</body>
 </html>

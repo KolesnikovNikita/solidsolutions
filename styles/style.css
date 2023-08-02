@@ -1642,37 +1642,63 @@ body#main-page {
 }
 
 .projects-list {
-  margin-top: 150px;
+  padding-top: 110px;
   background-color: #fff;
   padding-left: 16px;
   padding-right: 16px;
   margin-bottom: 80px;
+}
+@media (min-width: 1024px) {
+  .projects-list {
+    padding-left: 41px;
+    padding-right: 41px;
+    padding-top: 160px;
+  }
+}
+@media (min-width: 1200px) {
+  .projects-list {
+    margin-bottom: 130px;
+    padding-left: 82px;
+    padding-right: 82px;
+  }
 }
 .projects-list h1 {
   margin-bottom: 32px;
   color: #000;
 }
 .projects-list__cards {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
-}
-.projects-list__cards .card {
-  max-width: 410px;
+  align-items: stretch;
 }
 @media (min-width: 768px) {
-  .projects-list__cards .card {
-    min-width: 350px;
+  .projects-list__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .projects-list__cards {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 .projects-list__cards .card__body {
   margin-top: 16px;
 }
 .projects-list__cards .card__image {
+  position: relative;
   padding-top: 30px;
-  padding-bottom: 30px;
   border-radius: 14px;
   position: relative;
+  height: 340px;
+}
+.projects-list__cards .card__image .project-img {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .projects-list__cards .card__hover-wrapper {
   display: none;
@@ -1737,13 +1763,13 @@ body#main-page {
 .projects-list__cards .card__image:hover .card__hover-wrapper {
   display: block;
 }
-.projects-list .techs-container {
-  margin-bottom: 32px;
+.projects-list #techs-container {
+  margin-bottom: 52px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
-.projects-list .techs-container .select-button {
+.projects-list #techs-container .select-button {
   cursor: pointer;
   border: 1px solid #b7b6c2;
   padding: 8px 12px;
@@ -1752,7 +1778,7 @@ body#main-page {
   color: #b7b6c2;
   font-weight: 500;
 }
-.projects-list .techs-container .select-button.active-select {
+.projects-list #techs-container .select-button.active-select {
   background-color: #3769f1;
   color: #fff;
   border-color: transparent;
