@@ -36,7 +36,7 @@
   cursor: pointer;
 }
 
-.projects .technoligies ul, .page-content .team-info__container .content .team-list ul, .page-header__desktop .desktop-container ul {
+.cases-list .grid .case__image .case-hover-wrapper .case-hover ul, .projects .technoligies ul, .page-content .team-info__container .content .team-list ul, .page-header__desktop .desktop-container ul {
   padding: 0;
   list-style: none;
   cursor: pointer;
@@ -99,7 +99,7 @@
   margin: 0;
 }
 
-.projects-list h1, .feedback h3, .customer h3, .about h3, .services h3, .projects h2 {
+.cases-list h1, .projects-list h1, .feedback h3, .customer h3, .about h3, .services h3, .projects h2 {
   font-size: 24px;
   font-weight: 600;
   color: #0b103d;
@@ -176,9 +176,13 @@ body {
   overflow-wrap: break-word;
   color: black;
   margin: 0;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 body#main-page {
+  max-width: 1440px;
+  margin: 0 auto;
   background-color: #f8f8f8;
 }
 @media (min-width: 768px) {
@@ -1467,6 +1471,7 @@ body#main-page {
 }
 
 .footer {
+  z-index: 123;
   padding-left: 20px;
   padding-right: 20px;
   border-top-right-radius: 40px;
@@ -1552,6 +1557,7 @@ body#main-page {
 .footer__social a {
   cursor: pointer;
   margin-right: 17px;
+  opacity: 0.7;
 }
 .footer__explore {
   margin-bottom: 64px;
@@ -1592,8 +1598,8 @@ body#main-page {
   margin-bottom: 20px;
 }
 .footer__underline {
-  background-color: #666;
-  width: 350px;
+  color: #fff;
+  opacity: 0.7;
 }
 @media (min-width: 768px) {
   .footer__underline {
@@ -1689,7 +1695,6 @@ body#main-page {
   position: relative;
   padding-top: 30px;
   border-radius: 14px;
-  position: relative;
   height: 340px;
 }
 .projects-list__cards .card__image .project-img {
@@ -1709,8 +1714,13 @@ body#main-page {
   height: 100%;
   background-color: #0e0d35;
   border-radius: 14px;
-  opacity: 0.8000000119;
   padding-top: 45px;
+}
+.projects-list__cards .card__hover-wrapper:not(.card-hover) {
+  background-color: rgba(14, 13, 53, 0.8);
+}
+.projects-list__cards .card__hover-wrapper .card-hover {
+  opacity: 1;
 }
 .projects-list__cards .card__hover-wrapper .card-hover ul {
   display: block;
@@ -1784,6 +1794,97 @@ body#main-page {
   border-color: transparent;
 }
 .projects-list input {
+  display: none;
+}
+
+.cases-list {
+  padding-top: 110px;
+  background-color: #fff;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 80px;
+}
+.cases-list h1 {
+  margin-bottom: 32px;
+  color: #000;
+}
+.cases-list .cases-image {
+  width: 100%;
+}
+.cases-list .grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cases-list .grid .case__image {
+  position: relative;
+}
+.cases-list .grid .case__image .case-hover-wrapper {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+  padding-left: 40px;
+  border-radius: 14px;
+  padding-top: 45px;
+}
+.cases-list .grid .case__image .case-hover-wrapper .case-hover h4 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #262549;
+}
+.cases-list .grid .case__image .case-hover-wrapper .case-hover ul li {
+  padding: 8px 12px;
+  background-color: #3769f1;
+  border-radius: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+.cases-list .grid .case__image .case-hover-wrapper .case-hover ul li:not(:last-child) {
+  margin-right: 8px;
+}
+.cases-list .grid .case__image .case-hover-wrapper .case-hover a {
+  position: absolute;
+  right: 16px;
+  bottom: 42px;
+}
+.cases-list .grid .grid-item {
+  width: 304px;
+  margin-bottom: 20px;
+}
+.cases-list .grid .grid-item--lg {
+  width: 628px;
+}
+.cases-list .grid .case__image:hover .case-hover-wrapper {
+  display: block;
+}
+.cases-list #techs-container {
+  margin-bottom: 52px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.cases-list #techs-container .select-button {
+  cursor: pointer;
+  border: 1px solid #b7b6c2;
+  padding: 8px 12px;
+  border-radius: 40px;
+  font-size: 14px;
+  color: #b7b6c2;
+  font-weight: 500;
+}
+.cases-list #techs-container .select-button.active-select {
+  background-color: #3769f1;
+  color: #fff;
+  border-color: transparent;
+}
+.cases-list input {
   display: none;
 }
 

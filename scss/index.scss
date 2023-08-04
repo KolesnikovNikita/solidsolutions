@@ -35,9 +35,13 @@ body {
 	overflow-wrap: break-word;
 	color: black;
 	margin: 0;
+	max-width: 1440px;
+	margin: 0 auto;
 }
 
 body#main-page {
+	max-width: 1440px;
+	margin: 0 auto;
 	background-color: $header-background-color;
 	@media (min-width: 768px) {
 		background-image: url('../assets/images/tablet.png');
@@ -1323,6 +1327,7 @@ body#main-page {
 }
 
 .footer {
+	z-index: 123;
 	padding-left: 20px;
 	padding-right: 20px;
 	@media (min-width: 768px) {
@@ -1403,6 +1408,7 @@ body#main-page {
 		a {
 			cursor: pointer;
 			margin-right: 17px;
+			opacity: 0.7;
 		}
 	}
 
@@ -1453,8 +1459,9 @@ body#main-page {
 	}
 
 	&__underline {
-		background-color: #666;
-		width: 350px;
+		color: #fff;
+		opacity: 0.7;
+
 		@media (min-width: 768px) {
 			width: 100%;
 		}
@@ -1504,7 +1511,7 @@ body#main-page {
 	left: -60px;
 }
 
-// ============================== OUR PROJECTS PAGE ===========================
+// ============================== OUR PROJECTS PAGE =========================== //
 
 .projects-list {
 	padding-top: 110px;
@@ -1552,7 +1559,6 @@ body#main-page {
 				position: relative;
 				padding-top: 30px;
 				border-radius: 14px;
-				position: relative;
 				height: 340px;
 
 				.project-img {
@@ -1564,7 +1570,11 @@ body#main-page {
 					transform: translate(-50%, -50%);
 				}
 			}
+
 			&__hover-wrapper {
+				&:not(.card-hover) {
+					background-color: rgba(14, 13, 53, 0.8);
+				}
 				display: none;
 				position: absolute;
 				top: 0;
@@ -1573,11 +1583,11 @@ body#main-page {
 				height: 100%;
 				background-color: $button-tech-color;
 				border-radius: 14px;
-				opacity: 0.800000011920929;
-
 				padding-top: 45px;
 
 				.card-hover {
+					opacity: 1;
+
 					ul {
 						display: block;
 						padding-left: 50px;
@@ -1594,7 +1604,7 @@ body#main-page {
 						}
 					}
 					a {
-						position: absolute; // d!!!!!!!!!
+						position: absolute;
 						bottom: 25px;
 						right: 25px;
 						cursor: pointer;
@@ -1637,6 +1647,114 @@ body#main-page {
 		}
 
 		.card__image:hover .card__hover-wrapper {
+			display: block;
+		}
+	}
+
+	#techs-container {
+		margin-bottom: 52px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+
+		.select-button {
+			cursor: pointer;
+			border: 1px solid $input-text-color;
+			padding: 8px 12px;
+			border-radius: 40px;
+			font-size: 14px;
+			color: $input-text-color;
+			font-weight: 500;
+
+			&.active-select {
+				background-color: $main-dark-blue-color;
+				color: #fff;
+				border-color: transparent;
+			}
+		}
+	}
+	input {
+		display: none;
+	}
+}
+
+// ============================== OUR CASES PAGE =========================== //
+
+.cases-list {
+	padding-top: 110px;
+	background-color: #fff;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 80px;
+
+	h1 {
+		margin-bottom: 32px;
+		color: #000;
+		@extend %large-header;
+	}
+	.cases-image {
+		width: 100%;
+	}
+
+	.grid {
+		.case {
+			&__image {
+				position: relative;
+				.case-hover-wrapper {
+					display: none;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					padding-top: 40px;
+					padding-left: 40px;
+					border-radius: 14px;
+					padding-top: 45px;
+
+					.case-hover {
+						h4 {
+							margin-top: 0;
+							margin-bottom: 20px;
+							font-size: 24px;
+							font-weight: 500;
+							color: $project-header-color;
+						}
+						ul {
+							@extend %horizontal-list;
+
+							li {
+								padding: 8px 12px;
+								background-color: $main-dark-blue-color;
+								border-radius: 40px;
+								text-align: center;
+								color: #fff;
+								font-size: 14px;
+								font-weight: 500;
+								&:not(:last-child) {
+									margin-right: 8px;
+								}
+							}
+						}
+						a {
+							position: absolute;
+							right: 16px;
+							bottom: 42px;
+						}
+					}
+				}
+			}
+		}
+		display: flex;
+		flex-wrap: wrap;
+		.grid-item {
+			width: 304px;
+			margin-bottom: 20px;
+			&--lg {
+				width: 628px;
+			}
+		}
+		.case__image:hover .case-hover-wrapper {
 			display: block;
 		}
 	}

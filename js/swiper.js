@@ -6,10 +6,6 @@ function updateSlidesPerView() {
 		slidesPerView = 2;
 	}
 
-	if (windowWidth >= 1200) {
-		slidesPerView = 3;
-	}
-
 	swiper.params.slidesPerView = slidesPerView;
 	swiper.update();
 }
