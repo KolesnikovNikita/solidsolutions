@@ -1877,6 +1877,7 @@ body#main-page {
   position: absolute;
   right: 16px;
   bottom: 42px;
+  cursor: pointer;
 }
 .cases-list .grid .case__image:hover .case-hover-wrapper {
   display: block;
