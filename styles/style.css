@@ -1798,8 +1798,11 @@ body#main-page {
   margin-bottom: 80px;
 }
 .cases-list h1 {
-  margin-bottom: 32px;
   color: #000;
+  max-width: 1276px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
 }
 .cases-list .grid {
   margin: 0 auto -20px;
