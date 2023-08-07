@@ -1,140 +1,137 @@
-@import './variables';
+@import "./variables";
 
 // Blur Styles
 
 %box-blur {
-	border-radius: 18px;
-	background: rgba(255, 255, 255, 0.38);
-	box-shadow: -32.68181228637695px 32.68181228637695px 32.68181228637695px 0px
-			rgba(255, 255, 255, 0.1) inset,
-		32.68181228637695px -32.68181228637695px 32.68181228637695px 0px rgba(
-				194,
-				194,
-				194,
-				0.1
-			) inset;
-	backdrop-filter: blur(32.68181228637695px);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.38);
+  box-shadow: -32.68181228637695px 32.68181228637695px 32.68181228637695px 0px
+      rgba(255, 255, 255, 0.1) inset,
+    32.68181228637695px -32.68181228637695px 32.68181228637695px 0px rgba(
+        194,
+        194,
+        194,
+        0.1
+      ) inset;
+  backdrop-filter: blur(32.68181228637695px);
 }
 
 // List Styles
 
 %vertical-list {
-	padding: 0;
-	list-style: none;
-	cursor: pointer;
+  padding: 0;
+  list-style: none;
 }
 
 %horizontal-list {
-	padding: 0;
-	list-style: none;
-	cursor: pointer;
-	display: flex;
-	flex-direction: row;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: row;
 }
 
 // Button Styles
 
 %middle-button {
-	font-style: normal;
-	text-align: center;
-	padding: 8px 28px;
-	border-radius: 40px;
-	cursor: pointer;
-	border-color: transparent;
-	font-size: 14px;
+  font-style: normal;
+  text-align: center;
+  padding: 8px 28px;
+  border-radius: 40px;
+  cursor: pointer;
+  border-color: transparent;
+  font-size: 14px;
 }
 
 %big-button {
-	font-style: normal;
-	text-align: center;
-	padding: 12px 32px;
-	border-radius: 40px;
-	cursor: pointer;
-	border-color: transparent;
+  font-style: normal;
+  text-align: center;
+  padding: 12px 32px;
+  border-radius: 40px;
+  cursor: pointer;
+  border-color: transparent;
 }
 
 %small-button {
-	font-style: normal;
-	text-align: center;
-	padding: 6px 10px;
-	border-radius: 27px;
-	cursor: pointer;
-	border-color: transparent;
+  font-style: normal;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 27px;
+  cursor: pointer;
+  border-color: transparent;
 }
 
 // Text Style
 
 %alt-page-text {
-	font-size: 14px;
-	font-weight: 400;
-	color: $alt-text-color;
+  font-size: 14px;
+  font-weight: 400;
+  color: $alt-text-color;
 }
 
 %page-header {
-	font-size: 24px;
-	font-style: normal;
-	color: $main--dark-header-color;
-	font-weight: 500;
-	margin: 0;
+  font-size: 24px;
+  font-style: normal;
+  color: $main--dark-header-color;
+  font-weight: 500;
+  margin: 0;
 }
 
 %card-text {
-	font-size: 14px;
-	color: $main--dark-header-color;
-	font-weight: 400;
+  font-size: 14px;
+  color: $main--dark-header-color;
+  font-weight: 400;
 }
 
 %project-header {
-	font-size: 18px;
-	font-weight: 600;
-	color: $project-header-color;
-	margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: $project-header-color;
+  margin: 0;
 }
 
 %large-header {
-	font-size: 24px;
-	font-weight: 600;
-	color: $header-dark-color;
-	margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: $header-dark-color;
+  margin: 0;
 }
 
 %footer-header {
-	margin-top: 0;
-	margin-bottom: 32px;
-	color: #fff;
-	opacity: 0.6;
-	font-size: 16px;
-	font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 32px;
+  color: #fff;
+  opacity: 0.6;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 // Page Rights
 
 %page-rights {
-	color: $footer-rights-color;
-	font-size: 14px;
-	font-weight: 400;
+  color: $footer-rights-color;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 // Header Navigation
 
 %header-navigation {
-	box-shadow: -45px 45px 45px 0px #ffffff1a inset;
-	background: #ffffffcc;
-	box-shadow: 45px -45px 45px 0px #c2c2c21a inset;
+  background: #fff;
 }
 
 // Active link
 
 %active-link {
-	color: $header-dark-color;
-	font-size: 18px;
-	font-weight: 500;
-	letter-spacing: -0.36px;
+  color: $header-dark-color;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.36px;
 
-	@media (min-width: 768px) {
-		font-size: 24px;
-	}
-	@media (min-width: 1200px) {
-		font-size: 32px;
-	}
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 32px;
+  }
 }

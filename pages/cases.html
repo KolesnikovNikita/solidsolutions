@@ -1,273 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Our Cases</title>
-		<link rel="stylesheet" href="../styles/style.css" />
-	</head>
-	<body>
-		<section class="page-header">
-			<div class="page-header__navigation">
-				<div class="container-list">
-					<div class="logo">
-						<img
-							src="../assets/images/Logo.svg"
-							alt="logo"
-							width="85"
-							height="25"
-						/>
-					</div>
-					<div class="burger" id="burgerButton">
-						<div class="burger-icon">
-							<img src="../assets/images/burger-open.svg" />
-						</div>
-					</div>
-				</div>
-				<div class="mobile-list">
-					<div class="list-container">
-						<div>
-							<ul>
-								<li><a>Main</a></li>
-								<li><a>Services</a></li>
-								<li><a>Projects</a></li>
-								<li><a>About Us</a></li>
-							</ul>
-						</div>
-						<div class="mobile-list__button">
-							<a href="#getInTouch">Book a Call</a>
-						</div>
-					</div>
-				</div>
-			</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Cases</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+  </head>
+  <body>
+    <section class="page-header">
+      <div class="page-header__navigation">
+        <div class="container-list">
+          <div class="logo">
+            <img
+              src="../assets/images/Logo.svg"
+              alt="logo"
+              width="85"
+              height="25"
+            />
+          </div>
+          <div class="burger" id="burgerButton">
+            <div class="burger-icon">
+              <img src="../assets/images/burger-open.svg" />
+            </div>
+          </div>
+        </div>
+        <div class="mobile-list">
+          <div class="list-container">
+            <div>
+              <ul>
+                <li><a>Main</a></li>
+                <li><a>Services</a></li>
+                <li><a>Projects</a></li>
+                <li><a>About Us</a></li>
+              </ul>
+            </div>
+            <div class="mobile-list__button">
+              <a href="#getInTouch">Book a Call</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-header__desktop">
+        <div class="desktop-container">
+          <div class="logo">
+            <img
+              src="../assets/images/Logo.svg"
+              width="85"
+              alt="logo"
+              height="25"
+            />
+          </div>
+          <div class="header-links">
+            <ul>
+              <li>
+                <a style="padding-left: 10px" class="link-item active-item"
+                  >Main</a
+                >
+              </li>
+              <li><a class="link-item">Services</a></li>
+              <li><a class="link-item">Projects</a></li>
+              <li><a class="link-item">About Us</a></li>
+            </ul>
+          </div>
+          <div class="desktop__button">
+            <a href="#getInTouch">Book a Call</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-			<div class="page-header__desktop">
-				<div class="desktop-container">
-					<div class="logo">
-						<img
-							src="../assets/images/Logo.svg"
-							width="85"
-							alt="logo"
-							height="25"
-						/>
-					</div>
-					<div class="header-links">
-						<ul>
-							<li>
-								<a style="padding-left: 10px" class="link-item active-item"
-									>Main</a
-								>
-							</li>
-							<li><a class="link-item">Services</a></li>
-							<li><a class="link-item">Projects</a></li>
-							<li><a class="link-item">About Us</a></li>
-						</ul>
-					</div>
-					<div class="desktop__button">
-						<a href="#getInTouch">Book a Call</a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="cases-list">
-			<h1>Our Cases</h1>
-			<div id="techs-container">
-				<label for="mobileApp" class="select-button active-select"
-					>Mobile App</label
-				>
-				<input id="mobileApp" value="mobile-app" type="select" />
+    <section class="cases-list">
+      <h1>Our Projects</h1>
+      <div id="techs-container">
+        <label for="mobileApp" class="select-button active-select"
+          >Mobile App</label
+        >
+        <input id="mobileApp" value="mobile-app" type="select" />
 
-				<label for="ios" class="select-button">IOS</label>
-				<input id="ios" value="ios" type="select" />
+        <label for="ios" class="select-button">IOS</label>
+        <input id="ios" value="ios" type="select" />
 
-				<label for="android" class="select-button">Android</label>
-				<input id="android" value="android" type="select" />
+        <label for="android" class="select-button">Android</label>
+        <input id="android" value="android" type="select" />
 
-				<label for="crm" class="select-button">CRM</label>
-				<input id="crm" value="crm" type="select" />
+        <label for="crm" class="select-button">CRM</label>
+        <input id="crm" value="crm" type="select" />
 
-				<label for="ecommerce" class="select-button">E-commerce</label>
-				<input id="ecommerce" value="ecommerce" type="select" />
+        <label for="ecommerce" class="select-button">E-commerce</label>
+        <input id="ecommerce" value="ecommerce" type="select" />
 
-				<label for="educate" class="select-button">Educational Platform</label>
-				<input id="educate" value="educate" type="select" />
-			</div>
-			<div class="grid">
-				<div class="case grid-item--lg">
-					<div class="case__image">
-						<img
-							class="cases-image"
-							src="../assets/images/projects_images/proj1.png"
-							width="205"
-							alt="card"
-						/>
-						<div class="case-hover-wrapper">
-							<div class="case-hover">
-								<h4>LMCT+</h4>
-								<ul>
-									<li>Mobile App</li>
-									<li>IOS</li>
-									<li>Android</li>
-									<li>Automotive</li>
-								</ul>
-								<a><img src="../assets/images/Open_black.svg" /></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="case grid-item--lg">
-					<div class="case__image">
-						<img
-							class="cases-image"
-							src="../assets/images/projects_images/proj4.png"
-							width="205"
-							alt="card"
-						/>
-					</div>
-				</div>
-				<div class="case grid-item">
-					<div class="case__image">
-						<img
-							class="cases-image"
-							src="../assets/images/projects_images/proj5.png"
-							width="205"
-							alt="card"
-						/>
-					</div>
-				</div>
-				<div class="case grid-item">
-					<div class="case__image">
-						<img
-							class="cases-image"
-							src="../assets/images/projects_images/proj6.png"
-							width="205"
-							alt="card"
-						/>
-					</div>
-				</div>
-				<div class="case grid-item">
-					<div class="case__image">
-						<img
-							class="cases-image"
-							src="../assets/images/projects_images/proj7.png"
-							width="205"
-							alt="card"
-						/>
-					</div>
-				</div>
-				<div class="case grid-item">
-					<div class="case__image">
-						<img
-							class="cases-image"
-							src="../assets/images/projects_images/proj8.png"
-							width="205"
-							alt="card"
-						/>
-					</div>
-				</div>
-				<div class="case grid-item--lg">
-					<div class="case__image">
-						<img
-							class="cases-image"
-							src="../assets/images/projects_images/proj9.png"
-							width="205"
-							alt="card"
-						/>
-					</div>
-				</div>
-				<div class="case grid-item--lg">
-					<div class="case__image">
-						<img
-							class="cases-image"
-							src="../assets/images/projects_images/proj10.png"
-							width="205"
-							alt="card"
-						/>
-					</div>
-				</div>
-			</div>
-		</section>
+        <label for="educate" class="select-button">Educational Platform</label>
+        <input id="educate" value="educate" type="select" />
+      </div>
+      <div class="grid">
+        <div class="grid-sizer"></div>
+        <div class="gutter-sizer"></div>
 
-		<section class="special-gradient">
-			<footer class="footer">
-				<div class="container">
-					<div class="socials">
-						<h3>Solid Solutions</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-							amet justo ipsum.
-						</p>
-						<div class="footer__social">
-							<div>
-								<a
-									><img
-										src="../assets/images/footer_img/instagram.svg"
-										width="32"
-										height="32"
-								/></a>
-							</div>
-							<div>
-								<a
-									><img
-										src="../assets/images/footer_img/linkedln.svg"
-										width="32"
-										height="32"
-								/></a>
-							</div>
-							<div>
-								<a
-									><img
-										src="../assets/images/footer_img/facebook 01.svg"
-										width="32"
-										height="32"
-								/></a>
-							</div>
-							<div>
-								<a
-									><img
-										src="../assets/images/footer_img/skype.svg"
-										width="32"
-										height="32"
-								/></a>
-							</div>
-						</div>
-					</div>
-					<div class="explore">
-						<div class="footer__explore">
-							<h4>Explore</h4>
-							<div>
-								<a>Main</a>
-								<a>Services</a>
-							</div>
-							<div>
-								<a>Projects</a>
-								<a>About Us</a>
-							</div>
-						</div>
-					</div>
-					<div class="contacts">
-						<div class="footer__in-touch">
-							<h4>Get in touch</h4>
-							<div>+38 (096) 830 87 08</div>
-							<div>office@solid-sl.com</div>
-							<div>3024 Joes Road, Albany, NY 12207</div>
-						</div>
-					</div>
-				</div>
+        <div class="grid-item grid-item--width2">
+          <div class="case">
+            <div class="case__image">
+              <img src="../assets/images/projects_images/proj1.png" />
+              <div class="case-hover-wrapper">
+                <div class="case-hover">
+                  <ul>
+                    <li>Mobile App</li>
+                    <li>IOS</li>
+                    <li>Android</li>
+                    <li>Automotive</li>
+                  </ul>
+                  <a
+                    ><img src="../assets/images/Open_black.svg" alt="goto"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item grid-item--width2">
+          <div class="case">
+            <div class="case__image">
+              <img src="../assets/images/projects_images/proj4.png" />
+              <div class="case-hover-wrapper">
+                <div class="case-hover">
+                  <ul>
+                    <li>Mobile App</li>
+                    <li>IOS</li>
+                    <li>Android</li>
+                    <li>Automotive</li>
+                  </ul>
+                  <a
+                    ><img src="../assets/images/Open_black.svg" alt="goto"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="case">
+            <div class="case__image">
+              <img src="../assets/images/projects_images/proj5.png" />
+              <div class="case-hover-wrapper">
+                <div class="case-hover">
+                  <ul>
+                    <li>Mobile App</li>
+                    <li>IOS</li>
+                    <li>Android</li>
+                    <li>Automotive</li>
+                  </ul>
+                  <a
+                    ><img src="../assets/images/Open_black.svg" alt="goto"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="case">
+            <div class="case__image">
+              <img src="../assets/images/projects_images/proj6.png" />
+              <div class="case-hover-wrapper">
+                <div class="case-hover">
+                  <ul>
+                    <li>Mobile App</li>
+                    <li>IOS</li>
+                    <li>Android</li>
+                    <li>Automotive</li>
+                  </ul>
+                  <a
+                    ><img src="../assets/images/Open_black.svg" alt="goto"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="case">
+            <div class="case__image">
+              <img src="../assets/images/projects_images/proj7.png" />
+              <div class="case-hover-wrapper">
+                <div class="case-hover">
+                  <ul>
+                    <li>Mobile App</li>
+                    <li>IOS</li>
+                    <li>Android</li>
+                    <li>Automotive</li>
+                  </ul>
+                  <a
+                    ><img src="../assets/images/Open_black.svg" alt="goto"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="case">
+            <div class="case__image">
+              <img src="../assets/images/projects_images/proj8.png" />
+              <div class="case-hover-wrapper">
+                <div class="case-hover">
+                  <ul>
+                    <li>Mobile App</li>
+                    <li>IOS</li>
+                    <li>Android</li>
+                    <li>Automotive</li>
+                  </ul>
+                  <a
+                    ><img src="../assets/images/Open_black.svg" alt="goto"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item grid-item--width2">
+          <div class="case">
+            <div class="case__image">
+              <img src="../assets/images/projects_images/proj9.png" />
+              <div class="case-hover-wrapper">
+                <div class="case-hover">
+                  <ul>
+                    <li>Mobile App</li>
+                    <li>IOS</li>
+                    <li>Android</li>
+                    <li>Automotive</li>
+                  </ul>
+                  <a
+                    ><img src="../assets/images/Open_black.svg" alt="goto"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item grid-item--width2">
+          <div class="case">
+            <div class="case__image">
+              <img src="../assets/images/projects_images/proj10.png" />
+              <div class="case-hover-wrapper">
+                <div class="case-hover">
+                  <ul>
+                    <li>Mobile App</li>
+                    <li>IOS</li>
+                    <li>Android</li>
+                    <li>Automotive</li>
+                  </ul>
+                  <a
+                    ><img src="../assets/images/Open_black.svg" alt="goto"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-				<hr class="footer__underline" />
-				<div class="footer__rights">
-					<div class="container">
-						<div>Made with Love by Solid Solutions</div>
-						<div>
-							All rights reserved &nbsp <span>&#183;</span> &nbsp Privacy Policy
-						</div>
-					</div>
-				</div>
-			</footer>
-		</section>
-
-		<script src="../js/layout.js"></script>
-		<script src="../js/filterButtons.js"></script>
-	</body>
+    <section class="special-gradient">
+      <footer class="footer">
+        <div class="container">
+          <div class="socials">
+            <h3>Solid Solutions</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+              amet justo ipsum.
+            </p>
+            <div class="footer__social">
+              <div>
+                <a
+                  ><img
+                    src="../assets/images/footer_img/instagram.svg"
+                    width="32"
+                    height="32"
+                /></a>
+              </div>
+              <div>
+                <a
+                  ><img
+                    src="../assets/images/footer_img/linkedln.svg"
+                    width="32"
+                    height="32"
+                /></a>
+              </div>
+              <div>
+                <a
+                  ><img
+                    src="../assets/images/footer_img/facebook 01.svg"
+                    width="32"
+                    height="32"
+                /></a>
+              </div>
+              <div>
+                <a
+                  ><img
+                    src="../assets/images/footer_img/skype.svg"
+                    width="32"
+                    height="32"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="explore">
+            <div class="footer__explore">
+              <h4>Explore</h4>
+              <div>
+                <a>Main</a>
+                <a>Services</a>
+              </div>
+              <div>
+                <a>Projects</a>
+                <a>About Us</a>
+              </div>
+            </div>
+          </div>
+          <div class="contacts">
+            <div class="footer__in-touch">
+              <h4>Get in touch</h4>
+              <div>+38 (096) 830 87 08</div>
+              <div>office@solid-sl.com</div>
+              <div>3024 Joes Road, Albany, NY 12207</div>
+            </div>
+          </div>
+        </div>
+        <hr class="footer__underline" />
+        <div class="footer__rights">
+          <div class="container">
+            <div>Made with Love by Solid Solutions</div>
+            <div>
+              All rights reserved &nbsp <span>&#183;</span> &nbsp Privacy Policy
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <script src="../js/layout.js"></script>
+    <script src="../js/filterButtons.js"></script>
+    <script src="../js/mansory.js"></script>
+  </body>
 </html>
