@@ -1684,6 +1684,15 @@ body#main-page {
   padding-right: 16px;
   margin-bottom: 80px;
 
+  @media (min-width: 1024px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media (min-width: 1224px) {
+    padding-left: 82px;
+    padding-right: 82px;
+  }
+
   h1 {
     color: #000;
     @extend %large-header;
@@ -1699,23 +1708,35 @@ body#main-page {
     display: flex;
     flex-wrap: wrap;
 
+    img {
+      width: 100%;
+    }
+
     .gutter-sizer {
       width: 20px;
     }
 
-    .grid-sizer {
-      width: 304px;
+    .grid-sizer,
+    .grid-item {
+      width: 100%;
     }
 
     .grid-item {
       max-width: 100%;
-      width: 304px;
       margin-bottom: 20px;
     }
 
-    .grid-item--width2 {
-      width: 628px;
+    @media (min-width: 1308px) {
+      .grid-sizer,
+      .grid-item {
+        width: 304px;
+      }
+
+      .grid-item--width2 {
+        width: 628px;
+      }
     }
+
     .case {
       &__image {
         position: relative;
@@ -1770,6 +1791,10 @@ body#main-page {
               right: 16px;
               bottom: 42px;
               cursor: pointer;
+              @media (min-width: 1024px) {
+                right: 24px;
+                bottom: 85px;
+              }
             }
           }
         }

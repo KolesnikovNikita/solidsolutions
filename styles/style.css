@@ -1797,6 +1797,18 @@ body#main-page {
   padding-right: 16px;
   margin-bottom: 80px;
 }
+@media (min-width: 1024px) {
+  .cases-list {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width: 1224px) {
+  .cases-list {
+    padding-left: 82px;
+    padding-right: 82px;
+  }
+}
 .cases-list h1 {
   color: #000;
   max-width: 1276px;
@@ -1810,19 +1822,28 @@ body#main-page {
   display: flex;
   flex-wrap: wrap;
 }
+.cases-list .grid img {
+  width: 100%;
+}
 .cases-list .grid .gutter-sizer {
   width: 20px;
 }
-.cases-list .grid .grid-sizer {
-  width: 304px;
+.cases-list .grid .grid-sizer,
+.cases-list .grid .grid-item {
+  width: 100%;
 }
 .cases-list .grid .grid-item {
   max-width: 100%;
-  width: 304px;
   margin-bottom: 20px;
 }
-.cases-list .grid .grid-item--width2 {
-  width: 628px;
+@media (min-width: 1308px) {
+  .cases-list .grid .grid-sizer,
+  .cases-list .grid .grid-item {
+    width: 304px;
+  }
+  .cases-list .grid .grid-item--width2 {
+    width: 628px;
+  }
 }
 .cases-list .grid .case__image {
   position: relative;
@@ -1878,6 +1899,12 @@ body#main-page {
   right: 16px;
   bottom: 42px;
   cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .cases-list .grid .case__image .case-hover-wrapper .case-hover a {
+    right: 24px;
+    bottom: 85px;
+  }
 }
 .cases-list .grid .case__image:hover .case-hover-wrapper {
   display: block;
