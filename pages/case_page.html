@@ -70,29 +70,69 @@
       </div>
     </section>
     <section class="case-content">
-      <a>back to all cases</a>
+      <a class="case-content__back">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="34"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M10 16L6 12M6 12L10 8M6 12L18 12"
+            stroke="#0E40C7"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        back to all cases</a
+      >
       <div class="case-content__project">
         <div class="types">
           <h1>Project Name</h1>
-          <div>Mobile App</div>
-          <div>IOS</div>
-          <div>Android</div>
+          <div class="types__list">
+            <div class="types__list-item">Mobile App</div>
+            <div class="types__list-item">IOS</div>
+            <div class="types__list-item">Android</div>
+          </div>
         </div>
+      </div>
 
-        <div class="case-content__overview">
+      <div class="case-content__overview">
+        <div class="info">
           <div>
             <img src="../assets/images/project_image.png" alt="project-image" />
           </div>
         </div>
-        <div class="case-content__description">
+        <div class="description">
           <h4>Project Overview</h4>
           <p>
             Description (3-4 lines) Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae
             est varius fringilla. Pellentesque placerat vitae vestibulum lorem
           </p>
-          <a>go to the website</a>
+          <a
+            >go to the website
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14 16L18 12M18 12L14 8M18 12L6 12"
+                stroke="#0E40C7"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
         </div>
+
+        <hr class="page-underline" />
 
         <div class="case-content__features">
           <div class="case-content__list">
@@ -116,19 +156,21 @@
           </div>
         </div>
       </div>
+
       <div class="case-content__image">
         <img src="../assets/images/project_image2.png" />
       </div>
 
+      <hr class="page-underline" />
+
       <div class="case-content__development">
         <div class="container">
-          <div class="name">project goals</div>
           <div class="description">
-            <h4>project goals</h4>
+            <h4>Project Goals</h4>
             <ul>
-              <li>goal 1</li>
-              <li>goal 2</li>
-              <li>goal 3</li>
+              <li>goal 1 /</li>
+              <li>goal 2 /</li>
+              <li>goal 3 /</li>
             </ul>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
@@ -138,13 +180,12 @@
           </div>
         </div>
         <div class="container">
-          <div class="name">project goals</div>
           <div class="description">
             <h4>Solutions</h4>
             <ul>
-              <li>solution 1</li>
-              <li>solution 2</li>
-              <li>solution 3</li>
+              <li>solution 1 /</li>
+              <li>solution 2 /</li>
+              <li>solution 3 /</li>
             </ul>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
@@ -156,8 +197,9 @@
             </p>
           </div>
         </div>
+        <hr class="page-underline" />
         <div class="container">
-          <div class="name">Technologies Used</div>
+          <h4>Technologies Used</h4>
           <div class="tech-list">
             <ul>
               <li><img src="../assets/images/html5.png" alt="html5" /></li>
@@ -179,35 +221,38 @@
             </ul>
           </div>
         </div>
+        <hr class="page-underline" />
       </div>
 
       <div class="case-content__challenges">
         <h4>Challenges</h4>
         <div class="container">
-          <img src="../assets/images/challenges_person.png" alt="person" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-            amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
-          </p>
-        </div>
-        <div class="container">
-          <img src="../assets/images/challenges_idea.png" alt="idea" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-            amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
-          </p>
-        </div>
-        <div class="container">
-          <img src="../assets/images/challenges_flag.png" alt="flag" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-            amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
-          </p>
+          <div>
+            <img src="../assets/images/challenges_person.png" alt="person" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+              amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
+            </p>
+          </div>
+          <div>
+            <img src="../assets/images/challenges_idea.png" alt="idea" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+              amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
+            </p>
+          </div>
+          <div>
+            <img src="../assets/images/challenges_flag.png" alt="flag" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+              amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
+            </p>
+          </div>
         </div>
       </div>
 
       <div class="case-content__roadmap">
-        <div><span>Project phases</span></div>
+        <div class="phases">Project phases</div>
         <div class="container">
           <div>
             <h4>The Roadmap</h4>
@@ -223,120 +268,137 @@
         </div>
       </div>
 
-      <div class="case-content__illustrations">
-        <div>
-          <img src="../assets/images/illustration.png" alt="illustration" />
-        </div>
-        <div>
-          <img src="../assets/images/illustration2.png" alt="illustration" />
-          <div>
+      <div id="whiteStyle">
+        <div class="case-content__roadmap">
+          <div class="phases">Phase 1</div>
+          <div class="container">
             <div>
-              <img
-                src="../assets/images/illustration3.png"
-                alt="illustration"
-              />
+              <h4>Research & Design</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+                amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
+                Pellentesque placerat vestibulum lorem
+              </p>
             </div>
             <div>
-              <img
-                src="../assets/images/illustration4.png"
-                alt="illustration"
-              />
+              <img src="../assets/images/research_design.png" alt="roadmap" />
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="case-content__development">
-        <div class="container">
+        <div class="case-content__illustrations">
           <div>
-            <span>Phase 2</span>
-            <h4>Development & Testing</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-              amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
-              Pellentesque placerat vestibulum lorem Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Sed sit amet justo ipsum.
-              Pellentesque placerat vestibulum lorem Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Sed sit amet justo ipsum. Sed
-              accumsan quam vitae est varius fringilla. Pellentesque placerat
-              vestibulum lorem
-            </p>
+            <img src="../assets/images/illustration.png" alt="illustration" />
           </div>
           <div>
-            <img src="../assets/images/develop-image.jpeg" alt="develop" />
+            <img src="../assets/images/illustration2.png" alt="illustration" />
+            <div class="double">
+              <div>
+                <img
+                  src="../assets/images/illustration3.png"
+                  alt="illustration"
+                />
+              </div>
+              <div>
+                <img
+                  src="../assets/images/illustration4.png"
+                  alt="illustration"
+                />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="case-content__maintenance">
-        <div class="container">
-          <div>
-            <span>Phase 3</span>
-            <h4>Maintenance</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-              amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
-              Pellentesque placerat vestibulum lorem Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Sed sit amet justo ipsum.
-              Pellentesque placerat vestibulum lorem Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Sed sit amet justo ipsum. Sed
-              accumsan quam vitae est varius fringilla. Pellentesque placerat
-              vestibulum lorem
-            </p>
-          </div>
-          <div>
-            <img src="../assets/images/maintenance_img.jpeg" alt="develop" />
+        <div class="case-content__testing">
+          <div class="container">
+            <div>
+              <span>Phase 2</span>
+              <h4>Development & Testing</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+                amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
+                Pellentesque placerat vestibulum lorem Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit. Sed sit amet justo ipsum.
+                Pellentesque placerat vestibulum lorem Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed
+                accumsan quam vitae est varius fringilla. Pellentesque placerat
+                vestibulum lorem
+              </p>
+            </div>
+            <div>
+              <img src="../assets/images/develop-image.jpeg" alt="develop" />
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="case-content__summary">
-        <div class="container">
-          <div>
-            <span>Conclusion</span>
-            <h4>Summary</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-              amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
-              Pellentesque placerat vestibulum lorem Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Sed sit amet justo ipsum.
-              Pellentesque placerat vestibulum lorem Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Sed sit amet justo ipsum. Sed
-              accumsan quam vitae est varius fringilla. Pellentesque placerat
-              vestibulum lorem
-            </p>
+        <div class="case-content__maintenance">
+          <div class="container">
+            <div>
+              <span>Phase 3</span>
+              <h4>Maintenance</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+                amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
+                Pellentesque placerat vestibulum lorem Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit. Sed sit amet justo ipsum.
+                Pellentesque placerat vestibulum lorem Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed
+                accumsan quam vitae est varius fringilla. Pellentesque placerat
+                vestibulum lorem
+              </p>
+            </div>
+            <div>
+              <img src="../assets/images/maintenance_img.jpeg" alt="develop" />
+            </div>
           </div>
-          <div>
-            <img src="../assets/images/maintenance_img.jpeg" alt="develop" />
+        </div>
+
+        <div class="case-content__summary">
+          <div class="container">
+            <div style="text-align: center">
+              <span>Conclusion</span>
+              <h4>Summary</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+                amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
+                Pellentesque placerat vestibulum lorem Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit. Sed sit amet justo ipsum.
+                Pellentesque placerat vestibulum lorem Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed
+                accumsan quam vitae est varius fringilla. Pellentesque placerat
+                vestibulum lorem
+              </p>
+            </div>
+            <div>
+              <img src="../assets/images/maintenance_img.jpeg" alt="develop" />
+            </div>
           </div>
         </div>
       </div>
 
       <div class="case-content__more">
+        <h4>More Cases</h4>
         <div class="container">
-          <h4>More Cases</h4>
-          <div>
-            <ul>
-              <li>
-                <img
-                  src="../assets/images/projects_images/proj1.png"
-                  alt="case"
-                />
-              </li>
-              <li>
-                <img
-                  src="../assets/images/projects_images/proj1.png"
-                  alt="case"
-                />
-              </li>
-              <li>
-                <img
-                  src="../assets/images/projects_images/proj1.png"
-                  alt="case"
-                />
-              </li>
-            </ul>
-          </div>
+          <ul>
+            <li>
+              <img
+                src="../assets/images/projects_images/proj4.png"
+                alt="case"
+              />
+            </li>
+            <li>
+              <img
+                src="../assets/images/projects_images/proj7.png"
+                alt="case"
+              />
+            </li>
+            <li>
+              <img
+                src="../assets/images/projects_images/proj9.png"
+                alt="case"
+              />
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -419,8 +481,7 @@
         </div>
       </footer>
     </section>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+
     <script src="../js/layout.js"></script>
-    <script src="../js/filterButtons.js"></script>
   </body>
 </html>
