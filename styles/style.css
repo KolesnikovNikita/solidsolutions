@@ -1988,15 +1988,34 @@ body#main-page {
   font-weight: 500;
 }
 .case-content__overview {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
   padding-left: 16px;
   padding-right: 16px;
   margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .case-content__overview {
+    grid-template-columns: minmax(358px, 395px) 50%;
+    grid-template-rows: 1fr 1fr;
+  }
+  .case-content__overview .info {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
 }
 .case-content__overview .info {
   margin-bottom: 40px;
 }
 .case-content__overview .info img {
   border-radius: 12px;
+}
+@media (min-width: 768px) {
+  .case-content__image {
+    margin-bottom: 32px;
+  }
 }
 .case-content .description h4 {
   color: #0b2471;
@@ -2042,6 +2061,15 @@ body#main-page {
 .case-content__development {
   padding-left: 16px;
   padding-right: 16px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 768px) {
+  .case-content__development .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: baseline;
+  }
 }
 .case-content__development h4 {
   color: #0b2471;
@@ -2075,10 +2103,21 @@ body#main-page {
   font-weight: 500;
   color: #0b2471;
 }
+@media (min-width: 768px) {
+  .case-content__challenges h4 {
+    margin-bottom: 64px;
+  }
+}
 .case-content__challenges .container {
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
+@media (min-width: 1024px) {
+  .case-content__challenges .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .case-content__challenges .container img {
   display: block;
@@ -2095,11 +2134,19 @@ body#main-page {
 .case-content #whiteStyle {
   background-color: #fff;
   padding-top: 40px;
+  border-radius: 0 0 12px 12px;
 }
 .case-content__roadmap {
   padding-left: 16px;
   padding-right: 16px;
   margin-bottom: 45px;
+}
+@media (min-width: 1200px) {
+  .case-content__roadmap .container {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: minmax(360px, 410px) minmax(390px, 735px);
+  }
 }
 .case-content .phases {
   font-size: 13px;
@@ -2121,20 +2168,69 @@ body#main-page {
   margin-bottom: 100px;
   padding-left: 16px;
   padding-right: 16px;
-  gap: 16px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 }
 .case-content__illustrations .double {
   display: flex;
-  flex-direction: row;
-  gap: 13px;
-  padding-top: 16px;
+  gap: 7px;
+}
+.case-content__illustrations .double #third_image {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+.case-content__illustrations .double #fourth_image {
+  grid-column: 4/5;
+  grid-row: 3/5;
+}
+@media (min-width: 768px) {
+  .case-content__illustrations {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
+  }
+  .case-content__illustrations #first_image {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+  .case-content__illustrations #second_image {
+    grid-column: 3/5;
+    grid-row: 1/2;
+  }
 }
 .case-content__testing, .case-content__maintenance, .case-content__summary {
   margin-bottom: 100px;
   padding-left: 16px;
   padding-right: 16px;
+}
+@media (min-width: 1024px) {
+  .case-content__testing #testing, .case-content__maintenance #testing, .case-content__summary #testing {
+    display: grid;
+    grid-template-columns: minmax(350px, 415px) 50%;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1024px) {
+  .case-content__testing #maintenance, .case-content__maintenance #maintenance, .case-content__summary #maintenance {
+    display: grid;
+    grid-template-columns: minmax(350px, 415px) 50%;
+    justify-content: space-between;
+  }
+}
+.case-content__testing #maintenance .text, .case-content__maintenance #maintenance .text, .case-content__summary #maintenance .text {
+  order: 2;
+}
+.case-content__testing #maintenance .image, .case-content__maintenance #maintenance .image, .case-content__summary #maintenance .image {
+  order: 1;
+}
+.case-content__testing #summary, .case-content__maintenance #summary, .case-content__summary #summary {
+  padding-bottom: 40px;
+}
+@media (min-width: 1024px) {
+  .case-content__testing #summary p, .case-content__maintenance #summary p, .case-content__summary #summary p {
+    max-width: 565px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .case-content__testing img, .case-content__maintenance img, .case-content__summary img {
   border-radius: 12px;
