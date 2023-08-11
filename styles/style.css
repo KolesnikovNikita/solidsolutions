@@ -749,14 +749,21 @@ body#main-page {
   color: #6e6e86;
   margin-top: 0;
   margin-bottom: 30px;
+  font-size: 14px;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .projects-cases p {
+    font-size: 16px;
+  }
 }
 .projects-cases a {
   padding-left: 32px;
   padding-right: 53px;
   font-size: 16px;
   font-weight: 500;
-  padding-top: 11px;
-  padding-bottom: 11px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   border-radius: 40px;
   background-color: #1a1a1a;
   color: #fff;
@@ -798,13 +805,12 @@ body#main-page {
 }
 
 .advantages {
+  padding-top: 56px;
   padding-bottom: 40px;
   padding-left: 45px;
   padding-right: 45px;
   border-radius: 20px 20px 0 0;
-  margin-top: -39px;
   background-color: #fff;
-  padding-top: 55px;
 }
 @media (min-width: 1200px) {
   .advantages {
@@ -864,22 +870,23 @@ body#main-page {
   margin: 0;
   color: #6e6e86;
   margin-top: 0;
-  margin-bottom: 55px;
+}
+.advantages__desktop {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 55px;
 }
 @media (min-width: 768px) {
   .advantages__desktop {
     justify-content: center;
-    display: flex;
-    flex-direction: row-reverse;
+    align-items: center;
+    grid-template-columns: 50% 300px;
   }
   .advantages__desktop .text-info {
-    width: 44%;
-    margin-left: 50px;
+    order: 1;
   }
-}
-@media (min-width: 768px) and (min-width: 1200px) {
-  .advantages__desktop .text-info {
-    padding-top: 10%;
+  .advantages__desktop .chat-info {
+    order: 0;
   }
 }
 @media (min-width: 1200px) {
@@ -888,15 +895,8 @@ body#main-page {
     padding-right: 218px;
   }
 }
-@media (min-width: 1200px) {
-  .advantages__desktop .chat-image img {
-    width: 425px;
-    height: 400px;
-  }
-}
-
 .tab-content {
-  animation: fadeEffect 0.5s; /* Fading effect takes 1 second */
+  animation: fadeEffect 0.5s;
 }
 .tab-content span {
   color: #ffde45;
@@ -1344,7 +1344,7 @@ body#main-page {
   .feedback {
     padding-left: 37px;
     padding-right: 37px;
-    padding-bottom: 106px;
+    padding-bottom: 100px;
     display: flex;
     flex-direction: row;
     gap: 48px;
@@ -1373,7 +1373,7 @@ body#main-page {
 }
 .feedback__contacts .container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 .feedback__contacts .container:not(:last-child) {
   margin-bottom: 24px;
@@ -1389,10 +1389,10 @@ body#main-page {
 @media (min-width: 768px) {
   .feedback__contacts {
     font-size: 16px;
+    margin-bottom: 0;
   }
 }
 .feedback h3 {
-  margin-top: -13px;
   margin-bottom: 16px;
 }
 @media (min-width: 768px) {
