@@ -1100,7 +1100,7 @@ body#main-page {
 }
 
 .special-gradient {
-  background-image: linear-gradient(25deg, $deep-dark-color 50%, white 50%);
+  background-image: linear-gradient(88deg, $deep-dark-color 50%, white 50%);
 }
 
 .customer {
@@ -1222,7 +1222,7 @@ body#main-page {
     padding-bottom: 106px;
   }
   background-color: #fff;
-  border-bottom-left-radius: 20px;
+  border-bottom-left-radius: 40px;
   padding-bottom: 128px;
   &__contacts {
     .container {
@@ -1366,6 +1366,9 @@ body#main-page {
   z-index: 123;
   padding-left: 20px;
   padding-right: 20px;
+  border-top-right-radius: 40px;
+  padding-top: 60px;
+  background-color: $deep-dark-color;
   @media (min-width: 768px) {
     padding-left: 35px;
     padding-right: 35px;
@@ -1375,44 +1378,49 @@ body#main-page {
     padding-left: 82px;
     padding-right: 82px;
   }
+
   .container {
-    display: flex;
-    flex-direction: column;
-    .explore {
-      width: 70%;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    width: 100%;
     .contacts {
-      width: 70%;
-      margin-left: auto;
-      margin-right: auto;
+      width: 80%;
+      @media (min-width: 768px) {
+        width: auto;
+      }
+    }
+    .explore {
+      width: 80%;
+      @media (min-width: 768px) {
+        width: auto;
+      }
+
+      @media (min-width: 1200px) {
+        margin-right: 10%;
+      }
     }
     @media (min-width: 768px) {
-      flex-direction: row;
+      display: flex;
       justify-content: space-between;
-      .socials {
-        width: 46%;
-      }
-
-      .explore {
-        width: 19%;
-        margin-left: 0;
-        margin-right: 0;
-      }
-
-      .contacts {
-        width: 35%;
-      }
+    }
+    @media (min-width: 1224px) {
     }
   }
-  border-top-right-radius: 40px;
-  padding-top: 60px;
-  background-color: $deep-dark-color;
+
+  .socials {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 1200px) {
+      margin-right: auto;
+    }
+  }
+
   h3 {
     @extend %page-header;
     color: #fff;
     margin-bottom: 20px;
+    display: block;
   }
 
   p {
@@ -1421,8 +1429,6 @@ body#main-page {
     font-weight: 400;
     opacity: 0.6;
     margin-top: 0;
-
-    padding-right: 20px;
     margin-bottom: 32px;
     @media (min-width: 768px) {
       margin-bottom: auto;
@@ -1433,12 +1439,11 @@ body#main-page {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 39px;
+    height: 32px;
     margin-bottom: 64px;
     @media (min-width: 768px) {
-      margin-top: 100px;
-      margin-bottom: 0;
       justify-content: flex-start;
+      margin-bottom: 0;
     }
 
     a {
@@ -1454,19 +1459,32 @@ body#main-page {
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    gap: 20px;
+    @media (max-width: 768px) {
+      gap: 20px;
+    }
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
     div {
       cursor: pointer;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
 
-      a {
-        color: #fff;
-      }
       @media (min-width: 768px) {
         flex-direction: column;
+        align-content: space-between;
         gap: 20px;
+      }
+
+      @media (min-width: 1024px) {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+
+      a {
+        color: #fff;
       }
     }
     h4 {
@@ -1474,9 +1492,11 @@ body#main-page {
     }
   }
   &__in-touch {
-    margin-bottom: 56px;
     margin-left: auto;
     margin-right: auto;
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
 
     div {
       display: flex;
@@ -1495,8 +1515,13 @@ body#main-page {
   }
 
   &__underline {
+    margin-top: 56px;
+    margin-bottom: 20px;
     color: #fff;
     opacity: 0.7;
+    @media (min-width: 768px) {
+      margin-top: 80px;
+    }
     #short-line {
       @media (max-width: 1200px) {
         width: 80%;
@@ -1509,15 +1534,15 @@ body#main-page {
   }
 
   &__rights {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 40px;
-    padding-top: 20px;
-    @extend %page-rights;
-
-    @media (min-width: 768px) {
-      display: block;
+    &-content {
+      padding-bottom: 40px;
+      @extend %page-rights;
+      text-align: center;
+      @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
     }
   }
 }
@@ -1559,7 +1584,8 @@ body#main-page {
   background-color: #fff;
   padding-left: 16px;
   padding-right: 16px;
-  margin-bottom: 80px;
+  border-bottom-left-radius: 40px;
+  padding-bottom: 80px;
 
   @media (min-width: 1024px) {
     padding-left: 41px;
@@ -1568,7 +1594,7 @@ body#main-page {
   }
 
   @media (min-width: 1200px) {
-    margin-bottom: 130px;
+    padding-bottom: 130px;
     padding-left: 82px;
     padding-right: 82px;
   }
@@ -1726,7 +1752,8 @@ body#main-page {
   background-color: #fff;
   padding-left: 16px;
   padding-right: 16px;
-  margin-bottom: 80px;
+  padding-bottom: 80px;
+  border-bottom-left-radius: 40px;
 
   @media (min-width: 1024px) {
     padding-left: 32px;
@@ -1801,8 +1828,8 @@ body#main-page {
           }
 
           @media (min-width: 1224px) {
-            padding-top: 40px;
-            padding-left: 40px;
+            padding-top: 30px;
+            padding-left: 30px;
           }
 
           .case-hover {
@@ -1812,6 +1839,9 @@ body#main-page {
               font-size: 24px;
               font-weight: 500;
               color: $project-header-color;
+              @media (min-width: 1200px) {
+                font-weight: 700;
+              }
             }
             ul {
               @extend %horizontal-list;
@@ -1837,7 +1867,7 @@ body#main-page {
               cursor: pointer;
               @media (min-width: 1024px) {
                 right: 24px;
-                bottom: 85px;
+                bottom: 50px;
               }
             }
           }
@@ -1883,7 +1913,8 @@ body#main-page {
 .case-content {
   padding-top: 110px;
   background-color: $header-background-color;
-  margin-bottom: 80px;
+  padding-bottom: 80px;
+  border-bottom-left-radius: 40px;
   @media (min-width: 1200px) {
     padding-top: 160px;
     padding-right: 82px;
