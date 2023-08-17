@@ -337,7 +337,12 @@
 
         <div class="content-list-box">
           <div id="web-development" class="tab-content">
-            <h4><span>&#8249;</span> Web-Development <span>&#8250;</span></h4>
+            <div class="header-container">
+              <div class="left-sign">V</div>
+              <h4>Web-Development</h4>
+              <div class="right-sign">V</div>
+            </div>
+
             <p>
               We provide full-stack development of websites and web applications
               of any complexity from brochure websites to large ERP systems. Our
@@ -350,7 +355,11 @@
           </div>
 
           <div id="maintenance" class="tab-content">
-            <h4><span>&#8249;</span> Maintenance <span>&#8250;</span></h4>
+            <div class="header-container">
+              <div class="left-sign">V</div>
+              <h4>Maintenance</h4>
+              <div class="right-sign">V</div>
+            </div>
             <p>
               In our company, IT maintenance plays a crucial role in ensuring
               the smooth operation of our technology infrastructure. From
@@ -364,9 +373,11 @@
           </div>
 
           <div id="consulting-and-analytics" class="tab-content">
-            <h4>
-              <span>&#8249;</span> Consulting and Analytics <span>&#8250;</span>
-            </h4>
+            <div class="header-container">
+              <div class="left-sign">V</div>
+              <h4>Consulting and Analytics</h4>
+              <div class="right-sign">V</div>
+            </div>
             <p>
               In the world of business, consulting and analytics play integral
               roles in helping companies make informed decisions and drive
@@ -378,7 +389,16 @@
             </p>
           </div>
           <div class="services-image">
-            <img src="../assets/images/services-img.jpeg" />
+            <picture>
+              <source
+                media="(min-width: 1024px)"
+                srcset="../assets/images/services-img.jpeg"
+              />
+              <img
+                src="../assets/images/service-mob-image.png"
+                alt="Site development"
+              />
+            </picture>
           </div>
         </div>
       </div>
@@ -419,8 +439,8 @@
             <img src="../assets/images/about_company/img6.jpeg" />
           </div>
           <div class="block">
-            <img src="../assets/images/about_company/img7.jpeg" />
-            <img src="../assets/images/about_company/img8.jpeg" />
+            <img id="three" src="../assets/images/about_company/img7.jpeg" />
+            <img id="four" src="../assets/images/about_company/img8.jpeg" />
             <div id="learnLinkContainer" class="about-button">
               <a id="learnLink"> </a>
             </div>
@@ -805,12 +825,12 @@
             <div class="footer__explore">
               <h4>Explore</h4>
               <div>
-                <a>Main</a>
-                <a>Services</a>
+                <a class="explore-link">Main</a>
+                <a class="explore-link">Services</a>
               </div>
               <div>
-                <a>Projects</a>
-                <a>About Us</a>
+                <a class="explore-link">Projects</a>
+                <a class="explore-link">About Us</a>
               </div>
             </div>
           </div>
@@ -837,6 +857,7 @@
     </section>
     <script src="../js/main.js"></script>
     <script src="../js/layout.js"></script>
+    <script src="../js/footerFilter.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="../js/swiper.js"></script>
   </body>

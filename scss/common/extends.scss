@@ -135,3 +135,14 @@
     font-size: 32px;
   }
 }
+
+//    Service Card
+
+%service-card-style {
+  border-radius: 20px;
+  border: 1px solid var(--dark-100, #e7e7eb);
+  background: rgba(255, 255, 255, 0.54);
+  box-shadow: -45.53333282470703px 45.53333282470703px 45.53333282470703px 0px
+    rgba(255, 255, 255, 0.1) inset;
+  backdrop-filter: blur(45.53333282470703px);
+}
