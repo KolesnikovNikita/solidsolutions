@@ -1992,17 +1992,19 @@ body#main-page {
 
 .case-content {
   padding-top: 125px;
+  padding-left: 16px;
+  padding-right: 16px;
   background-color: $header-background-color;
   padding-bottom: 80px;
   border-bottom-left-radius: 40px;
+  @media (min-width: 768px) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
   @media (min-width: 1200px) {
     padding-top: 160px;
     padding-right: 82px;
     padding-left: 82px;
-  }
-  &__image {
-    padding-left: 16px;
-    padding-right: 16px;
   }
 
   &__back {
@@ -2034,12 +2036,6 @@ body#main-page {
   }
 
   &__project {
-    padding-left: 16px;
-    padding-right: 16px;
-    @media (min-width: 1024px) {
-      padding-left: 32px;
-      padding-right: 32px;
-    }
     .types {
       border-radius: 24px;
       margin-bottom: 20px;
@@ -2086,8 +2082,7 @@ body#main-page {
       grid-template-columns: minmax(358px, 395px) 50%;
       grid-template-rows: 50% 50%;
       justify-content: space-between;
-      padding-left: 32px;
-      padding-right: 32px;
+
       .info {
         grid-column-start: 2;
         grid-column-end: 3;
@@ -2098,8 +2093,7 @@ body#main-page {
     @media (min-width: 1200px) {
       grid-template-rows: 55% 45%;
     }
-    padding-left: 16px;
-    padding-right: 16px;
+
     margin-bottom: 40px;
     .info {
       margin-bottom: 40px;
@@ -2115,12 +2109,6 @@ body#main-page {
     align-items: center;
     @media (min-width: 768px) {
       margin-bottom: 32px;
-      padding-left: 32px;
-      padding-right: 32px;
-    }
-    @media (min-width: 1024px) {
-      padding-left: 32px;
-      padding-right: 32px;
     }
 
     @media (min-width: 1200px) {
@@ -2261,8 +2249,6 @@ body#main-page {
   }
 
   &__development {
-    padding-left: 16px;
-    padding-right: 16px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
 
@@ -2396,9 +2382,6 @@ body#main-page {
   }
 
   &__challenges {
-    margin-right: 16px;
-    margin-left: 16px;
-
     margin-bottom: 75px;
     background-color: #fff;
     padding-left: 38px;
@@ -2457,14 +2440,14 @@ body#main-page {
     }
   }
 
-  #whiteStyle {
-    background-color: #fff;
-    padding-top: 40px;
-    border-radius: 0 0 24px 24px;
-    @media (min-width: 1200px) {
-      background-color: inherit;
-    }
-  }
+  // #whiteStyle {
+  //   background-color: #fff;
+  //   padding-top: 40px;
+  //   border-radius: 0 0 24px 24px;
+  //   @media (min-width: 1200px) {
+  //     background-color: inherit;
+  //   }
+  // }
 
   &__roadmap {
     .container {
@@ -2479,14 +2462,7 @@ body#main-page {
         justify-content: center;
       }
     }
-    @media (max-width: 768px) {
-      padding-left: 16px;
-      padding-right: 16px;
-    }
-    @media (min-width: 1024px) {
-      padding-left: 32px;
-      padding-right: 32px;
-    }
+
     margin-bottom: 45px;
     @media (min-width: 1200px) {
       margin-bottom: 160px;
@@ -2526,8 +2502,7 @@ body#main-page {
 
   &__illustrations {
     margin-bottom: 100px;
-    padding-left: 16px;
-    padding-right: 16px;
+
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
@@ -2550,7 +2525,7 @@ body#main-page {
     }
 
     @media (min-width: 1200px) {
-      grid-template-columns: repeat(2, 625px);
+      grid-template-columns: repeat(2, 50%);
       justify-content: center;
       gap: 25px;
       margin-bottom: 160px;
@@ -2612,12 +2587,7 @@ body#main-page {
         border-radius: 32px;
       }
     }
-    padding-left: 16px;
-    padding-right: 16px;
-    @media (min-width: 768px) {
-      padding-left: 32px;
-      padding-right: 32px;
-    }
+
     span {
       font-size: 13px;
       color: $main-dark-blue-color;
