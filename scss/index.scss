@@ -56,17 +56,22 @@ body#main-page {
 
 .scroll-up {
   position: fixed;
-  right: 50px;
+  right: 20px;
   bottom: 70px;
   z-index: 5;
-  width: 65px;
-  height: 65px;
+  width: 45px;
+  height: 45px;
   cursor: pointer;
   visibility: hidden;
   border-radius: 50%;
   opacity: 0;
   transition: 0.2s;
   transform: translateY(25px);
+  @media (min-width: 1200px) {
+    right: 50px;
+    width: 65px;
+    height: 65px;
+  }
 
   &::before {
     position: absolute;
@@ -1171,7 +1176,7 @@ body#main-page {
 }
 
 .special-gradient {
-  background-image: linear-gradient(78deg, $deep-dark-color 50%, white 50%);
+  background-image: linear-gradient(88deg, $deep-dark-color 50%, white 50%);
 }
 
 .customer {
@@ -1986,7 +1991,7 @@ body#main-page {
 /* ========================    Case Page    ====================== */
 
 .case-content {
-  padding-top: 110px;
+  padding-top: 125px;
   background-color: $header-background-color;
   padding-bottom: 80px;
   border-bottom-left-radius: 40px;
@@ -2172,7 +2177,7 @@ body#main-page {
 
     a {
       position: relative;
-      font-size: 14px;
+      font-size: 16px;
       color: $blue-sky-color;
       font-weight: 500;
       cursor: pointer;
@@ -2187,7 +2192,7 @@ body#main-page {
       svg {
         position: absolute;
         bottom: -2px;
-        left: 115px;
+        left: 135px;
         @media (min-width: 1200px) {
           left: 160px;
         }
@@ -2227,7 +2232,13 @@ body#main-page {
 
   &__features-item {
     img {
-      padding-right: 16px;
+      margin-right: 16px;
+      width: 32px;
+      height: 32px;
+      @media (min-width: 1024px) {
+        width: 48px;
+        height: 48px;
+      }
     }
     display: flex;
     align-items: center;
@@ -2258,36 +2269,58 @@ body#main-page {
     @media (min-width: 768px) {
       padding-left: 32px;
       padding-right: 32px;
+      margin-bottom: 100px;
+    }
+
+    @media (min-width: 1200px) {
+      margin-bottom: 160px;
+    }
+
+    p {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: 38px;
+      color: $main-text-color;
+      @media (min-width: 1024px) {
+        font-size: 18px;
+      }
     }
 
     .container {
-      @media (min-width: 1200px) {
-        margin-bottom: 160px;
-      }
       border-bottom: 1px solid $light-grey-color;
       margin-bottom: 38px;
       @media (min-width: 768px) {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        align-items: baseline;
       }
+
       p {
         @media (min-width: 1200px) {
           font-size: 18px;
         }
       }
-    }
-    h4 {
-      color: $deep-violet-color;
-      font-size: 18px;
-      font-weight: 500;
-      margin-top: 0;
-      margin-bottom: 20px;
+      h4 {
+        color: $deep-violet-color;
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 20px;
+        @media (min-width: 1024px) {
+          font-size: 24px;
+        }
+      }
     }
 
     ul {
       @extend %horizontal-list;
+      margin-top: 0;
 
+      flex-wrap: wrap;
+      @media (min-width: 1200px) {
+        margin-bottom: 0;
+      }
       li {
         font-size: 16px;
         color: $blue-sky-color;
@@ -2298,13 +2331,28 @@ body#main-page {
           margin-bottom: 30px;
         }
         &:not(:last-child) {
-          margin-right: 8px;
+          margin-right: 16px;
+          margin-bottom: 16px;
         }
       }
     }
   }
 
   .tech-list {
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    h4 {
+      font-size: 18px;
+      color: $deep-violet-color;
+      font-weight: 500;
+      margin-top: 0;
+      margin-bottom: 20px;
+      @media (min-width: 1024px) {
+        font-size: 24px;
+      }
+    }
     .tool-tip {
       cursor: pointer;
       position: relative;
@@ -2353,16 +2401,22 @@ body#main-page {
 
     margin-bottom: 75px;
     background-color: #fff;
-    padding: 38px;
+    padding-left: 38px;
+    padding-right: 38px;
+    padding-bottom: 32px;
+    padding-top: 60px;
     border-radius: 12px;
     @media (min-width: 1200px) {
-      padding: 65px 110px;
+      padding: 65px 100px;
+      margin-bottom: 140px;
     }
     h4 {
       text-align: center;
       font-size: 24px;
       font-weight: 500;
+      margin-top: 0;
       color: $deep-violet-color;
+
       @media (min-width: 768px) {
         margin-bottom: 64px;
       }
@@ -2377,7 +2431,8 @@ body#main-page {
       gap: 32px;
       @media (min-width: 1024px) {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 275px);
+        justify-content: space-around;
       }
       img {
         display: block;
@@ -2390,7 +2445,10 @@ body#main-page {
 
       p {
         @extend %card-text;
-        margin: 0;
+        max-width: 275px;
+        margin-left: auto;
+        margin-right: auto;
+
         color: $main-text-color;
         @media (min-width: 1200px) {
           font-size: 18px;
@@ -2410,38 +2468,36 @@ body#main-page {
 
   &__roadmap {
     .container {
-      @media (min-width: 1200px) {
+      @media (min-width: 1400px) {
         display: grid;
         justify-content: space-between;
-        grid-template-columns: minmax(360px, 410px) minmax(390px, 735px);
+        grid-template-columns: 415px 764px;
+      }
+
+      .map-image {
+        display: flex;
+        justify-content: center;
       }
     }
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-bottom: 45px;
-
-    @media (min-width: 768px) {
+    @media (max-width: 768px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    @media (min-width: 1024px) {
       padding-left: 32px;
       padding-right: 32px;
     }
-  }
-
-  .phases {
-    font-size: 13px;
-    color: $main-dark-blue-color;
-    font-weight: 500;
-    margin-bottom: 11px;
+    margin-bottom: 45px;
     @media (min-width: 1200px) {
-      font-size: 20px;
+      margin-bottom: 160px;
     }
-  }
 
-  .container {
     h4 {
       @extend %page-header;
       color: $deep-violet-color;
       margin-bottom: 24px;
       margin-top: 0;
+      letter-spacing: -1px;
       @media (min-width: 1200px) {
         font-size: 48px;
       }
@@ -2458,15 +2514,30 @@ body#main-page {
     }
   }
 
+  .phases {
+    font-size: 13px;
+    color: $main-dark-blue-color;
+    font-weight: 500;
+    margin-bottom: 11px;
+    @media (min-width: 1200px) {
+      font-size: 20px;
+    }
+  }
+
   &__illustrations {
     margin-bottom: 100px;
     padding-left: 16px;
     padding-right: 16px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
     .double {
       display: flex;
       gap: 7px;
+      @media (min-width: 1200px) {
+        margin-top: 20px;
+        gap: 25px;
+      }
 
       #third_image {
         grid-column: 3/4;
@@ -2477,18 +2548,12 @@ body#main-page {
         grid-row: 3/5;
       }
     }
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 7px;
-      #first_image {
-        grid-column: 1/3;
-        grid-row: 1/3;
-      }
 
-      #second_image {
-        grid-column: 3/5;
-        grid-row: 1/2;
-      }
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(2, 625px);
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 160px;
     }
   }
 
@@ -2500,6 +2565,7 @@ body#main-page {
         display: grid;
         grid-template-columns: 35% 50%;
         justify-content: space-between;
+        align-items: center;
       }
     }
 
@@ -2508,6 +2574,7 @@ body#main-page {
         display: grid;
         grid-template-columns: 50% 35%;
         justify-content: space-between;
+        align-items: center;
       }
 
       .text {
@@ -2521,19 +2588,29 @@ body#main-page {
 
     #summary {
       padding-bottom: 40px;
-
+      align-items: center;
       @media (min-width: 1024px) {
         p {
           max-width: 665px;
           margin-left: auto;
           margin-right: auto;
+          @media (min-width: 768px) {
+            margin-bottom: 65px;
+          }
         }
       }
     }
 
-    margin-bottom: 100px;
+    margin-bottom: 80px;
+
+    @media (min-width: 1200px) {
+      margin-bottom: 160px;
+    }
     img {
       border-radius: 12px;
+      @media (min-width: 1024px) {
+        border-radius: 32px;
+      }
     }
     padding-left: 16px;
     padding-right: 16px;
@@ -2561,6 +2638,11 @@ body#main-page {
       }
     }
     p {
+      @extend %card-text;
+      color: $main-text-color;
+      margin-top: 0;
+      margin-bottom: 55px;
+
       @media (min-width: 1200px) {
         font-size: 18px;
       }
@@ -2568,6 +2650,9 @@ body#main-page {
   }
 
   &__more {
+    @media (min-width: 1200px) {
+      margin-bottom: 80px;
+    }
     .swiper-of-cases {
       position: relative;
       width: 100%;
@@ -2612,9 +2697,9 @@ body#main-page {
     .swiper-of-cases:hover .navigation-container {
       display: block;
     }
-    background-color: #fff;
+
     position: relative;
-    padding-top: 80px;
+
     @media (min-width: 1024px) {
       background-color: $header-background-color;
     }
@@ -2626,7 +2711,7 @@ body#main-page {
       font-weight: 500;
       margin-left: 16px;
       @media (min-width: 1024px) {
-        font-size: 48px;
+        font-size: 40px;
         margin-bottom: 33px;
       }
     }
