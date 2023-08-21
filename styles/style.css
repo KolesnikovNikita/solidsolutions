@@ -2112,24 +2112,9 @@ body#main-page {
 /* ========================    Case Page    ====================== */
 .case-content {
   padding-top: 125px;
-  padding-left: 16px;
-  padding-right: 16px;
   background-color: #f8f8f8;
   padding-bottom: 80px;
   border-bottom-left-radius: 40px;
-}
-@media (min-width: 768px) {
-  .case-content {
-    padding-left: 35px;
-    padding-right: 35px;
-  }
-}
-@media (min-width: 1200px) {
-  .case-content {
-    padding-top: 160px;
-    padding-right: 82px;
-    padding-left: 82px;
-  }
 }
 .case-content__back {
   font-size: 14px;
@@ -2575,6 +2560,47 @@ body#main-page {
     font-size: 18px;
   }
 }
+.case-content #topStyle {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width: 768px) {
+  .case-content #topStyle {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+@media (min-width: 1200px) {
+  .case-content #topStyle {
+    padding-left: 82px;
+    padding-right: 82px;
+  }
+}
+.case-content #whiteStyle {
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #fff;
+  padding-top: 40px;
+  border-radius: 0 0 24px 24px;
+}
+@media (min-width: 768px) {
+  .case-content #whiteStyle {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+@media (min-width: 1200px) {
+  .case-content #whiteStyle {
+    padding-left: 82px;
+    padding-right: 82px;
+    background-color: inherit;
+  }
+}
+@media (min-width: 1200px) {
+  .case-content #whiteStyle {
+    background-color: inherit;
+  }
+}
 .case-content__roadmap {
   margin-bottom: 45px;
 }
@@ -2818,7 +2844,7 @@ body#main-page {
 }
 
 .services-page {
-  margin-top: 120px;
+  padding-top: 120px;
 }
 .services-page__introduction {
   margin-bottom: 100px;
@@ -3029,8 +3055,6 @@ body#main-page {
   color: #f0ebe4;
 }
 .services-page__questions {
-  padding-left: 16px;
-  padding-right: 16px;
   margin-bottom: 100px;
 }
 .services-page__questions .questions-list {

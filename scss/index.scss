@@ -1992,24 +1992,12 @@ body#main-page {
 
 .case-content {
   padding-top: 125px;
-  padding-left: 16px;
-  padding-right: 16px;
   background-color: $header-background-color;
   padding-bottom: 80px;
   border-bottom-left-radius: 40px;
-  @media (min-width: 768px) {
-    padding-left: 35px;
-    padding-right: 35px;
-  }
-  @media (min-width: 1200px) {
-    padding-top: 160px;
-    padding-right: 82px;
-    padding-left: 82px;
-  }
 
   &__back {
     font-size: 14px;
-
     font-weight: 500;
     position: relative;
     padding-left: 30px;
@@ -2440,14 +2428,38 @@ body#main-page {
     }
   }
 
-  // #whiteStyle {
-  //   background-color: #fff;
-  //   padding-top: 40px;
-  //   border-radius: 0 0 24px 24px;
-  //   @media (min-width: 1200px) {
-  //     background-color: inherit;
-  //   }
-  // }
+  #topStyle {
+    padding-left: 16px;
+    padding-right: 16px;
+    @media (min-width: 768px) {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+    @media (min-width: 1200px) {
+      padding-left: 82px;
+      padding-right: 82px;
+    }
+  }
+
+  #whiteStyle {
+    @media (min-width: 768px) {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+    @media (min-width: 1200px) {
+      padding-left: 82px;
+      padding-right: 82px;
+      background-color: inherit;
+    }
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: #fff;
+    padding-top: 40px;
+    border-radius: 0 0 24px 24px;
+    @media (min-width: 1200px) {
+      background-color: inherit;
+    }
+  }
 
   &__roadmap {
     .container {
@@ -2502,7 +2514,6 @@ body#main-page {
 
   &__illustrations {
     margin-bottom: 100px;
-
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
@@ -2695,7 +2706,7 @@ body#main-page {
 // ============================== SERVICES PAGE =========================== //
 
 .services-page {
-  margin-top: 120px;
+  padding-top: 120px;
 
   &__introduction {
     margin-bottom: 100px;
@@ -2962,8 +2973,6 @@ body#main-page {
   }
 
   &__questions {
-    padding-left: 16px;
-    padding-right: 16px;
     margin-bottom: 100px;
     // @extend %service-card-style;
 
