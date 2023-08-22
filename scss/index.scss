@@ -2712,11 +2712,20 @@ body#main-page {
     margin-bottom: 100px;
     padding-left: 16px;
     padding-right: 16px;
+    @media (min-width: 1024px) {
+      margin-bottom: 160px;
+    }
 
     &-container {
       border-radius: 20px;
       padding: 48px 37px;
       background-color: $blue-sky-color;
+      @media (min-width: 1024px) {
+        padding-left: 58px;
+        padding-bottom: 65px;
+        padding-top: 235px;
+        padding-right: 108px;
+      }
     }
 
     span {
@@ -2724,6 +2733,10 @@ body#main-page {
       font-weight: 500;
       margin-bottom: 12px;
       color: $skin-light-color;
+      @media (min-width: 1024px) {
+        font-size: 20px;
+        margin-bottom: 16px;
+      }
     }
 
     h1 {
@@ -2732,6 +2745,10 @@ body#main-page {
       font-size: 24px;
       margin-bottom: 24px;
       margin-top: 0;
+      @media (min-width: 1024px) {
+        font-size: 56px;
+        margin-bottom: 48px;
+      }
     }
 
     p {
@@ -2741,6 +2758,10 @@ body#main-page {
       color: $pearl-color;
       margin-top: 0;
       margin-bottom: 43px;
+      @media (min-width: 1024px) {
+        font-size: 18px;
+        margin-bottom: 140px;
+      }
     }
 
     .scroll-link {
@@ -2748,6 +2769,9 @@ body#main-page {
       font-style: normal;
       font-weight: 500;
       color: #fff;
+      @media (min-width: 1024px) {
+        font-size: 20px;
+      }
     }
   }
 
@@ -2764,9 +2788,27 @@ body#main-page {
         color: $deep-violet-color;
         margin-bottom: 24px;
         margin-top: 0;
+        @media (min-width: 768px) {
+          padding-left: 35px;
+          padding-right: 35px;
+        }
+        @media (min-width: 1200px) {
+          padding-left: 82px;
+          padding-right: 82px;
+        }
+        @media (min-width: 1024px) {
+          font-size: 56px;
+          margin-bottom: 56px;
+        }
       }
 
       .card {
+        @media (min-width: 1024px) {
+          display: grid;
+          grid-template-columns: minmax(295px, 520px) minmax(295px, 690px);
+          justify-items: center;
+          justify-content: space-around;
+        }
         padding: 32px;
         background-color: $service-card-color;
         @extend %service-card-style;
@@ -2779,12 +2821,20 @@ body#main-page {
             font-size: 13px;
             color: $main-dark-blue-color;
             font-weight: 500;
+            @media (min-width: 1024px) {
+              font-size: 22px;
+              margin-bottom: 35px;
+            }
+
             span {
               font-size: 13px;
               color: $input-text-color;
               font-weight: 400;
               padding-right: 7px;
               margin-bottom: 10px;
+              @media (min-width: 1024px) {
+                font-size: 22px;
+              }
             }
           }
 
@@ -2794,12 +2844,21 @@ body#main-page {
             font-weight: 400;
             margin-top: 0;
             margin-bottom: 18px;
+            @media (min-width: 1024px) {
+              font-size: 56px;
+              letter-spacing: -2.56px;
+              margin-bottom: 32px;
+            }
           }
 
           p {
             @extend %card-text;
+            color: $main-text-color;
             margin-top: 0;
             margin-bottom: 18px;
+            @media (min-width: 1024px) {
+              font-size: 20px;
+            }
           }
         }
       }
@@ -2810,12 +2869,35 @@ body#main-page {
     padding-left: 16px;
     padding-right: 16px;
     margin-bottom: 100px;
+    @media (min-width: 768px) {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+
+    @media (min-width: 1200px) {
+      padding-left: 82px;
+      padding-right: 82px;
+    }
+
+    .head-content {
+      @media (min-width: 1224px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 32px;
+        margin-bottom: 118px;
+      }
+    }
 
     h2 {
       margin-top: 0;
       margin-bottom: 40px;
       @extend %page-header;
       color: $deep-violet-color;
+      letter-spacing: -1px;
+      @media (min-width: 1024px) {
+        font-size: 56px;
+      }
     }
 
     p {
@@ -2823,10 +2905,20 @@ body#main-page {
       color: $main-text-color;
       margin-top: 0;
       margin-bottom: 40px;
+      @media (min-width: 1024px) {
+        font-size: 18px;
+      }
     }
 
     .cards-list {
       margin-bottom: 16px;
+      @media (min-width: 1024px) {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(358px, 410px));
+        grid-template-rows: repeat(auto-fit, minmax(285px, 320px));
+        gap: 20px;
+      }
 
       &__item {
         height: 285px;
@@ -2839,6 +2931,17 @@ body#main-page {
         background-color: $service-card-color;
         cursor: pointer;
 
+        .icon {
+          img {
+            height: 32px;
+            width: 32px;
+            @media (min-width: 1024px) {
+              height: 56px;
+              width: 56px;
+            }
+          }
+        }
+
         .details {
           span {
             @extend %alt-page-text;
@@ -2846,6 +2949,10 @@ body#main-page {
             opacity: 1;
             transition: opacity 0.3s ease, transform 0.3s ease;
             transition-delay: 0.2s;
+
+            @media (min-width: 1024px) {
+              font-size: 22px;
+            }
           }
 
           h3 {
@@ -2854,6 +2961,10 @@ body#main-page {
             font-size: 18px;
             color: $service-card-tech-color;
             font-weight: 500;
+
+            @media (min-width: 1024px) {
+              font-size: 22px;
+            }
           }
           p {
             margin-top: 7px;
@@ -2881,7 +2992,6 @@ body#main-page {
           background-color: $deep-dark-color;
           transition: background-color 0.5s ease, transform 0.3s ease;
           transition-delay: 0.2s;
-
           transform: scale(1.01);
         }
       }
@@ -2899,22 +3009,45 @@ body#main-page {
 
   &__plan {
     margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
   }
 
   &__technologies {
     margin-bottom: 100px;
     padding-left: 16px;
     padding-right: 16px;
+    @media (min-width: 768px) {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+    @media (min-width: 1200px) {
+      padding-left: 82px;
+      padding-right: 82px;
+    }
 
     h2 {
       @extend %page-header;
       color: $deep-violet-color;
       margin-top: 0;
       margin-bottom: 32px;
+      @media (min-width: 1024px) {
+        font-size: 56px;
+        margin-bottom: 72px;
+      }
     }
   }
 
   .accordion-list {
+    .content {
+      @media (min-width: 1024px) {
+        display: grid;
+        grid-template-columns: 305px auto;
+        align-items: baseline;
+        gap: 10%;
+      }
+    }
+
     &__item {
       &:not(:last-child) {
         margin-bottom: 32px;
@@ -2929,6 +3062,9 @@ body#main-page {
         letter-spacing: -1px;
 
         margin-bottom: 13px;
+        @media (min-width: 1024px) {
+          font-size: 48px;
+        }
       }
 
       p {
@@ -2946,20 +3082,34 @@ body#main-page {
           color: $deep-violet-color;
           font-weight: 500;
           margin: 0;
+          @media (min-width: 1024px) {
+            font-size: 18px;
+          }
         }
 
         .tech-list {
           padding-left: 35px;
           padding-right: 35px;
           margin-top: 27px;
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
+
+          display: flex;
+          justify-content: row;
+          flex-wrap: wrap;
           gap: 16px;
 
           &:not(:last-child) {
             border-bottom: 1px solid $service-grey-border-color;
             padding-bottom: 32px;
             margin-bottom: 32px;
+          }
+
+          img {
+            width: 60px;
+            height: 60px;
+            @media (min-width: 1024px) {
+              height: 80px;
+              width: 80px;
+            }
           }
         }
 
@@ -2972,11 +3122,24 @@ body#main-page {
     }
   }
 
+  &__image-container {
+    display: flex;
+    justify-content: center;
+  }
+
   &__questions {
     margin-bottom: 100px;
-    // @extend %service-card-style;
+
+    @media (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: 45% 55%;
+    }
 
     .questions-list {
+      @media (min-width: 1024px) {
+        margin-right: 16px;
+        margin-left: 16px;
+      }
       margin-top: 20px;
       border-radius: 12px;
       border: 1px solid #e4e4e7;
