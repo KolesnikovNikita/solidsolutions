@@ -70,7 +70,7 @@
   border-color: transparent;
 }
 
-.services-page .accordion-list__item p, .services-page__examples .cards-list__item .details span, .services-page__examples p, .case-content .description p, .about p, .services p {
+.services-page__technologies .accordion__item p, .services-page__examples .cards-list__item .details span, .services-page__examples p, .case-content .description p, .about p, .services p {
   font-size: 14px;
   font-weight: 400;
   color: #6e6e86;
@@ -2845,6 +2845,7 @@ body#main-page {
 
 .services-page {
   padding-top: 120px;
+  background-color: #f8f8f8;
 }
 .services-page__introduction {
   margin-bottom: 100px;
@@ -3151,7 +3152,7 @@ body#main-page {
   justify-content: center;
 }
 .services-page__technologies {
-  margin-bottom: 100px;
+  padding-bottom: 100px;
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -3178,18 +3179,7 @@ body#main-page {
     margin-bottom: 72px;
   }
 }
-@media (min-width: 1024px) {
-  .services-page .accordion-list .content {
-    display: grid;
-    grid-template-columns: 305px auto;
-    align-items: baseline;
-    gap: 10%;
-  }
-}
-.services-page .accordion-list__item:not(:last-child) {
-  margin-bottom: 32px;
-}
-.services-page .accordion-list__item button {
+.services-page__technologies .accordion__item button {
   transition: 0.4s;
   color: #0e40c7;
   background-color: transparent;
@@ -3199,30 +3189,50 @@ body#main-page {
   margin-bottom: 13px;
 }
 @media (min-width: 1024px) {
-  .services-page .accordion-list__item button {
+  .services-page__technologies .accordion__item button {
     font-size: 48px;
   }
 }
-.services-page .accordion-list__item p {
+.services-page__technologies .accordion__item p {
   color: #87869a;
   margin-bottom: 32px;
   margin-top: 0;
+  letter-spacing: -0.28px;
 }
-.services-page .accordion-list__item .sub-content {
+@media (min-width: 1024px) {
+  .services-page__technologies .accordion__item p {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .services-page__technologies .accordion__item .content-desktop {
+    display: grid;
+    grid-template-columns: minmax(250px, 305px) minmax(400px, 655px);
+    gap: 10%;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+.services-page__technologies .accordion__item .content:not(:last-child) {
+  margin-bottom: 32px;
+}
+.services-page__technologies .accordion__item .sub-content {
   padding-top: 37px;
 }
-.services-page .accordion-list__item .sub-content h4 {
+.services-page__technologies .accordion__item .sub-content h4 {
   font-size: 16px;
   color: #0b2471;
   font-weight: 500;
   margin: 0;
+  letter-spacing: -1px;
 }
 @media (min-width: 1024px) {
-  .services-page .accordion-list__item .sub-content h4 {
+  .services-page__technologies .accordion__item .sub-content h4 {
     font-size: 18px;
   }
 }
-.services-page .accordion-list__item .sub-content .tech-list {
+.services-page__technologies .accordion__item .sub-content .tech-list {
   padding-left: 35px;
   padding-right: 35px;
   margin-top: 27px;
@@ -3231,22 +3241,22 @@ body#main-page {
   flex-wrap: wrap;
   gap: 16px;
 }
-.services-page .accordion-list__item .sub-content .tech-list:not(:last-child) {
+.services-page__technologies .accordion__item .sub-content .tech-list:not(:last-child) {
   border-bottom: 1px solid #f0ebe4;
   padding-bottom: 32px;
   margin-bottom: 32px;
 }
-.services-page .accordion-list__item .sub-content .tech-list img {
+.services-page__technologies .accordion__item .sub-content .tech-list img {
   width: 60px;
   height: 60px;
 }
 @media (min-width: 1024px) {
-  .services-page .accordion-list__item .sub-content .tech-list img {
+  .services-page__technologies .accordion__item .sub-content .tech-list img {
     height: 80px;
     width: 80px;
   }
 }
-.services-page .accordion-list__item .sub-content hr {
+.services-page__technologies .accordion__item .sub-content hr {
   margin-top: 32px;
   margin-bottom: 32px;
   color: #f0ebe4;
@@ -3256,20 +3266,23 @@ body#main-page {
   justify-content: center;
 }
 .services-page__questions {
-  margin-bottom: 100px;
+  background-color: #fff;
+  padding-bottom: 100px;
 }
 .services-page__questions .faq-questions {
   overflow-y: auto;
-  max-height: 560px;
+  max-height: 600px;
 }
 @media (min-width: 1024px) {
   .services-page__questions {
+    padding-left: 16px;
     display: grid;
-    grid-template-columns: 45% 55%;
-    grid-template-rows: auto 540px, 560px;
+    grid-template-columns: 40% 55%;
+    justify-content: space-between;
   }
 }
 .services-page__questions .questions-list {
+  margin-bottom: 16px;
   margin-top: 20px;
   border-radius: 12px;
   border: 1px solid #e4e4e7;
