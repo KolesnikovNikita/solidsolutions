@@ -2960,6 +2960,7 @@ body#main-page {
     grid-template-columns: minmax(295px, 520px) minmax(295px, 690px);
     justify-items: center;
     justify-content: space-around;
+    gap: 10%;
   }
 }
 .services-page__provide .contents .card:not(:last-child) {
@@ -3257,10 +3258,15 @@ body#main-page {
 .services-page__questions {
   margin-bottom: 100px;
 }
+.services-page__questions .faq-questions {
+  overflow-y: auto;
+  max-height: 560px;
+}
 @media (min-width: 1024px) {
   .services-page__questions {
     display: grid;
     grid-template-columns: 45% 55%;
+    grid-template-rows: auto 540px, 560px;
   }
 }
 .services-page__questions .questions-list {
@@ -3281,6 +3287,12 @@ body#main-page {
   color: #0e0d35;
   font-weight: 500;
   background-color: transparent;
+}
+@media (min-width: 1024px) {
+  .services-page__questions .questions-list h2 button {
+    font-size: 18px;
+    padding: 24px;
+  }
 }
 .services-page__questions .questions-list p {
   color: #515151;

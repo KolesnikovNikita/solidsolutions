@@ -2808,6 +2808,7 @@ body#main-page {
           grid-template-columns: minmax(295px, 520px) minmax(295px, 690px);
           justify-items: center;
           justify-content: space-around;
+          gap: 10%;
         }
         padding: 32px;
         background-color: $service-card-color;
@@ -3128,11 +3129,16 @@ body#main-page {
   }
 
   &__questions {
+    .faq-questions {
+      overflow-y: auto;
+      max-height: 560px;
+    }
     margin-bottom: 100px;
 
     @media (min-width: 1024px) {
       display: grid;
       grid-template-columns: 45% 55%;
+      grid-template-rows: auto (540px, 560px);
     }
 
     .questions-list {
@@ -3152,6 +3158,10 @@ body#main-page {
           color: $button-tech-color;
           font-weight: 500;
           background-color: transparent;
+          @media (min-width: 1024px) {
+            font-size: 18px;
+            padding: 24px;
+          }
         }
       }
 
