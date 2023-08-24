@@ -3185,3 +3185,134 @@ body#main-page {
     }
   }
 }
+
+.industries-page {
+  padding-top: 90px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 92px;
+  background-color: #fff;
+  @media (min-width: 768px) {
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 120px;
+  }
+  @media (min-width: 1200px) {
+    padding-left: 82px;
+    padding-right: 82px;
+    padding-top: 190px;
+    padding-bottom: 125px;
+  }
+  h1 {
+    @extend %large-header;
+    letter-spacing: -0.48px;
+    color: $deep-violet-color;
+    margin-bottom: 56px;
+    @media (min-width: 1024px) {
+      font-size: 32px;
+    }
+  }
+
+  &__list {
+    &-item {
+      &:hover {
+        transition: all 0.2s ease;
+        background-color: $main-dark-blue-color;
+        border-radius: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+        @media (min-width: 768px) {
+          padding-left: 32px;
+          padding-right: 32px;
+        }
+        .header {
+          h3 {
+            color: #fff;
+          }
+          span {
+            background-color: #fff;
+            color: $button-tech-color;
+          }
+        }
+        .description {
+          color: $industry-text-grey-color;
+        }
+
+        .link {
+          svg {
+            transform: rotate(320deg);
+          }
+          svg circle {
+            fill: white;
+          }
+          svg rect {
+            fill: white;
+          }
+          svg path {
+            stroke: #3769f1;
+          }
+        }
+      }
+
+      padding-top: 56px;
+      padding-bottom: 56px;
+      border-top: 1px solid $service-grey-border-color;
+      border-bottom: 1px solid $service-grey-border-color;
+      @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 275px 370px;
+        justify-content: space-around;
+        align-items: center;
+      }
+      @media (min-width: 768px) {
+        grid-template-columns: 240px 370px 0 45px;
+      }
+      @media (min-width: 1200px) {
+        grid-template-columns: 275px 415px 185px 45px;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        h3 {
+          @extend %industry-header;
+          display: inline-block;
+          padding-right: 16px;
+          @media (min-width: 1024px) {
+            font-size: 24px;
+          }
+        }
+        span {
+          background-color: $main-dark-blue-color;
+          font-size: 13px;
+          color: #fff;
+          font-weight: 400;
+          padding: 4px 16px;
+          border-radius: 20px;
+          @media (min-width: 1024px) {
+            font-size: 15px;
+          }
+        }
+      }
+      .description {
+        @extend %industry-description;
+        @media (min-width: 1024px) {
+          font-size: 18px;
+        }
+      }
+      .image {
+        .cardItem {
+          display: none;
+        }
+      }
+      .link {
+        @media (max-width: 768px) {
+          display: none;
+        }
+        @media (min-width: 1200px) and (hover: hover) {
+          display: block;
+        }
+      }
+    }
+  }
+}

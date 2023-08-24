@@ -83,6 +83,12 @@
   font-weight: 400;
 }
 
+%industry-description {
+  font-size: 14px;
+  color: $chekbox-active-text;
+  font-weight: 400;
+}
+
 %project-header {
   font-size: 18px;
   font-weight: 600;
@@ -94,6 +100,13 @@
   font-size: 24px;
   font-weight: 600;
   color: $header-dark-color;
+  margin: 0;
+}
+
+%industry-header {
+  color: $button-tech-color;
+  font-size: 18px;
+  font-weight: 500;
   margin: 0;
 }
 
