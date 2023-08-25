@@ -70,7 +70,7 @@
   border-color: transparent;
 }
 
-.services-page__technologies .accordion__item p, .services-page__examples .cards-list__item .details span, .services-page__examples p, .case-content .description p, .about p, .services p {
+.aboutUs-page__preview p, .services-page__technologies .accordion__item p, .services-page__examples .cards-list__item .details span, .services-page__examples p, .case-content .description p, .about p, .services p {
   font-size: 14px;
   font-weight: 400;
   color: #6e6e86;
@@ -84,7 +84,7 @@
   margin: 0;
 }
 
-.services-page__questions .questions-list p, .services-page__examples .cards-list__item .details p, .services-page__provide .contents .card-description p, .case-content__testing p, .case-content__maintenance p, .case-content__summary p, .case-content__roadmap p, .case-content__challenges .container p, .customer__cards .card__body p {
+.aboutUs-page__advantages-item p, .services-page__questions .questions-list p, .services-page__examples .cards-list__item .details p, .services-page__provide .contents .card-description p, .case-content__testing p, .case-content__maintenance p, .case-content__summary p, .case-content__roadmap p, .case-content__challenges .container p, .customer__cards .card__body p {
   font-size: 14px;
   color: #2f2f2f;
   font-weight: 400;
@@ -103,7 +103,7 @@
   margin: 0;
 }
 
-.industries-page h1, .cases-list h1, .projects-list h1, .feedback h3, .customer h3, .about h3, .services h3, .projects h2 {
+.aboutUs-page__values h2, .aboutUs-page__leadership h2, .aboutUs-page__advantages-item h3, .aboutUs-page__advantages h2, .aboutUs-page__preview h1, .industries-page h1, .cases-list h1, .projects-list h1, .feedback h3, .customer h3, .about h3, .services h3, .projects h2 {
   font-size: 24px;
   font-weight: 600;
   color: #0b103d;
@@ -3463,6 +3463,161 @@ body#main-page {
   .industries-page__list-item .link {
     display: block;
   }
+}
+
+.aboutUs-page {
+  padding-top: 95px;
+}
+.aboutUs-page__preview {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 56px;
+}
+.aboutUs-page__preview h1 {
+  color: #0b2471;
+  padding-bottom: 16px;
+}
+.aboutUs-page__preview p {
+  margin: 0;
+}
+.aboutUs-page__team {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 100px;
+}
+.aboutUs-page__team .experience {
+  margin-top: -10%;
+  transform: scale(1);
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  background-color: #3769f1;
+  border-radius: 20px;
+  padding: 16px;
+}
+.aboutUs-page__team .experience .amount {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aboutUs-page__team .experience .amount span {
+  font-size: 14px;
+  font-weight: 300;
+  color: #cad8ff;
+}
+.aboutUs-page__advantages {
+  padding-bottom: 100px;
+}
+.aboutUs-page__advantages .customized {
+  background-color: #3769f1;
+  border-radius: 20px;
+}
+.aboutUs-page__advantages .customized h3 {
+  color: #fefce8;
+}
+.aboutUs-page__advantages .customized p {
+  color: #e7e7eb;
+}
+.aboutUs-page__advantages .full-stack {
+  background-color: #ffeb6b;
+  border-top: 8px solid var(--neutral-100, #f8f8f8);
+  border-radius: 20px;
+}
+.aboutUs-page__advantages .full-stack h3 {
+  color: #0e0d35;
+}
+.aboutUs-page__advantages .full-stack p {
+  color: #565672;
+}
+.aboutUs-page__advantages .support {
+  background-color: #262549;
+  border-top: 8px solid var(--neutral-100, #f8f8f8);
+  border-radius: 20px;
+}
+.aboutUs-page__advantages .support h3 {
+  color: #fff;
+}
+.aboutUs-page__advantages .support p {
+  color: #e7e7eb;
+}
+.aboutUs-page__advantages h2 {
+  color: #0b103d;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.aboutUs-page__advantages-item .inner {
+  padding: 16px;
+}
+.aboutUs-page__advantages-item:nth-child(1) {
+  background-color: #000;
+}
+.aboutUs-page__leadership {
+  padding-left: 16px;
+  padding-right: 32px;
+  padding-bottom: 80px;
+}
+.aboutUs-page__leadership h2 {
+  color: #0b103d;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+.aboutUs-page__leadership .team-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.aboutUs-page__leadership .team-list .item {
+  flex-shrink: 0;
+}
+.aboutUs-page__leadership .team-list .item .employee-name {
+  color: #0b103d;
+  font-size: 16px;
+  font-weight: 500;
+}
+.aboutUs-page__leadership .team-list .item .employee-position {
+  color: #3769f1;
+  font-size: 14px;
+  font-weight: 500;
+}
+.aboutUs-page__leadership .team-list .item:not(:last-child) {
+  margin-right: 8px;
+}
+.aboutUs-page__values {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #f6f3ef;
+}
+.aboutUs-page__values-list .item {
+  background-color: #fff;
+  padding: 18px;
+  border-radius: 24px;
+}
+.aboutUs-page__values-list .item:not(:last-child) {
+  margin-bottom: 12px;
+}
+.aboutUs-page__values-list .item .content h4 {
+  color: #3769f1;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.aboutUs-page__values-list .item .content p {
+  font-size: 17px;
+  color: #6e6e86;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.aboutUs-page__values h2 {
+  color: #0e40c7;
+  margin-bottom: 32px;
 }
 
 /*# sourceMappingURL=style.css.map */

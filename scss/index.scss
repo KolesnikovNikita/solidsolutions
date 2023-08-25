@@ -3316,3 +3316,185 @@ body#main-page {
     }
   }
 }
+
+.aboutUs-page {
+  padding-top: 95px;
+
+  &__preview {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 56px;
+    h1 {
+      @extend %large-header;
+      color: $deep-violet-color;
+      padding-bottom: 16px;
+    }
+    p {
+      @extend %alt-page-text;
+      margin: 0;
+    }
+  }
+
+  &__team {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 100px;
+    .experience {
+      margin-top: -10%;
+      transform: scale(1);
+
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      background-color: $main-dark-blue-color;
+      border-radius: 20px;
+      padding: 16px;
+
+      .amount {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        span {
+          font-size: 14px;
+          font-weight: 300;
+          color: $about-grey-color;
+        }
+      }
+    }
+  }
+  &__advantages {
+    padding-bottom: 100px;
+    .customized {
+      background-color: $main-dark-blue-color;
+      border-radius: 20px;
+      h3 {
+        color: $about-pearl-color;
+      }
+      p {
+        color: $pearl-color;
+      }
+    }
+    .full-stack {
+      background-color: $main-yellow-color;
+      border-top: 8px solid var(--neutral-100, $header-background-color);
+      border-radius: 20px;
+      h3 {
+        color: $service-deep-blue-color;
+      }
+      p {
+        color: $main-text-color;
+      }
+    }
+    .support {
+      background-color: $project-header-color;
+      border-top: 8px solid var(--neutral-100, $header-background-color);
+      border-radius: 20px;
+      h3 {
+        color: #fff;
+      }
+      p {
+        color: $pearl-color;
+      }
+    }
+    h2 {
+      @extend %large-header;
+      color: $header-dark-color;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    &-item {
+      .inner {
+        padding: 16px;
+      }
+      h3 {
+        @extend %large-header;
+      }
+      p {
+        @extend %card-text;
+      }
+      &:nth-child(1) {
+        background-color: #000;
+      }
+    }
+  }
+
+  &__leadership {
+    padding-left: 16px;
+    padding-right: 32px;
+    padding-bottom: 80px;
+    h2 {
+      @extend %large-header;
+      color: $header-dark-color;
+      font-weight: 500;
+      margin-bottom: 32px;
+    }
+    .team-list {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      .item {
+        .employee-name {
+          color: $header-dark-color;
+          font-size: 16px;
+          font-weight: 500;
+        }
+        .employee-position {
+          color: $main-dark-blue-color;
+          font-size: 14px;
+          font-weight: 500;
+        }
+        flex-shrink: 0;
+        &:not(:last-child) {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+  &__values {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: $about-skin-color;
+
+    &-list {
+      .item {
+        background-color: #fff;
+        padding: 18px;
+        border-radius: 24px;
+
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+
+        .content {
+          h4 {
+            color: $main-dark-blue-color;
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 8px;
+          }
+          p {
+            font-size: 17px;
+            color: $main-header-color;
+            font-weight: 400;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    h2 {
+      @extend %large-header;
+      color: $blue-sky-color;
+      margin-bottom: 32px;
+    }
+  }
+}
