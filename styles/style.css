@@ -70,13 +70,19 @@
   border-color: transparent;
 }
 
-.aboutUs-page__preview p, .services-page__technologies .accordion__item p, .services-page__examples .cards-list__item .details span, .services-page__examples p, .case-content .description p, .about p, .services p {
+.aboutUs-page__exploring p, .aboutUs-page__preview p, .services-page__technologies .accordion__item p, .services-page__examples .cards-list__item .details span, .services-page__examples p, .case-content .description p, .about p, .services p {
   font-size: 14px;
   font-weight: 400;
   color: #6e6e86;
 }
 
-.services-page__technologies h2, .services-page__examples h2, .case-content__testing h4, .case-content__maintenance h4, .case-content__summary h4, .case-content__roadmap h4, .case-content .description h4, .case-content__project .types h1, .footer h3 {
+.aboutUs-page__exploring span {
+  color: #3769f1;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.aboutUs-page__exploring h2, .aboutUs-page__values h2, .aboutUs-page__advantages h2, .aboutUs-page__preview h1, .services-page__technologies h2, .services-page__examples h2, .case-content__testing h4, .case-content__maintenance h4, .case-content__summary h4, .case-content__roadmap h4, .case-content .description h4, .case-content__project .types h1, .footer h3 {
   font-size: 24px;
   font-style: normal;
   color: #2f2f2f;
@@ -96,21 +102,21 @@
   font-weight: 400;
 }
 
-.projects h3 {
+.aboutUs-page__values-list .item .content h4, .projects h3 {
   font-size: 18px;
   font-weight: 600;
   color: #262549;
   margin: 0;
 }
 
-.aboutUs-page__values h2, .aboutUs-page__leadership h2, .aboutUs-page__advantages-item h3, .aboutUs-page__advantages h2, .aboutUs-page__preview h1, .industries-page h1, .cases-list h1, .projects-list h1, .feedback h3, .customer h3, .about h3, .services h3, .projects h2 {
+.aboutUs-page__atmosphere h2, .aboutUs-page__leadership h2, .industries-page h1, .cases-list h1, .projects-list h1, .feedback h3, .customer h3, .about h3, .services h3, .projects h2 {
   font-size: 24px;
   font-weight: 600;
   color: #0b103d;
   margin: 0;
 }
 
-.industries-page__list-item .header h3 {
+.aboutUs-page__advantages-item h3, .industries-page__list-item .header h3 {
   color: #0e0d35;
   font-size: 18px;
   font-weight: 500;
@@ -3466,34 +3472,102 @@ body#main-page {
 }
 
 .aboutUs-page {
-  padding-top: 95px;
+  padding-top: 125px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 1024px) {
+  .aboutUs-page {
+    padding-top: 155px;
+  }
 }
 .aboutUs-page__preview {
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 56px;
+  padding-bottom: 36px;
+}
+@media (min-width: 768px) {
+  .aboutUs-page__preview {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10%;
+    align-items: center;
+  }
+}
+@media (min-width: 1200px) {
+  .aboutUs-page__preview {
+    padding-left: 82px;
+    padding-right: 82px;
+  }
 }
 .aboutUs-page__preview h1 {
-  color: #0b2471;
+  color: #000;
   padding-bottom: 16px;
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__preview h1 {
+    font-size: 48px;
+    padding-bottom: 0;
+  }
 }
 .aboutUs-page__preview p {
   margin: 0;
+  color: #6e6e86;
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__preview p {
+    font-size: 18px;
+  }
 }
 .aboutUs-page__team {
   padding-left: 16px;
   padding-right: 16px;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
+}
+@media (min-width: 768px) {
+  .aboutUs-page__team {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+.aboutUs-page__team .photo {
+  text-align: center;
 }
 .aboutUs-page__team .experience {
+  display: flex;
+  justify-content: center;
+}
+.aboutUs-page__team .experience-inner {
   margin-top: -10%;
   transform: scale(1);
-  z-index: 2;
+  width: 90%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #3769f1;
   border-radius: 20px;
-  padding: 16px;
+  padding: 25px 40px;
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__team .experience-inner .desktop-view {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10%;
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__team .experience-inner {
+    padding: 50px 80px;
+    gap: 10%;
+  }
 }
 .aboutUs-page__team .experience .amount {
   color: #fff;
@@ -3502,6 +3576,29 @@ body#main-page {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.aboutUs-page__team .experience .amount:not(:last-child) {
+  margin-bottom: 33px;
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__team .experience .amount:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+.aboutUs-page__team .experience .amount .motivation {
+  display: inline-block;
+  transform-origin: center;
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__team .experience .amount .motivation svg {
+    transform: scale(2.5);
+    padding-bottom: 6px;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__team .experience .amount {
+    font-size: 56px;
+  }
 }
 .aboutUs-page__team .experience .amount span {
   font-size: 14px;
@@ -3513,7 +3610,8 @@ body#main-page {
 }
 .aboutUs-page__advantages .customized {
   background-color: #3769f1;
-  border-radius: 20px;
+  border-radius: 0px 12px 8px 0px;
+  width: 94%;
 }
 .aboutUs-page__advantages .customized h3 {
   color: #fefce8;
@@ -3524,7 +3622,11 @@ body#main-page {
 .aboutUs-page__advantages .full-stack {
   background-color: #ffeb6b;
   border-top: 8px solid var(--neutral-100, #f8f8f8);
-  border-radius: 20px;
+  border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 94%;
+  margin-top: -5px;
 }
 .aboutUs-page__advantages .full-stack h3 {
   color: #0e0d35;
@@ -3535,7 +3637,10 @@ body#main-page {
 .aboutUs-page__advantages .support {
   background-color: #262549;
   border-top: 8px solid var(--neutral-100, #f8f8f8);
-  border-radius: 20px;
+  border-radius: 12px 0px 0px 12px;
+  width: 94%;
+  margin-left: auto;
+  margin-top: -5px;
 }
 .aboutUs-page__advantages .support h3 {
   color: #fff;
@@ -3545,79 +3650,364 @@ body#main-page {
 }
 .aboutUs-page__advantages h2 {
   color: #0b103d;
-  font-weight: 500;
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__advantages h2 {
+    font-size: 48px;
+    margin-bottom: 64px;
+  }
 }
 .aboutUs-page__advantages-item .inner {
-  padding: 16px;
+  padding: 36px 24px;
+  display: grid;
+  grid-template-columns: minmax(105px, 418px) minmax(148px, 520px);
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__advantages-item .inner {
+    padding: 80px 76px;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__advantages-item h3 {
+    font-size: 40px;
+  }
+}
+.aboutUs-page__advantages-item p {
+  margin: 0;
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__advantages-item p {
+    font-size: 20px;
+  }
 }
 .aboutUs-page__advantages-item:nth-child(1) {
   background-color: #000;
 }
 .aboutUs-page__leadership {
   padding-left: 16px;
-  padding-right: 32px;
-  padding-bottom: 80px;
+  padding-bottom: 56px;
+}
+@media (min-width: 768px) {
+  .aboutUs-page__leadership {
+    padding-left: 35px;
+  }
 }
 .aboutUs-page__leadership h2 {
   color: #0b103d;
   font-weight: 500;
   margin-bottom: 32px;
 }
+@media (min-width: 1024px) {
+  .aboutUs-page__leadership h2 {
+    font-size: 40px;
+    margin-bottom: 86px;
+  }
+}
 .aboutUs-page__leadership .team-list {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
 }
+@media (min-width: 1224px) {
+  .aboutUs-page__leadership .team-list {
+    justify-content: center;
+  }
+}
 .aboutUs-page__leadership .team-list .item {
+  width: 175px;
   flex-shrink: 0;
 }
+@media (min-width: 1024px) {
+  .aboutUs-page__leadership .team-list .item {
+    width: auto;
+  }
+}
 .aboutUs-page__leadership .team-list .item .employee-name {
-  color: #0b103d;
-  font-size: 16px;
+  color: #0e0d35;
+  font-size: 14px;
+  font-style: normal;
   font-weight: 500;
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__leadership .team-list .item .employee-name {
+    font-size: 20px;
+  }
 }
 .aboutUs-page__leadership .team-list .item .employee-position {
   color: #3769f1;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
 }
+@media (min-width: 1024px) {
+  .aboutUs-page__leadership .team-list .item .employee-position {
+    font-size: 16px;
+  }
+}
 .aboutUs-page__leadership .team-list .item:not(:last-child) {
-  margin-right: 8px;
+  margin-right: 10px;
 }
 .aboutUs-page__values {
-  padding-top: 80px;
+  padding-top: 40px;
   padding-bottom: 80px;
   padding-left: 16px;
   padding-right: 16px;
   background-color: #f6f3ef;
 }
+@media (min-width: 768px) {
+  .aboutUs-page__values {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__values {
+    padding-top: 170px;
+    padding-bottom: 170px;
+  }
+}
+@media (min-width: 768px) {
+  .aboutUs-page__values-list {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+@media (min-width: 1400px) {
+  .aboutUs-page__values-list {
+    justify-content: center;
+  }
+}
 .aboutUs-page__values-list .item {
+  flex-shrink: 0;
   background-color: #fff;
-  padding: 18px;
+  padding: 32px;
   border-radius: 24px;
+  max-width: 412px;
 }
 .aboutUs-page__values-list .item:not(:last-child) {
   margin-bottom: 12px;
 }
+.aboutUs-page__values-list .item .image {
+  margin-bottom: 32px;
+}
 .aboutUs-page__values-list .item .content h4 {
   color: #3769f1;
-  font-size: 24px;
-  font-weight: 600;
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__values-list .item .content h4 {
+    font-size: 24px;
+  }
 }
 .aboutUs-page__values-list .item .content p {
-  font-size: 17px;
+  font-size: 14px;
   color: #6e6e86;
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 0;
 }
+@media (min-width: 1024px) {
+  .aboutUs-page__values-list .item .content p {
+    font-size: 17px;
+  }
+}
 .aboutUs-page__values h2 {
   color: #0e40c7;
   margin-bottom: 32px;
+}
+.aboutUs-page__values h2 .break {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .aboutUs-page__values h2 .break {
+    display: inline;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__values h2 {
+    font-size: 40px;
+    margin-bottom: 56px;
+  }
+}
+.aboutUs-page__exploring {
+  padding-top: 48px;
+  padding-bottom: 80px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.aboutUs-page__exploring .desktop-view .photo-1,
+.aboutUs-page__exploring .desktop-view .photo-2 {
+  text-align: center;
+}
+@media (max-width: 1023px) {
+  .aboutUs-page__exploring .desktop-view .photo-1,
+  .aboutUs-page__exploring .desktop-view .photo-2 {
+    margin-bottom: 40px;
+  }
+}
+.aboutUs-page__exploring .desktop-view .photo-1 {
+  order: 1;
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__exploring .desktop-view {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10%;
+    align-items: center;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__exploring .desktop-view:first-child {
+    margin-bottom: 80px;
+  }
+}
+@media (min-width: 768px) {
+  .aboutUs-page__exploring {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__exploring {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    padding-left: 80px;
+    padding-right: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__exploring span {
+    font-size: 20px;
+  }
+}
+.aboutUs-page__exploring .photo {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.aboutUs-page__exploring h2 {
+  margin-top: 15px;
+  margin-bottom: 32px;
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__exploring h2 {
+    font-size: 48px;
+  }
+}
+.aboutUs-page__exploring p {
+  color: #3e3d5d;
+  margin-top: 0;
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__exploring p {
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+}
+.aboutUs-page__atmosphere {
+  padding-top: 20px;
+  background-color: #3769f1;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 40px;
+  margin-bottom: 160px;
+  height: 890px;
+}
+@media (min-width: 425px) {
+  .aboutUs-page__atmosphere {
+    margin-bottom: 175px;
+  }
+}
+@media (min-width: 768px) {
+  .aboutUs-page__atmosphere {
+    height: 600px;
+    margin-bottom: 255px;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__atmosphere {
+    height: 1000px;
+  }
+}
+@media (min-width: 1200px) {
+  .aboutUs-page__atmosphere {
+    height: 1295px;
+    margin-bottom: 395px;
+    padding: 80px 40px;
+  }
+}
+.aboutUs-page__atmosphere h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__atmosphere h2 {
+    font-size: 48px;
+    margin-bottom: 70px;
+  }
+}
+@media (min-width: 768px) {
+  .aboutUs-page__atmosphere .gallery .desktop-view {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__atmosphere .gallery .desktop-view {
+    gap: 24px;
+  }
+}
+.aboutUs-page__atmosphere .gallery-item {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .aboutUs-page__atmosphere .gallery .gallery-item-large img {
+    height: 350px;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__atmosphere .gallery .gallery-item-big {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .aboutUs-page__atmosphere .gallery .gallery-item-big img {
+    height: 190px;
+  }
+}
+@media (max-width: 767px) {
+  .aboutUs-page__atmosphere .gallery .gallery-item-small img {
+    height: 150px;
+  }
+}
+@media (max-width: 767px) {
+  .aboutUs-page__atmosphere .gallery .gallery-item-middle img {
+    height: 158px;
+  }
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__atmosphere .gallery .gallery-item-middle {
+    margin-top: 20px;
+  }
+}
+.aboutUs-page__atmosphere .gallery .double-photo {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+@media (min-width: 1024px) {
+  .aboutUs-page__atmosphere .gallery .double-photo {
+    gap: 24px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

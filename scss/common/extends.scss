@@ -69,6 +69,12 @@
   color: $alt-text-color;
 }
 
+%middle-size-text {
+  color: $main-dark-blue-color;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 %page-header {
   font-size: 24px;
   font-style: normal;

@@ -3318,45 +3318,121 @@ body#main-page {
 }
 
 .aboutUs-page {
-  padding-top: 95px;
+  padding-top: 125px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  @media (min-width: 1024px) {
+    padding-top: 155px;
+  }
 
   &__preview {
     padding-left: 16px;
     padding-right: 16px;
-    padding-bottom: 56px;
+    padding-bottom: 36px;
+    @media (min-width: 768px) {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+    @media (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10%;
+      align-items: center;
+    }
+    @media (min-width: 1200px) {
+      padding-left: 82px;
+      padding-right: 82px;
+    }
     h1 {
-      @extend %large-header;
-      color: $deep-violet-color;
+      @extend %page-header;
+      color: #000;
       padding-bottom: 16px;
+      @media (min-width: 1024px) {
+        font-size: 48px;
+        padding-bottom: 0;
+      }
     }
     p {
       @extend %alt-page-text;
       margin: 0;
+      color: $main-header-color;
+      @media (min-width: 1024px) {
+        font-size: 18px;
+      }
     }
   }
 
   &__team {
     padding-left: 16px;
     padding-right: 16px;
-    padding-bottom: 100px;
-    .experience {
-      margin-top: -10%;
-      transform: scale(1);
+    padding-bottom: 80px;
+    @media (min-width: 768px) {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
 
-      z-index: 2;
+    .photo {
+      text-align: center;
+    }
+
+    .experience {
       display: flex;
-      justify-content: space-between;
-      background-color: $main-dark-blue-color;
-      border-radius: 20px;
-      padding: 16px;
+      justify-content: center;
+      &-inner {
+        margin-top: -10%;
+        transform: scale(1);
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        background-color: $main-dark-blue-color;
+        border-radius: 20px;
+        padding: 25px 40px;
+
+        .desktop-view {
+          @media (min-width: 1024px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            gap: 10%;
+            width: 100%;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          padding: 50px 80px;
+          gap: 10%;
+        }
+      }
 
       .amount {
+        &:not(:last-child) {
+          margin-bottom: 33px;
+          @media (min-width: 1024px) {
+            margin-bottom: 0;
+          }
+        }
+
+        .motivation {
+          display: inline-block;
+          transform-origin: center;
+          svg {
+            @media (min-width: 1024px) {
+              transform: scale(2.5);
+              padding-bottom: 6px;
+            }
+          }
+        }
         color: #fff;
         font-size: 24px;
         font-weight: 500;
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media (min-width: 1024px) {
+          font-size: 56px;
+        }
 
         span {
           font-size: 14px;
@@ -3368,9 +3444,12 @@ body#main-page {
   }
   &__advantages {
     padding-bottom: 100px;
+
     .customized {
       background-color: $main-dark-blue-color;
-      border-radius: 20px;
+      border-radius: 0px 12px 8px 0px;
+      width: 94%;
+
       h3 {
         color: $about-pearl-color;
       }
@@ -3381,7 +3460,11 @@ body#main-page {
     .full-stack {
       background-color: $main-yellow-color;
       border-top: 8px solid var(--neutral-100, $header-background-color);
-      border-radius: 20px;
+      border-radius: 12px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 94%;
+      margin-top: -5px;
       h3 {
         color: $service-deep-blue-color;
       }
@@ -3392,7 +3475,10 @@ body#main-page {
     .support {
       background-color: $project-header-color;
       border-top: 8px solid var(--neutral-100, $header-background-color);
-      border-radius: 20px;
+      border-radius: 12px 0px 0px 12px;
+      width: 94%;
+      margin-left: auto;
+      margin-top: -5px;
       h3 {
         color: #fff;
       }
@@ -3401,22 +3487,38 @@ body#main-page {
       }
     }
     h2 {
-      @extend %large-header;
+      @extend %page-header;
       color: $header-dark-color;
-      font-weight: 500;
       text-align: center;
-      margin-bottom: 16px;
+      margin-bottom: 32px;
+      @media (min-width: 1024px) {
+        font-size: 48px;
+        margin-bottom: 64px;
+      }
     }
 
     &-item {
       .inner {
-        padding: 16px;
+        padding: 36px 24px;
+        display: grid;
+        grid-template-columns: minmax(105px, 418px) minmax(148px, 520px);
+        align-items: center;
+        @media (min-width: 1024px) {
+          padding: 80px 76px;
+        }
       }
       h3 {
-        @extend %large-header;
+        @extend %industry-header;
+        @media (min-width: 1024px) {
+          font-size: 40px;
+        }
       }
       p {
         @extend %card-text;
+        margin: 0;
+        @media (min-width: 1024px) {
+          font-size: 20px;
+        }
       }
       &:nth-child(1) {
         background-color: #000;
@@ -3426,75 +3528,314 @@ body#main-page {
 
   &__leadership {
     padding-left: 16px;
-    padding-right: 32px;
-    padding-bottom: 80px;
+    padding-bottom: 56px;
+    @media (min-width: 768px) {
+      padding-left: 35px;
+    }
     h2 {
       @extend %large-header;
       color: $header-dark-color;
       font-weight: 500;
       margin-bottom: 32px;
+      @media (min-width: 1024px) {
+        font-size: 40px;
+        margin-bottom: 86px;
+      }
     }
     .team-list {
       display: flex;
       flex-wrap: nowrap;
       overflow-x: auto;
+
+      @media (min-width: 1224px) {
+        justify-content: center;
+      }
       .item {
+        width: 175px;
+        @media (min-width: 1024px) {
+          width: auto;
+        }
         .employee-name {
-          color: $header-dark-color;
-          font-size: 16px;
+          color: $button-tech-color;
+          font-size: 14px;
+          font-style: normal;
           font-weight: 500;
+          @media (min-width: 1024px) {
+            font-size: 20px;
+          }
         }
         .employee-position {
           color: $main-dark-blue-color;
-          font-size: 14px;
+          font-size: 12px;
           font-weight: 500;
+          @media (min-width: 1024px) {
+            font-size: 16px;
+          }
         }
         flex-shrink: 0;
         &:not(:last-child) {
-          margin-right: 8px;
+          margin-right: 10px;
         }
       }
     }
   }
   &__values {
-    padding-top: 80px;
+    padding-top: 40px;
     padding-bottom: 80px;
     padding-left: 16px;
     padding-right: 16px;
     background-color: $about-skin-color;
 
+    @media (min-width: 768px) {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+
+    @media (min-width: 1024px) {
+      padding-top: 170px;
+      padding-bottom: 170px;
+    }
+
     &-list {
+      @media (min-width: 768px) {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+      }
+
+      @media (min-width: 1400px) {
+        justify-content: center;
+      }
       .item {
+        flex-shrink: 0;
         background-color: #fff;
-        padding: 18px;
+        padding: 32px;
         border-radius: 24px;
+        max-width: 412px;
 
         &:not(:last-child) {
           margin-bottom: 12px;
         }
 
+        .image {
+          margin-bottom: 32px;
+        }
+
         .content {
           h4 {
             color: $main-dark-blue-color;
-            font-size: 24px;
-            font-weight: 600;
+            @extend %project-header;
             margin-top: 0;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            @media (min-width: 1024px) {
+              font-size: 24px;
+            }
           }
           p {
-            font-size: 17px;
+            font-size: 14px;
             color: $main-header-color;
             font-weight: 400;
             margin-top: 0;
             margin-bottom: 0;
+            @media (min-width: 1024px) {
+              font-size: 17px;
+            }
           }
         }
       }
     }
     h2 {
-      @extend %large-header;
+      @extend %page-header;
       color: $blue-sky-color;
       margin-bottom: 32px;
+      .break {
+        display: none;
+      }
+      @media screen and (min-width: 1024px) {
+        .break {
+          display: inline;
+        }
+      }
+      @media (min-width: 1024px) {
+        font-size: 40px;
+        margin-bottom: 56px;
+      }
+    }
+  }
+
+  &__exploring {
+    .desktop-view {
+      .photo-1,
+      .photo-2 {
+        text-align: center;
+        @media (max-width: 1023px) {
+          margin-bottom: 40px;
+        }
+      }
+      .photo-1 {
+        order: 1;
+      }
+      @media (min-width: 1024px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10%;
+        align-items: center;
+      }
+
+      &:first-child {
+        @media (min-width: 1024px) {
+          margin-bottom: 80px;
+        }
+      }
+    }
+    padding-top: 48px;
+    padding-bottom: 80px;
+    padding-left: 16px;
+    padding-right: 16px;
+    @media (min-width: 768px) {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+    @media (min-width: 1024px) {
+      padding-top: 120px;
+      padding-bottom: 120px;
+      padding-left: 80px;
+      padding-right: 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 10%;
+    }
+
+    span {
+      @extend %middle-size-text;
+      @media (min-width: 1024px) {
+        font-size: 20px;
+      }
+    }
+
+    .photo {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    h2 {
+      @extend %page-header;
+      margin-top: 15px;
+      margin-bottom: 32px;
+      @media (min-width: 1024px) {
+        font-size: 48px;
+      }
+    }
+
+    p {
+      @extend %alt-page-text;
+      color: $chekbox-active-text;
+      margin-top: 0;
+
+      @media (min-width: 1024px) {
+        margin-bottom: 0;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__atmosphere {
+    padding-top: 20px;
+    background-color: $main-dark-blue-color;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 40px;
+    margin-bottom: 160px;
+    height: 890px;
+
+    @media (min-width: 425px) {
+      margin-bottom: 175px;
+    }
+    @media (min-width: 768px) {
+      height: 600px;
+      margin-bottom: 255px;
+    }
+    @media (min-width: 1024px) {
+      height: 1000px;
+    }
+
+    @media (min-width: 1200px) {
+      height: 1295px;
+      margin-bottom: 395px;
+      padding: 80px 40px;
+    }
+
+    h2 {
+      @extend %large-header;
+      color: #fff;
+      margin-bottom: 20px;
+      @media (min-width: 1024px) {
+        font-size: 48px;
+        margin-bottom: 70px;
+      }
+    }
+    .gallery {
+      .desktop-view {
+        @media (min-width: 768px) {
+          display: flex;
+          flex-direction: row;
+          gap: 8px;
+        }
+        @media (min-width: 1024px) {
+          gap: 24px;
+        }
+      }
+      &-item {
+        text-align: center;
+      }
+      .gallery-item-large {
+        img {
+          @media (max-width: 767px) {
+            height: 350px;
+          }
+        }
+      }
+
+      .gallery-item-big {
+        @media (min-width: 1024px) {
+          margin-bottom: 20px;
+        }
+        img {
+          @media (max-width: 767px) {
+            height: 190px;
+          }
+        }
+      }
+
+      .gallery-item-small {
+        img {
+          @media (max-width: 767px) {
+            height: 150px;
+          }
+        }
+      }
+
+      .gallery-item-middle {
+        img {
+          @media (max-width: 767px) {
+            height: 158px;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          margin-top: 20px;
+        }
+      }
+      .double-photo {
+        display: flex;
+        gap: 6px;
+        justify-content: center;
+        @media (min-width: 1024px) {
+          gap: 24px;
+        }
+      }
     }
   }
 }
