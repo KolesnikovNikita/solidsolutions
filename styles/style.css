@@ -70,7 +70,7 @@
   border-color: transparent;
 }
 
-.aboutUs-page__exploring p, .aboutUs-page__preview p, .services-page__technologies .accordion__item p, .services-page__examples .cards-list__item .details span, .services-page__examples p, .case-content .description p, .about p, .services p {
+.blog-page p, .aboutUs-page__exploring p, .aboutUs-page__preview p, .services-page__technologies .accordion__item p, .services-page__examples .cards-list__item .details span, .services-page__examples p, .case-content .description p, .about p, .services p {
   font-size: 14px;
   font-weight: 400;
   color: #6e6e86;
@@ -82,7 +82,7 @@
   font-weight: 500;
 }
 
-.aboutUs-page__exploring h2, .aboutUs-page__values h2, .aboutUs-page__advantages h2, .aboutUs-page__preview h1, .services-page__technologies h2, .services-page__examples h2, .case-content__testing h4, .case-content__maintenance h4, .case-content__summary h4, .case-content__roadmap h4, .case-content .description h4, .case-content__project .types h1, .footer h3 {
+.blog-page h1, .aboutUs-page__exploring h2, .aboutUs-page__values h2, .aboutUs-page__advantages h2, .aboutUs-page__preview h1, .services-page__technologies h2, .services-page__examples h2, .case-content__testing h4, .case-content__maintenance h4, .case-content__summary h4, .case-content__roadmap h4, .case-content .description h4, .case-content__project .types h1, .footer h3 {
   font-size: 24px;
   font-style: normal;
   color: #2f2f2f;
@@ -4007,6 +4007,120 @@ body#main-page {
 @media (min-width: 1024px) {
   .aboutUs-page__atmosphere .gallery .double-photo {
     gap: 24px;
+  }
+}
+
+.blog-page {
+  padding-top: 110px;
+  background-color: #f8f8f8;
+  padding-bottom: 16px;
+  border-bottom-left-radius: 40px;
+}
+@media (min-width: 1024px) {
+  .blog-page {
+    padding-top: 150px;
+    padding-bottom: 90px;
+  }
+}
+.blog-page__header {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .blog-page__header {
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+}
+@media (min-width: 1200px) {
+  .blog-page__header {
+    padding-right: 82px;
+    padding-left: 82px;
+  }
+}
+@media (min-width: 1024px) {
+  .blog-page__header {
+    margin-bottom: 70px;
+  }
+}
+.blog-page h1 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #000;
+}
+@media (min-width: 1024px) {
+  .blog-page h1 {
+    font-size: 48px;
+    margin-bottom: 27px;
+  }
+}
+.blog-page p {
+  color: #6e6e86;
+  margin-top: 0;
+}
+@media (min-width: 1024px) {
+  .blog-page p {
+    font-size: 16px;
+  }
+}
+.blog-page__list {
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .blog-page__list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+}
+.blog-page__list-item {
+  cursor: pointer;
+  width: auto;
+  margin-bottom: 40px;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .blog-page__list-item {
+    width: 320px;
+  }
+}
+@media (min-width: 1024px) {
+  .blog-page__list-item {
+    gap: 20px;
+  }
+}
+.blog-page__list-item .image {
+  margin-bottom: 12px;
+}
+.blog-page__list-item .description .date {
+  font-size: 12px;
+  color: #515151;
+  font-weight: 400;
+}
+@media (min-width: 1024px) {
+  .blog-page__list-item .description .date {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+}
+.blog-page__list-item .description .article {
+  font-size: 16px;
+  color: #2f2f2f;
+  font-weight: 500;
+}
+@media (min-width: 1024px) {
+  .blog-page__list-item .description .article {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .blog-page__list-item {
+    margin-bottom: 60px;
   }
 }
 
