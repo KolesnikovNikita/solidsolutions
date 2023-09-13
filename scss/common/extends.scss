@@ -165,3 +165,15 @@
     rgba(255, 255, 255, 0.1) inset;
   backdrop-filter: blur(45.53333282470703px);
 }
+
+%accordion-body-text {
+  color: $service-grey-text-color;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 32px;
+  padding-right: 32px;
+  @media (min-width: 1024px) {
+    font-size: 16px;
+  }
+}

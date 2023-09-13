@@ -68,24 +68,47 @@
 
     <section class="services-page">
       <div class="services-page__introduction">
-        <div class="services-page__introduction-container">
-          <span>Embrace Your Digital Future</span>
-          <h1>Dive into Our Services and Ignite Success!</h1>
-          <p>
-            We provide customizable web solutions for businesses worldwide,
-            helping them achieve their goals beyond coding. With a focus on
-            delivering tailored products and satisfying their unique business
-            requirements, we strive to exceed expectations.
-          </p>
-
-          <a class="scroll-link">scroll</a>
+        <div class="services-page__video">
+          <video autoplay muted loop class="services-page__video-item">
+            <source
+              src="../assets/video/pexels-google-deepmind-1806932(2160p).mp4"
+              type="video/mp4"
+            />
+          </video>
         </div>
+        <h1>
+          Dive into Our Services <br />
+          and Ignite Success!
+        </h1>
       </div>
 
       <div class="services-page__provide">
         <div class="contents">
+          <div class="scroll-desktop-section">
+            <div class="link-container">
+              <a href="#cardSection">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 14L12 18M12 18L16 14M12 18L12 6"
+                    stroke="#3769F1"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                Scroll to learn more
+              </a>
+            </div>
+          </div>
           <h2>We provide...</h2>
-          <div class="card">
+          <div id="cardSection" class="card">
             <div class="card-description">
               <div><span>01.</span>Development</div>
               <h3>Web-Development</h3>
@@ -294,7 +317,7 @@
         <h2>Technologies we use</h2>
         <div class="accordion accordion-flush" id="accordionTechs">
           <div class="accordion__item">
-            <h2 class="accordion-header" id="headingOne">
+            <h3 class="accordion-header" id="headingOne">
               <button
                 class="accordion-button collapsed"
                 type="button"
@@ -304,7 +327,7 @@
               >
                 WEB
               </button>
-            </h2>
+            </h3>
 
             <div
               id="collapseOne"
@@ -490,7 +513,7 @@
             </div>
           </div>
           <div class="accordion__item">
-            <h2 class="accordion-header" id="headingTwo">
+            <h3 class="accordion-header" id="headingTwo">
               <button
                 class="accordion-button collapsed"
                 type="button"
@@ -499,7 +522,7 @@
               >
                 MOBILE
               </button>
-            </h2>
+            </h3>
             <div
               id="collapseTwo"
               aria-labelledby="headingTwo"
@@ -653,7 +676,7 @@
             </div>
           </div>
           <div class="accordion__item">
-            <h2 class="accordion-header" id="headingThree">
+            <h3 class="accordion-header" id="headingThree">
               <button
                 class="accordion-button collapsed"
                 type="button"
@@ -664,7 +687,7 @@
               >
                 DEVOPS
               </button>
-            </h2>
+            </h3>
             <div
               id="collapseThree"
               aria-labelledby="headingThree"
@@ -738,6 +761,12 @@
                     <div>
                       <img
                         src="../assets/images/services/techs/aws-ec2.png"
+                        alt="image"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="../assets/images/services/techs/aws-s3.png"
                         alt="image"
                       />
                     </div>
@@ -823,7 +852,7 @@
             </div>
           </div>
           <div class="accordion__item">
-            <h2 class="accordion-header" id="headingFour">
+            <h3 class="accordion-header" id="headingFour">
               <button
                 class="accordion-button collapsed"
                 type="button"
@@ -834,7 +863,7 @@
               >
                 QA
               </button>
-            </h2>
+            </h3>
             <div
               id="collapseFour"
               aria-labelledby="headingFour"
@@ -870,12 +899,7 @@
                         alt="image"
                       />
                     </div>
-                    <div>
-                      <img
-                        src="../assets/images/services/techs/Circle-Ci.png"
-                        alt="image"
-                      />
-                    </div>
+
                     <div>
                       <img
                         src="../assets/images/services/techs/JUnit.png"
@@ -935,64 +959,12 @@
                       />
                     </div>
                   </div>
-
-                  <h4>Virtualization</h4>
-                  <div class="tech-list">
-                    <div>
-                      <img
-                        src="../assets/images/services/techs/docker.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="../assets/images/services/techs/Kubernetes.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="../assets/images/services/techs/vagrant.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="../assets/images/services/techs/ionic.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="../assets/images/services/techs/VMware.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="../assets/images/services/techs/Proxmox.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="../assets/images/services/techs/Openstack.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="../assets/images/services/techs/VirtualBox.png"
-                        alt="image"
-                      />
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="accordion__item">
-            <h2 class="accordion-header" id="headingFive">
+            <h3 class="accordion-header" id="headingFive">
               <button
                 class="accordion-button collapsed"
                 type="button"
@@ -1003,7 +975,7 @@
               >
                 DATABASES
               </button>
-            </h2>
+            </h3>
             <div
               id="collapseFive"
               aria-labelledby="headingFive"
@@ -1068,58 +1040,6 @@
                       />
                     </div>
                   </div>
-
-                  <h4>Virtualization</h4>
-                  <div class="tech-list">
-                    <div>
-                      <img
-                        src="../assets/images/services/techs/docker.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="../assets/images/services/techs/Kubernetes.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="../assets/images/services/techs/vagrant.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="../assets/images/services/techs/ionic.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="../assets/images/services/techs/VMware.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="../assets/images/services/techs/Proxmox.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="../assets/images/services/techs/Openstack.png"
-                        alt="image"
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="../assets/images/services/techs/VirtualBox.png"
-                        alt="image"
-                      />
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -1157,188 +1077,200 @@
     </div>
 
     <section class="special-gradient">
-      <div class="services-page__questions">
-        <div class="services-page__image-container">
-          <img src="../assets/images/services/techs/faq.png" alt="faq" />
+      <div style="background-color: #f8f8f8; border-bottom-left-radius: 40px">
+        <div class="services-page__questions">
+          <div class="services-page__image-container">
+            <picture>
+              <source
+                media="(min-width: 1024px)"
+                srcset="../assets/images/services/techs/faq-desksize.png"
+              />
+              <img
+                src="../assets/images/services/techs/faq.png"
+                width="375"
+                height="410"
+                alt="FAQ"
+              />
+            </picture>
+          </div>
+          <div
+            class="accordion accordion-flush faq-questions"
+            id="accordionQuestions"
+          >
+            <div class="accordion-item questions-list">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  How do i order your web development service?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionQuestions"
+              >
+                <div class="accordion-body accordion-text">
+                  To order our web development services, please, contact us by
+                  <a>office@solid-sl.com</a> or Skype
+                  <a>office@solid-sl.com</a> and provide us with the information
+                  you have about your project. If you have any available
+                  documentation, it will really be extremely useful as it will
+                  let us understand your project and estimate it in terms of the
+                  cost and expected time for the development. For example, you
+                  can send us the technical specification of the system, a
+                  brief, a map of the site, navigation menu item list, content
+                  and so on. Then, our specialists will get in touch with you.
+                  Once we’ve clarified the technical requirements and signed the
+                  contract, we’ll start working on your product.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item questions-list">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  Can you help choose the best type of website for me?!
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionQuestions"
+              >
+                <div class="accordion-body accordion-text">
+                  To order our web development services, please, contact us by
+                  email office@solid-sl.com or Skype office@solid-sl.com and
+                  provide us with the information you have about your project.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item questions-list">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseThree"
+                >
+                  How do I order the web development services if I don’t have a
+                  detailed technical specification?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingThree"
+                data-bs-parent="#accordionQuestions"
+              >
+                <div class="accordion-body accordion-text">
+                  To order our web development services, please, contact us by
+                  email office@solid-sl.com or Skype office@solid-sl.com and
+                  provide us with the information you have about your project.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item questions-list">
+              <h2 class="accordion-header" id="flush-headingFour">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFour"
+                >
+                  How long will it take to build a website?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFour"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionQuestions"
+              >
+                <div class="accordion-body accordion-text">
+                  To order our web development services, please, contact us by
+                  email office@solid-sl.com or Skype office@solid-sl.com and
+                  provide us with the information you have about your project.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div
-          class="accordion accordion-flush faq-questions"
-          id="accordionQuestions"
-        >
-          <div class="accordion-item questions-list">
-            <h2 class="accordion-header" id="flush-headingOne">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseOne"
-                aria-expanded="false"
-                aria-controls="flush-collapseOne"
-              >
-                How do i order your web development service?
-              </button>
-            </h2>
-            <div
-              id="flush-collapseOne"
-              class="accordion-collapse collapse"
-              data-bs-parent="#accordionQuestions"
-            >
-              <div class="accordion-body">
-                To order our web development services, please, contact us by
-                email office@solid-sl.com or Skype office@solid-sl.com and
-                provide us with the information you have about your project. If
-                you have any available documentation, it will really be
-                extremely useful as it will let us understand your project and
-                estimate it in terms of the cost and expected time for the
-                development. For example, you can send us the technical
-                specification of the system, a brief, a map of the site,
-                navigation menu item list, content and so on. Then, our
-                specialists will get in touch with you. Once we’ve clarified the
-                technical requirements and signed the contract, we’ll start
-                working on your product.
+        <div id="getInTouch" class="feedback service-page-style">
+          <div class="contacts">
+            <h3>
+              We sure you have<br />
+              an amazing idea
+            </h3>
+            <p>Let’s discuss how to bring it to life.</p>
+            <div class="feedback__contacts">
+              <div class="container">
+                <img
+                  src="../assets/images/feedback/phone.svg"
+                  width="24"
+                  height="24"
+                />+38 (096) 830 87 08
+              </div>
+              <div class="container">
+                <img
+                  src="../assets/images/feedback/email.svg"
+                  width="24"
+                  height="24"
+                />office@solid-sl.com
+              </div>
+              <div class="container">
+                <img
+                  src="../assets/images/feedback/location.svg"
+                  width="24"
+                  height="24"
+                />3024 Joes Road, Albany, NY 12207
               </div>
             </div>
           </div>
-          <div class="accordion-item questions-list">
-            <h2 class="accordion-header" id="flush-headingTwo">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseTwo"
-                aria-expanded="false"
-                aria-controls="flush-collapseTwo"
-              >
-                Can you help choose the best type of website for me?!
-              </button>
-            </h2>
-            <div
-              id="flush-collapseTwo"
-              class="accordion-collapse collapse"
-              aria-labelledby="flush-headingTwo"
-              data-bs-parent="#accordionQuestions"
-            >
-              <div class="accordion-body">
-                To order our web development services, please, contact us by
-                email office@solid-sl.com or Skype office@solid-sl.com and
-                provide us with the information you have about your project.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item questions-list">
-            <h2 class="accordion-header" id="flush-headingThree">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseThree"
-                aria-expanded="false"
-                aria-controls="flush-collapseThree"
-              >
-                How do I order the web development services if I don’t have a
-                detailed technical specification?
-              </button>
-            </h2>
-            <div
-              id="flush-collapseThree"
-              class="accordion-collapse collapse"
-              aria-labelledby="flush-headingThree"
-              data-bs-parent="#accordionQuestions"
-            >
-              <div class="accordion-body">
-                To order our web development services, please, contact us by
-                email office@solid-sl.com or Skype office@solid-sl.com and
-                provide us with the information you have about your project.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item questions-list">
-            <h2 class="accordion-header" id="flush-headingFour">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseFour"
-                aria-expanded="false"
-                aria-controls="flush-collapseFour"
-              >
-                How do I order the web development services if I don’t have a
-                detailed technical specification?
-              </button>
-            </h2>
-            <div
-              id="flush-collapseFour"
-              class="accordion-collapse collapse"
-              data-bs-parent="#accordionQuestions"
-            >
-              <div class="accordion-body">
-                To order our web development services, please, contact us by
-                email office@solid-sl.com or Skype office@solid-sl.com and
-                provide us with the information you have about your project.
-              </div>
+          <div class="container">
+            <div class="feedback__form">
+              <p>I'm looking for help with:</p>
+              <form>
+                <div class="checkbox-container">
+                  <label for="development" class="checkbox-button"
+                    >Development</label
+                  >
+                  <input id="development" value="development" type="checkbox" />
+
+                  <label for="design" class="checkbox-button">Design </label>
+                  <input id="design" value="design" type="checkbox" />
+
+                  <label for="other" class="checkbox-button">Other</label>
+                  <input id="other" value="other" type="checkbox" />
+                </div>
+                <div class="input-container">
+                  <input type="text" placeholder="Your full name" />
+                  <input type="email" placeholder="email_example@gmail.com" />
+                  <textarea placeholder="About your project idea"></textarea>
+                </div>
+                <div class="button-container">
+                  <button type="submit">Enter</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
-      <section id="getInTouch" class="feedback service-page-style">
-        <div class="contacts">
-          <h3>
-            We sure you have<br />
-            an amazing idea
-          </h3>
-          <p>Let’s discuss how to bring it to life.</p>
-          <div class="feedback__contacts">
-            <div class="container">
-              <img
-                src="../assets/images/feedback/phone.svg"
-                width="24"
-                height="24"
-              />+38 (096) 830 87 08
-            </div>
-            <div class="container">
-              <img
-                src="../assets/images/feedback/email.svg"
-                width="24"
-                height="24"
-              />office@solid-sl.com
-            </div>
-            <div class="container">
-              <img
-                src="../assets/images/feedback/location.svg"
-                width="24"
-                height="24"
-              />3024 Joes Road, Albany, NY 12207
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="feedback__form">
-            <p>I'm looking for help with:</p>
-            <form>
-              <div class="checkbox-container">
-                <label for="development" class="checkbox-button"
-                  >Development</label
-                >
-                <input id="development" value="development" type="checkbox" />
-
-                <label for="design" class="checkbox-button">Design </label>
-                <input id="design" value="design" type="checkbox" />
-
-                <label for="other" class="checkbox-button">Other</label>
-                <input id="other" value="other" type="checkbox" />
-              </div>
-              <div class="input-container">
-                <input type="text" placeholder="Your full name" />
-                <input type="email" placeholder="email_example@gmail.com" />
-                <textarea placeholder="About your project idea"></textarea>
-              </div>
-              <div class="button-container">
-                <button type="submit">Enter</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
 
       <footer class="footer">
         <div class="container">

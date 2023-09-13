@@ -35,10 +35,16 @@ body {
   overflow-wrap: break-word;
   color: black;
   margin: 0;
+  max-width: 2200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body#main-page {
   background-color: $header-background-color;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   @media (min-width: 768px) {
     background-image: url("../assets/images/tablet.png");
     background-repeat: no-repeat;
@@ -134,6 +140,7 @@ body#main-page {
       ul {
         display: flex;
         justify-content: center;
+        margin: 0;
         @extend %horizontal-list;
         li {
           cursor: pointer;
@@ -602,7 +609,11 @@ body#main-page {
 
   @media (min-width: 768px) {
     padding-bottom: 5px;
-    margin-top: auto;
+    margin-top: 32px;
+  }
+  @media (min-width: 1024px) {
+    padding-bottom: 5px;
+    margin-top: 70px;
   }
 
   h3 {
@@ -693,10 +704,6 @@ body#main-page {
   border-radius: 20px 20px 0 0;
   background-color: #fff;
 
-  .text-info {
-    padding-left: 45px;
-    padding-right: 45px;
-  }
   h3 {
     padding-left: 45px;
     padding-right: 45px;
@@ -719,6 +726,12 @@ body#main-page {
   }
 
   &__recall {
+    padding-left: 16px;
+    padding-right: 16px;
+    @media (min-width: 768px) {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
     span {
       text-transform: uppercase;
       font-size: 12px;
@@ -764,7 +777,7 @@ body#main-page {
 
       justify-content: center;
       align-items: center;
-      grid-template-columns: 50% 300px;
+      grid-template-columns: 55% 300px;
     }
     @media (min-width: 1200px) {
       padding-left: 218px;
@@ -1603,8 +1616,9 @@ body#main-page {
   &__underline {
     margin-top: 56px;
     margin-bottom: 20px;
-    color: #fff;
-    opacity: 0.7;
+    color: $footer-underline-color;
+    opacity: 0.3;
+    height: 1px;
     @media (min-width: 768px) {
       margin-top: 80px;
     }
@@ -2025,6 +2039,9 @@ body#main-page {
       position: absolute;
       bottom: -7px;
       left: 0;
+      @media (min-width: 1200px) {
+        bottom: -4px;
+      }
     }
   }
 
@@ -2318,7 +2335,14 @@ body#main-page {
   }
 
   .tech-list {
-    @media (min-width: 768px) {
+    &:last-child {
+      border-bottom: 1px solid $light-grey-color;
+      @media (max-width: 767px) {
+        padding-bottom: 22px;
+        margin-bottom: 40px;
+      }
+    }
+    @media (min-width: 767px) {
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
@@ -2636,6 +2660,13 @@ body#main-page {
   }
 
   &__more {
+    @media (min-width: 768px) {
+      margin-left: 35px;
+    }
+    @media (min-width: 1200px) {
+      margin-left: 82px;
+      margin-right: 82px;
+    }
     @media (min-width: 1200px) {
       margin-bottom: 80px;
     }
@@ -2711,46 +2742,34 @@ body#main-page {
 // ============================== SERVICES PAGE =========================== //
 
 .services-page {
-  padding-top: 120px;
   background-color: $header-background-color;
 
+  &__video {
+    &-item {
+      width: 100%;
+    }
+  }
+
   &__introduction {
-    margin-bottom: 100px;
-    padding-left: 16px;
-    padding-right: 16px;
+    position: relative;
     @media (min-width: 1024px) {
-      margin-bottom: 160px;
-    }
-
-    &-container {
-      border-radius: 20px;
-      padding: 48px 37px;
-      background-color: $blue-sky-color;
-      @media (min-width: 1024px) {
-        padding-left: 58px;
-        padding-bottom: 65px;
-        padding-top: 235px;
-        padding-right: 108px;
-      }
-    }
-
-    span {
-      font-size: 14px;
-      font-weight: 500;
-      margin-bottom: 12px;
-      color: $skin-light-color;
-      @media (min-width: 1024px) {
-        font-size: 20px;
-        margin-bottom: 16px;
-      }
     }
 
     h1 {
-      color: $header-background-color;
+      color: $button-tech-color;
       font-weight: 500;
-      font-size: 24px;
-      margin-bottom: 24px;
-      margin-top: 0;
+      font-size: 32px;
+      letter-spacing: -1px;
+      padding-left: 16px;
+      padding-right: 16px;
+      position: absolute;
+      bottom: 32px;
+
+      @media (min-width: 768px) {
+        bottom: 60px;
+        padding-left: 60px;
+      }
+
       @media (min-width: 1024px) {
         font-size: 56px;
         margin-bottom: 48px;
@@ -2782,18 +2801,52 @@ body#main-page {
   }
 
   &__provide {
-    padding-left: 16px;
-    padding-right: 16px;
     margin-bottom: 100px;
-
+    border-radius: 56px 0px 0px 0px;
+    background-color: $header-background-color;
+    @media (min-width: 768px) {
+      margin-top: -53px;
+      transform: scale(1);
+    }
     .contents {
+      .scroll-desktop-section {
+        @media (max-width: 767px) {
+          display: none;
+        }
+
+        width: 380px;
+        border-bottom: 80px solid $header-background-color;
+        border-left: 10px solid transparent;
+        border-top-left-radius: 100px;
+        position: absolute;
+        right: 0;
+        top: -79px;
+
+        .link-container {
+          position: relative;
+
+          a {
+            position: absolute;
+            top: 25px;
+            right: 70px;
+            font-size: 22px;
+            color: $main-dark-blue-color;
+            font-weight: 500;
+          }
+        }
+      }
+
+      position: relative;
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-top: 40px;
       h2 {
         font-size: 24px;
         font-weight: 500;
         letter-spacing: -1px;
         color: $deep-violet-color;
         margin-bottom: 24px;
-        margin-top: 0;
+
         @media (min-width: 768px) {
           padding-left: 35px;
           padding-right: 35px;
@@ -2824,6 +2877,7 @@ body#main-page {
         }
 
         &-description {
+          align-self: center;
           div {
             font-size: 13px;
             color: $main-dark-blue-color;
@@ -2889,7 +2943,7 @@ body#main-page {
     .head-content {
       @media (min-width: 1224px) {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr minmax(360px, 415px);
         align-items: center;
         gap: 32px;
         margin-bottom: 118px;
@@ -2919,10 +2973,15 @@ body#main-page {
 
     .cards-list {
       margin-bottom: 16px;
-      @media (min-width: 1024px) {
+      @media (min-width: 768px) {
         display: grid;
         justify-content: center;
-        grid-template-columns: repeat(auto-fit, minmax(358px, 410px));
+        grid-template-columns: repeat(auto-fit, 330px);
+        grid-template-rows: repeat(auto-fit, minmax(285px, 320px));
+        gap: 16px;
+      }
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(auto-fit, minmax(338px, 316px));
         grid-template-rows: repeat(auto-fit, minmax(285px, 320px));
         gap: 20px;
       }
@@ -2978,6 +3037,7 @@ body#main-page {
             margin-bottom: 0;
             @extend %card-text;
             color: $project-background-color;
+            letter-spacing: -0.28px;
             display: none;
             opacity: 0;
             transition: opacity 0.3 ease;
@@ -3021,7 +3081,7 @@ body#main-page {
   }
 
   &__technologies {
-    padding-bottom: 100px;
+    padding-bottom: 90px;
     padding-left: 16px;
     padding-right: 16px;
     @media (min-width: 768px) {
@@ -3034,17 +3094,48 @@ body#main-page {
     }
 
     h2 {
-      @extend %page-header;
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: -1px;
       color: $deep-violet-color;
-      margin-top: 0;
       margin-bottom: 32px;
       @media (min-width: 1024px) {
         font-size: 56px;
-        margin-bottom: 72px;
+        margin-bottom: 56px;
+      }
+    }
+
+    h3 {
+      @extend %page-header;
+      color: $deep-violet-color;
+      margin-top: 0;
+      margin-bottom: 13px;
+      @media (min-width: 1024px) {
+        font-size: 56px;
       }
     }
     .accordion {
+      .accordion-button::after {
+        flex-shrink: 0;
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-left: auto;
+        content: "";
+        background-image: url("../assets/images/accordion-arrow.png");
+        background-repeat: no-repeat;
+        background-size: 1.25rem;
+        transition: transform 0.2s ease-in-out;
+        @media (min-width: 1024px) {
+          background-image: url("../assets/images/accordion-desk-arrow.png");
+          width: 3.25rem;
+          height: 3.25rem;
+          background-size: 3.25rem;
+        }
+      }
       &__item {
+        &:not(:last-child) {
+          margin-bottom: 40px;
+        }
         button {
           transition: 0.4s;
           color: $blue-sky-color;
@@ -3102,9 +3193,8 @@ body#main-page {
             padding-left: 35px;
             padding-right: 35px;
             margin-top: 27px;
-
             display: flex;
-            justify-content: row;
+            justify-content: center;
             flex-wrap: wrap;
             gap: 16px;
 
@@ -3141,11 +3231,18 @@ body#main-page {
 
   &__questions {
     background-color: #fff;
+    margin-bottom: 80px;
+    @media (max-width: 786px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
     .faq-questions {
+      padding-left: 20px;
+      padding-right: 20px;
       overflow-y: auto;
       max-height: 600px;
+      background-color: #fff;
     }
-    padding-bottom: 100px;
 
     @media (min-width: 1024px) {
       padding-left: 16px;
@@ -3155,6 +3252,13 @@ body#main-page {
     }
 
     .questions-list {
+      .accordion-text {
+        @extend %accordion-body-text;
+        overflow-y: scroll;
+        a {
+          color: $main-dark-blue-color;
+        }
+      }
       margin-bottom: 16px;
       @media (min-width: 1024px) {
         margin-right: 16px;
@@ -3951,9 +4055,6 @@ body#main-page {
   padding-right: 16px;
   padding-bottom: 57px;
 
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
   @media (min-width: 768px) {
     padding-top: 125px;
     padding-left: 35px;
@@ -3966,10 +4067,14 @@ body#main-page {
   }
 
   .desktop-view {
-    @media (min-width: 1024px) {
+    @media (min-width: 1200px) {
       display: grid;
       grid-template-columns: 50% 50%;
       gap: 2%;
+      align-items: center;
+    }
+    @media (min-width: 1200px) {
+      gap: 40px;
     }
   }
 
@@ -4014,12 +4119,17 @@ body#main-page {
     }
     p {
       margin: 0;
-      @extend %middle-size-text;
+      font-family: Inter;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24.8px;
       color: $main-text-color;
     }
 
     ul {
-      @extend %middle-size-text;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24.8px; /* 155% */
       color: $main-text-color;
       padding-left: 16px;
     }
@@ -4073,7 +4183,9 @@ body#main-page {
     flex-wrap: nowrap;
   }
   &-item {
-    max-width: 265px;
+    @media (max-width: 1023px) {
+      max-width: 265px;
+    }
     flex-shrink: 0;
     &:not(:last-child) {
       margin-right: 16px;

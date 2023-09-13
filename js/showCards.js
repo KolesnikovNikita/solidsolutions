@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const cards = document.querySelectorAll(".cards-list__item");
   const button = document.querySelector(".services-page__button button");
 
-  const initialVisibleCards = 3;
+  const initialVisibleCards = 4;
   let visibleCards = initialVisibleCards;
 
   function showCards(count) {
