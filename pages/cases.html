@@ -11,7 +11,7 @@
   </head>
   <body>
     <section class="page-header">
-      <div class="page-header__navigation">
+      <div class="page-header__navigation animItems">
         <div class="container-list">
           <div class="logo">
             <img src="../assets/images/Logo.svg" alt="logo" />
@@ -38,7 +38,7 @@
           </div>
         </div>
       </div>
-      <div class="page-header__desktop">
+      <div class="page-header__desktop animItems">
         <div class="desktop-container">
           <div class="logo">
             <img src="../assets/images/Logo.svg" alt="logo" />
@@ -63,8 +63,8 @@
     </section>
     <section class="special-gradient">
       <section class="cases-list">
-        <h1>Our Cases</h1>
-        <div id="techs-container">
+        <h1 class="animItems">Our Cases</h1>
+        <div class="cases-filter animItems" id="techs-container">
           <label for="all-cases" class="select-button active-select"
             >All Cases</label
           >
@@ -89,7 +89,7 @@
           >
           <input id="educate" value="educate" type="select" />
         </div>
-        <div class="grid">
+        <div class="grid animItems">
           <div class="grid-sizer"></div>
           <div class="gutter-sizer"></div>
 
@@ -370,6 +370,7 @@
     </section>
     <script src="../js/layout.js"></script>
     <script src="../js/filterButtons.js"></script>
+    <script src="../js/animation.js"></script>
     <script src="../js/mansory.js"></script>
   </body>
 </html>

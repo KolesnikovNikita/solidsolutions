@@ -53,8 +53,6 @@ body#main-page {
 
   @media (min-width: 1200px) {
     background-image: url("../assets/images/Bg_Desktop.png");
-    background-repeat: no-repeat;
-    background-size: contain;
   }
 }
 
@@ -431,7 +429,7 @@ body#main-page {
     &__link-container {
       transform: translate(0%, 40%);
       opacity: 0;
-      transition: all 0.8s ease 0.6s;
+      transition: all 0.8s ease 0.2s;
       &._active {
         transform: translate(0, 0);
         opacity: 1;
@@ -1025,7 +1023,6 @@ body#main-page {
 
       li {
         transform: translate(-100%, 0);
-        transition: all 0.3s ease 0s;
         .tab-item {
           position: relative;
           font-size: 16px;
@@ -1887,9 +1884,50 @@ body#main-page {
     @extend %large-header;
     margin-bottom: 32px;
     color: #000;
+    transform: translate(0, -100%);
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  .techs-filter {
+    transform: translate(-120%, 0) scale(1.4);
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    &._active {
+      transform: translate(0, 0) scale(1);
+      opacity: 1;
+    }
   }
 
   &__cards {
+    &._active {
+      .card {
+        transform: translate(0, 0);
+        opacity: 1;
+        &:nth-child(1) {
+          transition: all 0.8s ease 0s;
+        }
+        &:nth-child(2) {
+          transition: all 0.8s ease 0.2s;
+        }
+        &:nth-child(3) {
+          transition: all 0.8s ease 0.4s;
+        }
+        &:nth-child(4) {
+          transition: all 0.8s ease 0.6s;
+        }
+        &:nth-child(5) {
+          transition: all 0.8s ease 0.8s;
+        }
+        &:nth-child(6) {
+          transition: all 0.8s ease 1s;
+        }
+      }
+    }
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
@@ -1903,6 +1941,8 @@ body#main-page {
       grid-template-columns: repeat(3, 1fr);
     }
     .card {
+      transform: translate(0, 100%);
+      opacity: 0;
       &__body {
         margin-top: 16px;
       }
@@ -2031,6 +2071,19 @@ body#main-page {
 // ============================== OUR CASES PAGE =========================== //
 
 .cases-list {
+  .cases-filter {
+    &._active {
+      label {
+        transform: translate(0, 0);
+        transition: all 0.8s ease 0s;
+        opacity: 1;
+      }
+    }
+    label {
+      transform: translate(-200%, 0);
+      opacity: 0;
+    }
+  }
   padding-top: 110px;
   background-color: #fff;
   padding-left: 16px;
@@ -2048,6 +2101,13 @@ body#main-page {
   }
 
   h1 {
+    transform: translate(0, -50%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
     color: #000;
     @extend %large-header;
     max-width: 1276px;
@@ -2057,6 +2117,36 @@ body#main-page {
   }
 
   .grid {
+    &._active {
+      .grid-item {
+        transform: translate(0, 0);
+        opacity: 1;
+        &:nth-child(3) {
+          transition: all 0.8s ease 0s;
+        }
+        &:nth-child(4) {
+          transition: all 0.8s ease 0.1s;
+        }
+        &:nth-child(5) {
+          transition: all 0.8s ease 0.2s;
+        }
+        &:nth-child(6) {
+          transition: all 0.8s ease 0.3s;
+        }
+        &:nth-child(7) {
+          transition: all 0.8s ease 0.4s;
+        }
+        &:nth-child(9) {
+          transition: all 0.8s ease 0.5s;
+        }
+        &:nth-child(10) {
+          transition: all 0.8s ease 0.6s;
+        }
+        &:nth-child(11) {
+          transition: all 0.8s ease 0.7s;
+        }
+      }
+    }
     margin: 0 auto -20px;
     max-width: 1276px;
     display: flex;
@@ -2076,6 +2166,8 @@ body#main-page {
     }
 
     .grid-item {
+      opacity: 0;
+      transform: translate(0, 100%);
       max-width: 100%;
       margin-bottom: 20px;
     }

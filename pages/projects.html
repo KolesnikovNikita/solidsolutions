@@ -8,7 +8,7 @@
   </head>
   <body>
     <section class="page-header">
-      <div class="page-header__navigation">
+      <div class="page-header__navigation animItems">
         <div class="container-list">
           <div class="logo">
             <img src="../assets/images/Logo.svg" alt="logo" />
@@ -36,7 +36,7 @@
         </div>
       </div>
 
-      <div class="page-header__desktop">
+      <div class="page-header__desktop animItems">
         <div class="desktop-container">
           <div class="logo">
             <img src="../assets/images/Logo.svg" alt="logo" />
@@ -61,8 +61,8 @@
     </section>
     <section class="special-gradient">
       <section class="projects-list">
-        <h1>Our Projects</h1>
-        <div id="techs-container">
+        <h1 class="animItems">Our Projects</h1>
+        <div class="techs-filter animItems" id="techs-container">
           <label for="mobileApp" class="select-button active-select"
             >Mobile App</label
           >
@@ -85,7 +85,7 @@
           >
           <input id="educate" value="educate" type="select" />
         </div>
-        <div class="projects-list__cards">
+        <div class="projects-list__cards animItems">
           <div class="card">
             <div class="card__image" style="background-color: #e7e7eb">
               <img
@@ -421,7 +421,7 @@
         </div>
       </div>
     </footer>
-
+    <script src="../js/animation.js"></script>
     <script src="../js/filterButtons.js"></script>
     <script src="../js/layout.js"></script>
   </body>
