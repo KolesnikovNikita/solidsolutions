@@ -2292,6 +2292,13 @@ body#main-page {
   border-bottom-left-radius: 40px;
 
   &__back {
+    transform: translate(0, -100%);
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
     font-size: 14px;
     font-weight: 500;
     position: relative;
@@ -2323,6 +2330,13 @@ body#main-page {
 
   &__project {
     .types {
+      transform: translate(0, -50%);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
       border-radius: 24px;
       margin-bottom: 20px;
       background-color: $main-dark-blue-color;
@@ -2335,6 +2349,11 @@ body#main-page {
       }
 
       h1 {
+        opacity: 0;
+        transition: all 0.8s ease 0.2s;
+        &._active {
+          opacity: 1;
+        }
         @extend %page-header;
         color: #fff;
         margin-bottom: 12px;
@@ -2347,8 +2366,26 @@ body#main-page {
       &__list {
         display: flex;
         flex-direction: row;
+        overflow-x: auto;
         gap: 8px;
+        &._active {
+          .types__list-item {
+            transform: scale(1);
+
+            &:nth-child(1) {
+              transition: all 0.8s ease 0s;
+            }
+            &:nth-child(2) {
+              transition: all 0.8s ease 0.2s;
+            }
+            &:nth-child(3) {
+              transition: all 0.8s ease 0.4s;
+            }
+          }
+        }
         &-item {
+          flex-shrink: 0;
+          transform: scale(0);
           color: #fff;
           border-radius: 40px;
           padding: 8px 12px;
@@ -2384,6 +2421,13 @@ body#main-page {
     .info {
       margin-bottom: 40px;
       img {
+        transform: scale(0.5);
+        opacity: 0;
+        transition: all 0.4s ease 0s;
+        &._active {
+          transform: scale(1);
+          opacity: 1;
+        }
         border-radius: 12px;
       }
     }
@@ -2420,6 +2464,13 @@ body#main-page {
     }
 
     h4 {
+      transform: translate(0, -100%);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
       color: $deep-violet-color;
       .break {
         display: none;
@@ -2440,6 +2491,13 @@ body#main-page {
     }
 
     p {
+      transform: translate(0, -100%);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
       margin-top: 0;
       color: $main-text-color;
       @extend %alt-page-text;
@@ -2450,6 +2508,11 @@ body#main-page {
     }
 
     a {
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+      &._active {
+        opacity: 1;
+      }
       position: relative;
       font-size: 16px;
       color: $blue-sky-color;
@@ -2483,11 +2546,29 @@ body#main-page {
       align-items: center;
     }
 
-    ul {
+    .features-list {
+      &._active {
+        li {
+          transform: translate(0, 0) scale(1);
+          opacity: 1;
+          &:nth-child(1) {
+            transition: all 0.8s ease 0s;
+          }
+          &:nth-child(2) {
+            transition: all 0.8s ease 0.2s;
+          }
+          &:nth-child(3) {
+            transition: all 0.8s ease 0.4s;
+          }
+        }
+      }
       margin: 0;
       display: block;
       @extend %vertical-list;
+
       li {
+        transform: translate(0, -100%) scale(0.9);
+        opacity: 0;
         @media (min-width: 1200px) {
           font-size: 20px;
         }
@@ -2535,6 +2616,23 @@ body#main-page {
   }
 
   &__development {
+    .container {
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+
+        &:nth-child(1) {
+          transition: all 0.8s ease 0s;
+        }
+        &:nth-child(2) {
+          transition: all 0.8s ease 0.2s;
+        }
+        &:nth-child(3) {
+          transition: all 0.8s ease 0.4s;
+        }
+      }
+    }
+
     display: grid;
     grid-template-columns: repeat(1, 1fr);
 
@@ -2561,6 +2659,8 @@ body#main-page {
     }
 
     .container {
+      transform: translate(0, -100%);
+      opacity: 0;
       border-bottom: 1px solid $light-grey-color;
       margin-bottom: 38px;
       @media (min-width: 768px) {
@@ -2661,6 +2761,33 @@ body#main-page {
       }
     }
     ul {
+      &._active {
+        li {
+          transform: translate(0, 0);
+          &:nth-child(6) {
+            transition: all 0.8s ease 0s;
+          }
+          &:nth-child(5) {
+            transition: all 0.8s ease 0.2s;
+          }
+          &:nth-child(4) {
+            transition: all 0.8s ease 0.4s;
+          }
+          &:nth-child(3) {
+            transition: all 0.8s ease 0.6s;
+          }
+          &:nth-child(2) {
+            transition: all 0.8s ease 0.8s;
+          }
+          &:nth-child(1) {
+            transition: all 0.8s ease 1s;
+          }
+        }
+      }
+      li {
+        transform: translate(-150%, 0);
+      }
+
       @extend %horizontal-list;
       flex-wrap: wrap;
 
@@ -2687,6 +2814,13 @@ body#main-page {
       margin-bottom: 140px;
     }
     h4 {
+      transform: translate(0, -100%);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
       text-align: center;
       font-size: 24px;
       font-weight: 500;
@@ -2702,6 +2836,23 @@ body#main-page {
     }
 
     .container {
+      &._active {
+        div {
+          opacity: 1;
+          &:nth-child(1) {
+            transition: all 0.8s ease 0s;
+          }
+          &:nth-child(2) {
+            transition: all 0.8s ease 0.2s;
+          }
+          &:nth-child(3) {
+            transition: all 0.8s ease 0.4s;
+          }
+        }
+      }
+      div {
+        opacity: 0;
+      }
       display: flex;
       flex-direction: column;
       gap: 32px;
@@ -2775,6 +2926,13 @@ body#main-page {
       }
 
       .map-image {
+        transform: translate(0, -100%);
+        opacity: 0;
+        transition: all 0.8s ease 0s;
+        &._active {
+          transform: translate(0, 0);
+          opacity: 1;
+        }
         display: flex;
         justify-content: center;
       }
@@ -2786,6 +2944,13 @@ body#main-page {
     }
 
     h4 {
+      transform: translate(0, -100%);
+      opacity: 0;
+      transition: all 0.8s ease 0.2s;
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
       @extend %page-header;
       color: $deep-violet-color;
       margin-bottom: 24px;
@@ -2797,6 +2962,13 @@ body#main-page {
     }
 
     p {
+      transform: translate(0, -100%);
+      opacity: 0;
+      transition: all 0.8s ease 0.3s;
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
       @extend %card-text;
       color: $main-text-color;
       margin-top: 0;
@@ -2808,6 +2980,13 @@ body#main-page {
   }
 
   .phases {
+    transform: translate(0, -100%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
     font-size: 13px;
     color: $main-dark-blue-color;
     font-weight: 500;
@@ -2818,10 +2997,46 @@ body#main-page {
   }
 
   &__illustrations {
+    &._active {
+      #first_image {
+        transform: scale(1);
+        transition: all 0.8s ease 0s;
+        opacity: 1;
+      }
+
+      #second_image {
+        transform: scale(1);
+        transition: all 0.8s ease 0.2s;
+        opacity: 1;
+      }
+      .double {
+        #third_image {
+          transform: scale(1);
+          transition: all 0.8s ease 0.4s;
+          opacity: 1;
+        }
+
+        #fourth_image {
+          transform: scale(1);
+          transition: all 0.8s ease 0.6s;
+          opacity: 1;
+        }
+      }
+    }
     margin-bottom: 100px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
+    #first_image {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+
+    #second_image {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+
     .double {
       display: flex;
       gap: 7px;
@@ -2831,10 +3046,14 @@ body#main-page {
       }
 
       #third_image {
+        transform: scale(0.5);
+        opacity: 0;
         grid-column: 3/4;
         grid-row: 3/4;
       }
       #fourth_image {
+        transform: scale(0.5);
+        opacity: 0;
         grid-column: 4/5;
         grid-row: 3/5;
       }
@@ -2905,6 +3124,13 @@ body#main-page {
     }
 
     span {
+      transform: translate(0, -100%);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
       font-size: 13px;
       color: $main-dark-blue-color;
       font-weight: 500;
@@ -2915,6 +3141,13 @@ body#main-page {
     }
 
     h4 {
+      transform: translate(0, -100%);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
       @extend %page-header;
       color: $deep-violet-color;
       margin-bottom: 24px;
@@ -2924,6 +3157,13 @@ body#main-page {
       }
     }
     p {
+      transform: translate(0, -100%);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
       @extend %card-text;
       color: $main-text-color;
       margin-top: 0;
@@ -2946,12 +3186,24 @@ body#main-page {
     @media (min-width: 1200px) {
       margin-bottom: 80px;
     }
+
+    .swiper-wrapper {
+      &._active {
+        .swiper-slide {
+          transform: translate(0, 0);
+          opacity: 1;
+          transition: all 0.8s ease 0s;
+        }
+      }
+    }
     .swiper-of-cases {
       position: relative;
       width: 100%;
       overflow: hidden;
 
       .swiper-slide {
+        transform: translate(150%, 0);
+        opacity: 0;
         width: 100%;
         margin-right: 10px;
         max-height: 305px;
@@ -2997,6 +3249,13 @@ body#main-page {
       background-color: $header-background-color;
     }
     h4 {
+      transform: translate(0, -100%);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
       color: $button-tech-color;
       margin-bottom: 24px;
       font-size: 20px;
