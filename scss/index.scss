@@ -105,6 +105,7 @@ body#main-page {
     opacity: 1;
   }
   &__desktop {
+    max-width: 2200px;
     transform: scale(1.5);
     opacity: 0;
     transition: all 0.8s ease 0s;
@@ -263,7 +264,7 @@ body#main-page {
 }
 
 .page-content {
-  @media (min-width: 1024px) {
+  @media (min-width: 1024px) and (max-width: 1200px) {
     padding-top: 220px;
   }
 
@@ -412,7 +413,7 @@ body#main-page {
     p {
       transform: translate(0%, -40%);
       opacity: 0;
-      transition: all 0.8s ease 0s;
+      transition: all 0.8s ease 0.4s;
       &._active {
         transform: translate(0, 0);
         opacity: 1;
@@ -505,6 +506,7 @@ body#main-page {
     padding-top: 120px;
   }
   &__examples {
+    max-width: 1060px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -759,9 +761,13 @@ body#main-page {
 
 .advantages {
   padding-top: 56px;
+  &:first-child {
+    @media (min-width: 1200px) {
+      padding-bottom: 270px;
+    }
+  }
   @media (min-width: 1200px) {
     padding-top: 85px;
-    padding-bottom: 270px;
   }
   padding-bottom: 40px;
 
@@ -827,6 +833,20 @@ body#main-page {
   }
 
   &__desktop {
+    &.large-image {
+      @media (min-width: 768px) {
+        grid-template-columns: 1fr 300px;
+        justify-items: center;
+        gap: 40px;
+      }
+      @media (min-width: 1024px) {
+        gap: 10px;
+      }
+      @media (min-width: 1224px) {
+        gap: 10px;
+        justify-items: flex-start;
+      }
+    }
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 55px;
@@ -844,6 +864,9 @@ body#main-page {
     }
 
     .chat-image {
+      @media (max-width: 767px) {
+        text-align: center;
+      }
       transform: scale(0.5) translate(0, -25%);
       opacity: 0;
       transition: all 0.8s ease 0s;
@@ -860,8 +883,12 @@ body#main-page {
     }
     @media (min-width: 768px) {
       justify-content: center;
-      align-items: center;
+      align-content: center;
       grid-template-columns: 55% 300px;
+    }
+
+    @media (min-width: 1224px) {
+      gap: 130px;
     }
     @media (min-width: 1200px) {
       padding-left: 218px;
@@ -1070,6 +1097,13 @@ body#main-page {
     }
   }
   h3 {
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active {
+      transform: scale(1);
+      opacity: 1;
+    }
     @extend %large-header;
     text-align: center;
     margin-bottom: 24px;
@@ -1285,6 +1319,7 @@ body#main-page {
     @media (min-width: 768px) {
       display: flex;
       flex-direction: row;
+      justify-content: center;
       gap: 7px;
     }
     .grid-block {
@@ -1448,7 +1483,14 @@ body#main-page {
 }
 
 .feedback {
+  &.aboutUs-page {
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
   &__width {
+    overflow-x: hidden;
     max-width: 1170px;
     margin-left: auto;
     margin-right: auto;
@@ -1457,6 +1499,7 @@ body#main-page {
       flex-direction: row;
       gap: 48px;
       justify-content: center;
+
       .contacts {
         width: 68%;
       }
@@ -1467,17 +1510,18 @@ body#main-page {
     }
   }
   .container-form {
-    transform: scale(0);
-    transition: all 0.8s ease 0.1s;
+    transform: translate(100%, 0);
     opacity: 0;
+    transition: all 0.8s ease 0s;
+
     &._active {
-      transform: scale(1);
+      transform: translate(0, 0);
       opacity: 1;
     }
   }
   .contacts {
-    transform: translate(0, -150%);
-    opacity: 1;
+    transform: translate(0, -50%);
+    opacity: 0;
     transition: all 0.8s ease 0s;
     &._active {
       transform: translate(0, 0);
@@ -3848,6 +3892,16 @@ body#main-page {
     padding-bottom: 125px;
   }
   h1 {
+    @media (max-width: 767px) {
+      margin-top: 32px;
+    }
+    transform: translate(0, -150%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
     @extend %large-header;
     letter-spacing: -0.48px;
     color: $deep-violet-color;
@@ -3858,8 +3912,18 @@ body#main-page {
   }
 
   &__list {
+    &._active {
+      .industries-page__list-item {
+        transform: scale(1);
+        opacity: 1;
+        transition: all 0.8s ease 0s;
+      }
+    }
     &-item {
+      transform: scale(0);
+      opacity: 0;
       &:hover {
+        cursor: pointer;
         transition: all 0.2s ease;
         background-color: $main-dark-blue-color;
         border-radius: 16px;
@@ -3967,7 +4031,7 @@ body#main-page {
   margin-left: auto;
   margin-right: auto;
   @media (min-width: 1024px) {
-    padding-top: 155px;
+    padding-top: 153px;
   }
 
   &__preview {
@@ -3989,6 +4053,13 @@ body#main-page {
       padding-right: 82px;
     }
     h1 {
+      transform: translate(0, -20%);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
       @extend %page-header;
       color: #000;
       padding-bottom: 16px;
@@ -3998,6 +4069,13 @@ body#main-page {
       }
     }
     p {
+      transform: translate(0, -20%);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
       @extend %alt-page-text;
       margin: 0;
       color: $main-header-color;
@@ -4017,13 +4095,39 @@ body#main-page {
     }
 
     .photo {
+      transform: scale(0.5);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+      &._active {
+        transform: scale(1);
+        opacity: 1;
+      }
       text-align: center;
     }
 
     .experience {
+      transform: scale(0);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+      &._active {
+        transform: scale(1);
+        opacity: 1;
+      }
       display: flex;
       justify-content: center;
       &-inner {
+        &._active {
+          .amount {
+            opacity: 1;
+
+            &:nth-child(1) {
+              transition: all 0.8s ease 0.4s;
+            }
+            &:nth-child(2) {
+              transition: all 0.8s ease 0.6s;
+            }
+          }
+        }
         margin-top: -10%;
         transform: scale(1);
         width: 90%;
@@ -4051,6 +4155,7 @@ body#main-page {
       }
 
       .amount {
+        opacity: 0;
         &:not(:last-child) {
           margin-bottom: 33px;
           @media (min-width: 1024px) {
@@ -4087,9 +4192,29 @@ body#main-page {
     }
   }
   &__advantages {
+    overflow-x: hidden;
     padding-bottom: 100px;
+    &._active {
+      .customized {
+        transform: translate(0, 0);
+        opacity: 1;
+        transition: all 0.8s ease 0s;
+      }
+      .full-stack {
+        transform: translate(0, 0);
+        opacity: 1;
+        transition: all 0.8s ease 0s;
+      }
+      .support {
+        transform: translate(0, 0);
+        opacity: 1;
+        transition: all 0.8s ease 0s;
+      }
+    }
 
     .customized {
+      transform: translate(-50%, 0);
+      opacity: 0;
       background-color: $main-dark-blue-color;
       border-radius: 0px 12px 8px 0px;
       width: 94%;
@@ -4102,6 +4227,8 @@ body#main-page {
       }
     }
     .full-stack {
+      transform: translate(0, 50%);
+      opacity: 0;
       background-color: $main-yellow-color;
       border-top: 8px solid var(--neutral-100, $header-background-color);
       border-radius: 12px;
@@ -4117,6 +4244,8 @@ body#main-page {
       }
     }
     .support {
+      transform: translate(50%, 0);
+      opacity: 0;
       background-color: $project-header-color;
       border-top: 8px solid var(--neutral-100, $header-background-color);
       border-radius: 12px 0px 0px 12px;
@@ -4177,6 +4306,13 @@ body#main-page {
       padding-left: 35px;
     }
     h2 {
+      transform: translate(0, -20%);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
       @extend %large-header;
       color: $header-dark-color;
       font-weight: 500;
@@ -4187,6 +4323,25 @@ body#main-page {
       }
     }
     .team-list {
+      &._active {
+        .item {
+          transform: translate(0, 0);
+          opacity: 1;
+
+          &:nth-child(1) {
+            transition: all 0.8s ease 0.6s;
+          }
+          &:nth-child(2) {
+            transition: all 0.8s ease 0.4s;
+          }
+          &:nth-child(3) {
+            transition: all 0.8s ease 0.2s;
+          }
+          &:nth-child(4) {
+            transition: all 0.8s ease 0s;
+          }
+        }
+      }
       display: flex;
       flex-wrap: nowrap;
       overflow-x: auto;
@@ -4195,6 +4350,8 @@ body#main-page {
         justify-content: center;
       }
       .item {
+        transform: translate(-100%, 0);
+        opacity: 0;
         width: 175px;
         @media (min-width: 1024px) {
           width: auto;
@@ -4241,6 +4398,26 @@ body#main-page {
     }
 
     &-list {
+      overflow-x: hidden;
+      &._active {
+        .item {
+          &:nth-child(1) {
+            transition: all 0.8s ease 0.2s;
+            opacity: 1;
+            transform: translate(0, 0);
+          }
+          &:nth-child(2) {
+            transition: all 0.8s ease 0s;
+            opacity: 1;
+            transform: translate(0, 0);
+          }
+          &:nth-child(3) {
+            transition: all 0.8s ease 0.2s;
+            opacity: 1;
+            transform: translate(0, 0);
+          }
+        }
+      }
       @media (min-width: 768px) {
         overflow-x: auto;
         flex-wrap: nowrap;
@@ -4253,6 +4430,18 @@ body#main-page {
         justify-content: center;
       }
       .item {
+        &:nth-child(1) {
+          transform: translate(50%, 0);
+          opacity: 0;
+        }
+        &:nth-child(2) {
+          transform: translate(0, 50%);
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: translate(-50%, 0);
+          opacity: 0;
+        }
         flex-shrink: 0;
         background-color: #fff;
         padding: 32px;
@@ -4291,6 +4480,13 @@ body#main-page {
       }
     }
     h2 {
+      transform: translate(0, -50%);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
       @extend %page-header;
       color: $blue-sky-color;
       margin-bottom: 32px;
@@ -4313,6 +4509,13 @@ body#main-page {
     .desktop-view {
       .photo-1,
       .photo-2 {
+        transform: scale(0.5);
+        opacity: 0;
+        transition: all 0.8s ease 0s;
+        &._active {
+          transform: scale(1);
+          opacity: 1;
+        }
         text-align: center;
         @media (max-width: 1023px) {
           margin-bottom: 40px;
@@ -4353,6 +4556,13 @@ body#main-page {
     }
 
     span {
+      transform: translate(0, -20%);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
       @extend %middle-size-text;
       @media (min-width: 1024px) {
         font-size: 20px;
@@ -4365,6 +4575,13 @@ body#main-page {
     }
 
     h2 {
+      transform: translate(0, -20%);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
       @extend %page-header;
       margin-top: 15px;
       margin-bottom: 32px;
@@ -4374,6 +4591,13 @@ body#main-page {
     }
 
     p {
+      transform: translate(0, -20%);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
       @extend %alt-page-text;
       color: $chekbox-active-text;
       margin-top: 0;
@@ -4412,6 +4636,13 @@ body#main-page {
     }
 
     h2 {
+      transform: translate(0, -20%);
+      opacity: 0;
+      transition: all 0.8s ease 0s;
+      &._active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
       @extend %large-header;
       color: #fff;
       margin-bottom: 20px;
@@ -4421,6 +4652,28 @@ body#main-page {
       }
     }
     .gallery {
+      &._active {
+        .gallery-item {
+          transform: translate(0, 0);
+          opacity: 1;
+
+          &:nth-child(1) {
+            transition: all 0.8s ease 0s;
+          }
+          &:nth-child(2) {
+            transition: all 0.8s ease 0.2s;
+          }
+          &:nth-child(3) {
+            transition: all 0.8s ease 0.4s;
+          }
+          &:nth-child(4) {
+            transition: all 0.8s ease 0.6s;
+          }
+          &:nth-child(5) {
+            transition: all 0.8s ease 0.8s;
+          }
+        }
+      }
       .desktop-view {
         @media (min-width: 768px) {
           display: flex;
@@ -4433,6 +4686,8 @@ body#main-page {
       }
       &-item {
         text-align: center;
+        transform: translate(0, 50%);
+        opacity: 0;
       }
       .gallery-item-large {
         img {
@@ -4510,6 +4765,13 @@ body#main-page {
     }
   }
   h1 {
+    transform: translate(0, -20%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
     @extend %page-header;
     margin-top: 0;
     margin-bottom: 16px;
@@ -4520,6 +4782,13 @@ body#main-page {
     }
   }
   p {
+    transform: translate(0, -20%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    &._active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
     @extend %alt-page-text;
     color: $main-header-color;
     margin-top: 0;
@@ -4529,6 +4798,40 @@ body#main-page {
     }
   }
   &__list {
+    &._active {
+      .blog-page__list-item {
+        transform: translate(0, 0);
+        opacity: 1;
+
+        &:nth-child(1) {
+          transition: all 0.8s ease 0s;
+        }
+        &:nth-child(2) {
+          transition: all 0.8s ease 0.2s;
+        }
+        &:nth-child(3) {
+          transition: all 0.8s ease 0.4s;
+        }
+        &:nth-child(4) {
+          transition: all 0.8s ease 0.6s;
+        }
+        &:nth-child(5) {
+          transition: all 0.8s ease 0.8s;
+        }
+        &:nth-child(6) {
+          transition: all 0.8s ease 1s;
+        }
+        &:nth-child(7) {
+          transition: all 0.8s ease 1.2s;
+        }
+        &:nth-child(8) {
+          transition: all 0.8s ease 1.4s;
+        }
+        &:nth-child(9) {
+          transition: all 0.8s ease 1.6s;
+        }
+      }
+    }
     padding-left: 16px;
     padding-right: 16px;
     display: flex;
@@ -4543,6 +4846,8 @@ body#main-page {
     }
 
     &-item {
+      transform: translate(-50%, 0);
+      opacity: 0;
       cursor: pointer;
       width: auto;
       @media (min-width: 768px) and (max-width: 1200px) {

@@ -2,7 +2,7 @@ function updateSlidesPerView() {
   var windowWidth = window.innerWidth;
   var slidesPerView = 1;
 
-  if (windowWidth >= 1024) {
+  if (windowWidth >= 768) {
     slidesPerView = 2;
   }
 
