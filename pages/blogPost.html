@@ -1,261 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Post</title>
-    <link rel="stylesheet" href="../styles/style.css" />
-  </head>
-  <body>
-    <section class="page-header">
-      <div class="page-header__navigation">
-        <div class="container-list">
-          <div class="logo">
-            <img src="../assets/images/Logo.svg" alt="logo" />
-          </div>
-          <div class="burger" id="burgerButton">
-            <div class="burger-icon">
-              <img src="../assets/images/burger-open.svg" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Blog Post</title>
+        <link rel="stylesheet" href="../styles/style.css" />
+    </head>
+    <body>
+        <section class="page-header">
+            <div class="page-header__navigation animItems">
+                <div class="container-list">
+                    <div class="logo">
+                        <img src="../assets/images/Logo.svg" alt="logo" />
+                    </div>
+                    <div class="burger" id="burgerButton">
+                        <div class="burger-icon">
+                            <img src="../assets/images/burger-open.svg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-list">
+                    <div class="list-container">
+                        <div>
+                            <ul>
+                                <li><a>Main</a></li>
+                                <li><a>Services</a></li>
+                                <li><a>Projects</a></li>
+                                <li><a>About Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="mobile-list__button">
+                            <a href="#getInTouch">Book a Call</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="mobile-list">
-          <div class="list-container">
-            <div>
-              <ul>
-                <li><a>Main</a></li>
-                <li><a>Services</a></li>
-                <li><a>Projects</a></li>
-                <li><a>About Us</a></li>
-              </ul>
+            <div class="page-header__desktop animItems">
+                <div class="desktop-container">
+                    <div class="logo">
+                        <img src="../assets/images/Logo.svg" alt="logo" />
+                    </div>
+                    <div class="header-links">
+                        <ul>
+                            <li>
+                                <a style="padding-left: 10px" class="link-item active-item">Main</a>
+                            </li>
+                            <li><a class="link-item">Services</a></li>
+                            <li><a class="link-item">Projects</a></li>
+                            <li><a class="link-item">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="desktop__button">
+                        <a href="#getInTouch">Book a Call</a>
+                    </div>
+                </div>
             </div>
-            <div class="mobile-list__button">
-              <a href="#getInTouch">Book a Call</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="page-header__desktop">
-        <div class="desktop-container">
-          <div class="logo">
-            <img src="../assets/images/Logo.svg" alt="logo" />
-          </div>
-          <div class="header-links">
-            <ul>
-              <li>
-                <a style="padding-left: 10px" class="link-item active-item"
-                  >Main</a
+        </section>
+        <section class="special-gradient">
+            <section class="post-page">
+                <div class="post-page__backLink">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="34" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M10 16L6 12M6 12L10 8M6 12L18 12"
+                            stroke="#0E40C7"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                    <a>back to all news</a>
+                </div>
+                <div class="desktop-view">
+                    <div class="post-page__image">
+                        <img src="../assets/images/blog/postBlog-img.png" alt="post-image" />
+                    </div>
+                    <div class="post-page__info">
+                        <div class="date">Dec 22, 2022</div>
+                        <div class="article">Article Name</div>
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed
+                                accumsan quam vitae est varius fringilla. Pellentesque placerat vitae vestibulum lorem
+                            </p>
+                            <br />
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed
+                                accumsan quam vitae est varius fringilla. Pellentesque placerat vitae vestibulum
+                                loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum.
+                                Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vitae vestibulum
+                                lorem
+                            </p>
+                        </div>
+                        <br />
+                        <div>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                <li>Sed sit amet justo ipsum.</li>
+                                <li>Sed accumsan quam vitae est varius fringilla.</li>
+                                <li>Pellentesque placerat vitae vestibulum lorem</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="post-page-news">
+                <div><h2>More News</h2></div>
+                <div class="post-page-news-list">
+                    <div class="post-page-news-item">
+                        <div>
+                            <img src="../assets/images/blog/2.png" alt="img" />
+                        </div>
+                        <div>
+                            <div class="date">Dec 22, 2022</div>
+                            <div class="name">Article name</div>
+                        </div>
+                    </div>
+                    <div class="post-page-news-item">
+                        <div>
+                            <img src="../assets/images/blog/3.png" alt="img" />
+                        </div>
+                        <div>
+                            <div class="date">Dec 22, 2022</div>
+                            <div class="name">Article name</div>
+                        </div>
+                    </div>
+                    <div class="post-page-news-item">
+                        <div>
+                            <img src="../assets/images/blog/4.png" alt="img" />
+                        </div>
+                        <div>
+                            <div class="date">Dec 22, 2022</div>
+                            <div class="name">Article name</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="scroll-up">
+                <svg
+                    class="scroll-up__svg"
+                    width="64"
+                    height="64"
+                    viewBox="0 0 64 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                 >
-              </li>
-              <li><a class="link-item">Services</a></li>
-              <li><a class="link-item">Projects</a></li>
-              <li><a class="link-item">About Us</a></li>
-            </ul>
-          </div>
-          <div class="desktop__button">
-            <a href="#getInTouch">Book a Call</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="special-gradient">
-      <section class="post-page">
-        <div class="post-page__backLink">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="34"
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <path
-              d="M10 16L6 12M6 12L10 8M6 12L18 12"
-              stroke="#0E40C7"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <a>back to all news</a>
-        </div>
-        <div class="desktop-view">
-          <div class="post-page__image">
-            <img
-              src="../assets/images/blog/postBlog-img.png"
-              alt="post-image"
-            />
-          </div>
-          <div class="post-page__info">
-            <div class="date">Dec 22, 2022</div>
-            <div class="article">Article Name</div>
-            <div>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-                amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
-                Pellentesque placerat vitae vestibulum lorem
-              </p>
-              <br />
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-                amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
-                Pellentesque placerat vitae vestibulum loremLorem ipsum dolor
-                sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum.
-                Sed accumsan quam vitae est varius fringilla. Pellentesque
-                placerat vitae vestibulum lorem
-              </p>
+                    <rect y="64" width="64" height="64" rx="32" transform="rotate(-90 0 64)" fill="#3769F1" />
+                    <path
+                        class="scroll-up__svg-path"
+                        d="M36 30L32 26M32 26L28 30M32 26L32 38"
+                        stroke="white"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                </svg>
             </div>
-            <br />
-            <div>
-              <ul>
-                <li>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>Sed sit amet justo ipsum.</li>
-                <li>Sed accumsan quam vitae est varius fringilla.</li>
-                <li>Pellentesque placerat vitae vestibulum lorem</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="post-page-news">
-        <div><h2>More News</h2></div>
-        <div class="post-page-news-list">
-          <div class="post-page-news-item">
-            <div>
-              <img src="../assets/images/blog/2.png" alt="img" />
-            </div>
-            <div>
-              <div class="date">Dec 22, 2022</div>
-              <div class="name">Article name</div>
-            </div>
-          </div>
-          <div class="post-page-news-item">
-            <div>
-              <img src="../assets/images/blog/3.png" alt="img" />
-            </div>
-            <div>
-              <div class="date">Dec 22, 2022</div>
-              <div class="name">Article name</div>
-            </div>
-          </div>
-          <div class="post-page-news-item">
-            <div>
-              <img src="../assets/images/blog/4.png" alt="img" />
-            </div>
-            <div>
-              <div class="date">Dec 22, 2022</div>
-              <div class="name">Article name</div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="scroll-up">
-        <svg
-          class="scroll-up__svg"
-          width="64"
-          height="64"
-          viewBox="0 0 64 64"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            y="64"
-            width="64"
-            height="64"
-            rx="32"
-            transform="rotate(-90 0 64)"
-            fill="#3769F1"
-          />
-          <path
-            class="scroll-up__svg-path"
-            d="M36 30L32 26M32 26L28 30M32 26L32 38"
-            stroke="white"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
 
-      <footer class="footer">
-        <div class="container">
-          <div class="socials">
-            <h3>Solid Solutions</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-              amet justo ipsum.
-            </p>
-            <div class="footer__social">
-              <div>
-                <a
-                  ><img
-                    src="../assets/images/footer_img/instagram.svg"
-                    width="32"
-                    height="32"
-                /></a>
-              </div>
-              <div>
-                <a
-                  ><img
-                    src="../assets/images/footer_img/linkedln.svg"
-                    width="32"
-                    height="32"
-                /></a>
-              </div>
-              <div>
-                <a
-                  ><img
-                    src="../assets/images/footer_img/facebook 01.svg"
-                    width="32"
-                    height="32"
-                /></a>
-              </div>
-              <div>
-                <a
-                  ><img
-                    src="../assets/images/footer_img/skype.svg"
-                    width="32"
-                    height="32"
-                /></a>
-              </div>
-            </div>
-          </div>
-          <div class="explore">
-            <div class="footer__explore">
-              <h4>Explore</h4>
-              <div>
-                <a class="explore-link">Main</a>
-                <a class="explore-link">Services</a>
-              </div>
-              <div>
-                <a class="explore-link">Projects</a>
-                <a class="explore-link">About Us</a>
-              </div>
-            </div>
-          </div>
-          <div class="contacts">
-            <div class="footer__in-touch">
-              <h4>Get in touch</h4>
-              <div>+38 (096) 830 87 08</div>
-              <div>office@solid-sl.com</div>
-              <div>3024 Joes Road, Albany, NY 12207</div>
-            </div>
-          </div>
-        </div>
+            <footer class="footer">
+                <div class="container">
+                    <div class="socials">
+                        <h3>Solid Solutions</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum.</p>
+                        <div class="footer__social">
+                            <div>
+                                <a><img src="../assets/images/footer_img/instagram.svg" width="32" height="32" /></a>
+                            </div>
+                            <div>
+                                <a><img src="../assets/images/footer_img/linkedln.svg" width="32" height="32" /></a>
+                            </div>
+                            <div>
+                                <a><img src="../assets/images/footer_img/facebook 01.svg" width="32" height="32" /></a>
+                            </div>
+                            <div>
+                                <a><img src="../assets/images/footer_img/skype.svg" width="32" height="32" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="explore">
+                        <div class="footer__explore">
+                            <h4>Explore</h4>
+                            <div>
+                                <a class="explore-link">Main</a>
+                                <a class="explore-link">Services</a>
+                            </div>
+                            <div>
+                                <a class="explore-link">Projects</a>
+                                <a class="explore-link">About Us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts">
+                        <div class="footer__in-touch">
+                            <h4>Get in touch</h4>
+                            <div>+38 (096) 830 87 08</div>
+                            <div>office@solid-sl.com</div>
+                            <div>3024 Joes Road, Albany, NY 12207</div>
+                        </div>
+                    </div>
+                </div>
 
-        <hr class="footer__underline" />
-        <div class="footer__rights">
-          <div class="footer__rights-content">
-            <div>Made with Love by Solid Solutions</div>
-            <div>
-              All rights reserved &nbsp <span>&#183;</span> &nbsp Privacy Policy
-            </div>
-          </div>
-        </div>
-      </footer>
-    </section>
-    <script src="../js/layout.js"></script>
-  </body>
+                <hr class="footer__underline" />
+                <div class="footer__rights">
+                    <div class="footer__rights-content">
+                        <div>Made with Love by Solid Solutions</div>
+                        <div>All rights reserved &nbsp <span>&#183;</span> &nbsp Privacy Policy</div>
+                    </div>
+                </div>
+            </footer>
+        </section>
+        <script src="../js/layout.js"></script>
+        <script src="../js/animation.js"></script>
+    </body>
 </html>
