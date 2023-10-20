@@ -1470,6 +1470,7 @@ body#main-page {
 
 .feedback {
     &.aboutUs-page {
+        overflow-x: hidden;
         @media (min-width: 768px) {
             display: flex;
             justify-content: space-between;
@@ -4027,12 +4028,21 @@ body#main-page {
 
 .aboutUs-page {
     padding-top: 125px;
-    max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
     @media (min-width: 1024px) {
-        padding-top: 153px;
+        padding-top: 150px;
     }
+
+    // @media (min-width: 1200px) {
+    //     padding-left: 100px;
+    //     padding-right: 100px;
+    // }
+
+    // @media (min-width: 2000px) {
+    //     padding-left: 400px;
+    //     padding-right: 400px;
+    // }
 
     &__preview {
         padding-left: 16px;

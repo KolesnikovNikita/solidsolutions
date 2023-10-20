@@ -1662,6 +1662,9 @@ body#main-page {
   padding-left: 20px;
   padding-right: 20px;
 }
+.feedback.aboutUs-page {
+  overflow-x: hidden;
+}
 @media (min-width: 768px) {
   .feedback.aboutUs-page {
     display: flex;
@@ -4182,13 +4185,12 @@ body#main-page {
 
 .aboutUs-page {
   padding-top: 125px;
-  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
 }
 @media (min-width: 1024px) {
   .aboutUs-page {
-    padding-top: 153px;
+    padding-top: 150px;
   }
 }
 .aboutUs-page__preview {
