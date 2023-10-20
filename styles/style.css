@@ -2422,7 +2422,6 @@ body#main-page {
 }
 .cases-list .grid .case__image .case-hover-wrapper .case-hover ul {
   flex-wrap: wrap;
-  gap: 8px;
 }
 .cases-list .grid .case__image .case-hover-wrapper .case-hover ul li {
   padding: 8px 12px;
@@ -2437,8 +2436,6 @@ body#main-page {
   margin-right: 8px;
 }
 .cases-list .grid .case__image .case-hover-wrapper .case-hover a {
-  transform: translate(0, 50%);
-  opacity: 0;
   position: absolute;
   right: 16px;
   bottom: 42px;
@@ -2446,11 +2443,6 @@ body#main-page {
 }
 .cases-list .grid .case__image .case-hover-wrapper .case-hover a img {
   animation: rotate 4s linear infinite;
-}
-.cases-list .grid .case__image .case-hover-wrapper .case-hover a._active {
-  transform: translate(0, 0);
-  opacity: 1;
-  transition: all 0.8s ease 0s;
 }
 @media (min-width: 1024px) {
   .cases-list .grid .case__image .case-hover-wrapper .case-hover a {
