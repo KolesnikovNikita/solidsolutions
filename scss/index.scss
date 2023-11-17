@@ -872,14 +872,50 @@ body#main-page {
         }
 
         .chat-image {
-            text-align: center;
+            // text-align: center;
+            // transform: scale(0.5) translate(0, -25%);
+            // opacity: 0;
+            // transition: all 0.8s ease 0s;
+            // &._active {
+            //     transform: scale(1) translate(0, 0);
+            //     opacity: 1;
+            // }
+            position: relative;
 
-            transform: scale(0.5) translate(0, -25%);
-            opacity: 0;
-            transition: all 0.8s ease 0s;
-            &._active {
-                transform: scale(1) translate(0, 0);
-                opacity: 1;
+            .chat-image__1 {
+                position: absolute;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+
+            .chat-image__2 {
+                position: absolute;
+                top: -86px;
+                left: -25px;
+            }
+
+            .chat-image__3 {
+                position: absolute;
+                top: -45px;
+                left: -25px;
+            }
+
+            .chat-image__4 {
+                position: absolute;
+                top: 23px;
+                left: 150px;
+            }
+
+            .chat-image__5 {
+                position: absolute;
+                top: -13px;
+                left: -70px;
+            }
+
+            .chat-image__6 {
+                position: absolute;
+                top: 57px;
+                left: 22px;
             }
         }
 

@@ -1061,14 +1061,37 @@ body#main-page {
   }
 }
 .advantages__desktop .chat-image {
-  text-align: center;
-  transform: scale(0.5) translate(0, -25%);
-  opacity: 0;
-  transition: all 0.8s ease 0s;
+  position: relative;
 }
-.advantages__desktop .chat-image._active {
-  transform: scale(1) translate(0, 0);
-  opacity: 1;
+.advantages__desktop .chat-image .chat-image__1 {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.advantages__desktop .chat-image .chat-image__2 {
+  position: absolute;
+  top: -86px;
+  left: -25px;
+}
+.advantages__desktop .chat-image .chat-image__3 {
+  position: absolute;
+  top: -45px;
+  left: -25px;
+}
+.advantages__desktop .chat-image .chat-image__4 {
+  position: absolute;
+  top: 23px;
+  left: 150px;
+}
+.advantages__desktop .chat-image .chat-image__5 {
+  position: absolute;
+  top: -13px;
+  left: -70px;
+}
+.advantages__desktop .chat-image .chat-image__6 {
+  position: absolute;
+  top: 57px;
+  left: 22px;
 }
 @media (min-width: 768px) {
   .advantages__desktop .chat-info {
