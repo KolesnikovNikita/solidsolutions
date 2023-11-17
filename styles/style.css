@@ -1093,6 +1093,11 @@ body#main-page {
   top: 57px;
   left: 22px;
 }
+.advantages__desktop .chat-image .chat-image__test {
+  position: absolute;
+  top: 57px;
+  left: 22px;
+}
 @media (min-width: 768px) {
   .advantages__desktop .chat-info {
     order: 0;
