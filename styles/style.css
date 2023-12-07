@@ -2278,6 +2278,7 @@ body#main-page {
   margin-top: 16px;
 }
 .projects-list__cards .card__image {
+  cursor: url("../assets/images/Open.svg"), auto;
   position: relative;
   padding-top: 30px;
   border-radius: 14px;
@@ -2313,20 +2314,11 @@ body#main-page {
   padding-left: 50px;
   color: #fff;
 }
-.projects-list__cards .card__hover-wrapper .card-hover ul li {
-  cursor: pointer;
-}
 .projects-list__cards .card__hover-wrapper .card-hover ul li:not(:last-child) {
   margin-bottom: 12px;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.32px;
-}
-.projects-list__cards .card__hover-wrapper .card-hover a {
-  position: absolute;
-  bottom: 25px;
-  right: 25px;
-  cursor: pointer;
 }
 .projects-list__cards .card__options input {
   display: none;
@@ -2476,6 +2468,9 @@ body#main-page {
   max-width: 100%;
   margin-bottom: 20px;
 }
+.cases-list .grid .grid-item:hover {
+  cursor: url("../assets/images/Open.svg"), auto;
+}
 @media (min-width: 1308px) {
   .cases-list .grid .grid-sizer,
   .cases-list .grid .grid-item {
@@ -2484,6 +2479,9 @@ body#main-page {
   .cases-list .grid .grid-item--width2 {
     width: 628px;
   }
+}
+.cases-list .grid .case:hover {
+  cursor: url("../assets/images/Open_black.svg"), auto;
 }
 .cases-list .grid .case__image {
   position: relative;
@@ -2527,6 +2525,7 @@ body#main-page {
   flex-wrap: wrap;
 }
 .cases-list .grid .case__image .case-hover-wrapper .case-hover ul li {
+  margin-bottom: 8px;
   padding: 8px 12px;
   background-color: #3769f1;
   border-radius: 40px;
@@ -2537,21 +2536,6 @@ body#main-page {
 }
 .cases-list .grid .case__image .case-hover-wrapper .case-hover ul li:not(:last-child) {
   margin-right: 8px;
-}
-.cases-list .grid .case__image .case-hover-wrapper .case-hover a {
-  position: absolute;
-  right: 16px;
-  bottom: 42px;
-  cursor: pointer;
-}
-.cases-list .grid .case__image .case-hover-wrapper .case-hover a img {
-  animation: rotate 4s linear infinite;
-}
-@media (min-width: 1024px) {
-  .cases-list .grid .case__image .case-hover-wrapper .case-hover a {
-    right: 24px;
-    bottom: 50px;
-  }
 }
 .cases-list .grid .case__image:hover .case-hover-wrapper {
   display: block;

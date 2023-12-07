@@ -1993,7 +1993,7 @@ body#main-page {
 
 // ============================== OUR PROJECTS PAGE =========================== //
 
-.projects-list {
+.projects-list {    
     padding-top: 110px;
     background-color: #fff;
     padding-left: 16px;
@@ -2080,6 +2080,7 @@ body#main-page {
                 margin-top: 16px;
             }
             &__image {
+                cursor: url('../assets/images/Open.svg'), auto;
                 position: relative;
                 padding-top: 30px;
                 border-radius: 14px;
@@ -2118,7 +2119,7 @@ body#main-page {
                         color: #fff;
 
                         li {
-                            cursor: pointer;
+                            
                             &:not(:last-child) {
                                 margin-bottom: 12px;
                                 font-size: 16px;
@@ -2127,12 +2128,7 @@ body#main-page {
                             }
                         }
                     }
-                    a {
-                        position: absolute;
-                        bottom: 25px;
-                        right: 25px;
-                        cursor: pointer;
-                    }
+                    
                 }
             }
             &__options {
@@ -2169,8 +2165,11 @@ body#main-page {
             }
         }
 
+       
+
         .card__image:hover .card__hover-wrapper {
             display: block;
+            
         }
     }
 
@@ -2303,6 +2302,11 @@ body#main-page {
             transform: translate(0, 100%);
             max-width: 100%;
             margin-bottom: 20px;
+            
+            &:hover {
+                cursor: url('../assets/images/Open.svg'), auto;
+                
+            }
         }
 
         @media (min-width: 1308px) {
@@ -2317,6 +2321,9 @@ body#main-page {
         }
 
         .case {
+            &:hover {
+                cursor: url('../assets/images/Open_black.svg'), auto;
+            }
             &__image {
                 position: relative;
                 .case-hover-wrapper {
@@ -2356,6 +2363,7 @@ body#main-page {
                             flex-wrap: wrap;
 
                             li {
+                                margin-bottom: 8px;
                                 padding: 8px 12px;
                                 background-color: $main-dark-blue-color;
                                 border-radius: 40px;
@@ -2365,23 +2373,11 @@ body#main-page {
                                 font-weight: 500;
                                 &:not(:last-child) {
                                     margin-right: 8px;
+                                   
                                 }
                             }
                         }
-                        a {
-                            img {
-                                animation: rotate 4s linear infinite;
-                            }
-
-                            position: absolute;
-                            right: 16px;
-                            bottom: 42px;
-                            cursor: pointer;
-                            @media (min-width: 1024px) {
-                                right: 24px;
-                                bottom: 50px;
-                            }
-                        }
+                       
                     }
                 }
             }
