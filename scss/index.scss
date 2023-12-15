@@ -528,6 +528,8 @@ body#main-page {
         padding-top: 120px;
     }
     &__examples {
+        margin-right: auto;
+        margin-left: auto;
         max-width: 1060px;
         display: flex;
         flex-direction: column;
@@ -548,15 +550,9 @@ body#main-page {
             padding-left: 120px;
             padding-right: 120px;
         }
-
         @media (min-width: 1200px) {
-            padding-left: 100px;
-            padding-right: 100px;
-        }
-
-        @media (min-width: 1400px) {
-            padding-left: 190px;
-            padding-right: 190px;
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 
@@ -855,6 +851,7 @@ body#main-page {
     }
 
     &__desktop {
+        justify-items: center;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         align-items: center;
@@ -983,7 +980,6 @@ body#main-page {
 
 .tab-content {
     animation: fadeEffect 0.5s;
-
     span {
         color: $sun-yellow-color;
     }
@@ -1000,6 +996,7 @@ body#main-page {
 
 .services {
     .content-list-box {
+        max-width: 745px;
         opacity: 0;
         transition: all 0.4s ease 0.2s;
         &._active {
@@ -1076,7 +1073,6 @@ body#main-page {
     @media (min-width: 1200px) {
         padding-left: 130px;
         padding-right: 130px;
-        display: flex;
         padding-bottom: 143px;
     }
 
@@ -1230,6 +1226,9 @@ body#main-page {
             justify-content: space-between;
             gap: 20px;
         }
+        @media (min-width: 1600px) {
+            justify-content: space-around;
+        }
         .header {
             h3 {
                 transform: scale(0.5);
@@ -1243,6 +1242,7 @@ body#main-page {
                 }
                 @media (min-width: 1200px) {
                     width: 577px;
+                    padding: 0;
                 }
             }
         }
@@ -1260,7 +1260,6 @@ body#main-page {
                     width: 530px;
                     vertical-align: bottom;
                     margin-top: 105px;
-                    padding-right: 45px;
                 }
             }
 
@@ -1457,6 +1456,11 @@ body#main-page {
     padding-bottom: 100px;
     @media (min-width: 768px) {
         padding-bottom: 122px;
+        padding-left: 40px;
+    }
+
+    @media (min-width: 1800px) {
+        padding-left: 140px;
     }
 
     &__navigation {
@@ -1518,6 +1522,15 @@ body#main-page {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+
+                .service {
+                    img {
+                        cursor: pointer;
+                        &:hover {
+                            filter: grayscale(100%) invert(100%) sepia(100%) saturate(10000%) hue-rotate(200deg);
+                        }
+                    }
+                }
             }
             &__body {
                  h4 {
@@ -1993,7 +2006,7 @@ body#main-page {
 
 // ============================== OUR PROJECTS PAGE =========================== //
 
-.projects-list {    
+.projects-list {
     padding-top: 110px;
     background-color: #fff;
     padding-left: 16px;
@@ -2119,7 +2132,6 @@ body#main-page {
                         color: #fff;
 
                         li {
-                            
                             &:not(:last-child) {
                                 margin-bottom: 12px;
                                 font-size: 16px;
@@ -2128,7 +2140,6 @@ body#main-page {
                             }
                         }
                     }
-                    
                 }
             }
             &__options {
@@ -2165,11 +2176,8 @@ body#main-page {
             }
         }
 
-       
-
         .card__image:hover .card__hover-wrapper {
             display: block;
-            
         }
     }
 
@@ -2302,10 +2310,9 @@ body#main-page {
             transform: translate(0, 100%);
             max-width: 100%;
             margin-bottom: 20px;
-            
+
             &:hover {
                 cursor: url('../assets/images/Open.svg'), auto;
-                
             }
         }
 
@@ -2373,11 +2380,9 @@ body#main-page {
                                 font-weight: 500;
                                 &:not(:last-child) {
                                     margin-right: 8px;
-                                   
                                 }
                             }
                         }
-                       
                     }
                 }
             }
@@ -2557,6 +2562,9 @@ body#main-page {
         }
         @media (min-width: 1200px) {
             grid-template-rows: 55% 45%;
+            max-width: 1275px;
+            margin-right: auto;
+            margin-left: auto;
         }
 
         margin-bottom: 40px;
@@ -3298,6 +3306,9 @@ body#main-page {
             justify-content: center;
             gap: 25px;
             margin-bottom: 160px;
+            max-width: 1275px;
+            margin-right: auto;
+            margin-left: auto;
         }
     }
 
@@ -3311,6 +3322,11 @@ body#main-page {
                 justify-content: space-between;
                 align-items: center;
             }
+            @media (min-width: 1200px) {
+                max-width: 1275px;
+                margin-right: auto;
+                margin-left: auto;
+            }
         }
 
         #maintenance {
@@ -3319,6 +3335,12 @@ body#main-page {
                 grid-template-columns: 50% 35%;
                 justify-content: space-between;
                 align-items: center;
+            }
+
+            @media (min-width: 1200px) {
+                max-width: 1275px;
+                margin-right: auto;
+                margin-left: auto;
             }
 
             .text {
@@ -3566,7 +3588,7 @@ body#main-page {
 
             @media (min-width: 1024px) {
                 font-size: 56px;
-                margin-bottom: 48px;
+                margin-bottom: 125px;
             }
         }
 
@@ -3748,6 +3770,7 @@ body#main-page {
         padding-left: 16px;
         padding-right: 16px;
         margin-bottom: 100px;
+
         @media (min-width: 768px) {
             padding-left: 35px;
             padding-right: 35px;
@@ -3799,19 +3822,26 @@ body#main-page {
         .cards-list {
             margin-bottom: 16px;
             @media (min-width: 768px) {
-                display: grid;
-                justify-content: center;
-                grid-template-columns: repeat(auto-fit, 330px);
-                grid-template-rows: repeat(auto-fit, minmax(285px, 320px));
-                gap: 16px;
-            }
-            @media (min-width: 1024px) {
-                grid-template-columns: repeat(auto-fit, minmax(338px, 316px));
-                grid-template-rows: repeat(auto-fit, minmax(285px, 320px));
-                gap: 20px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
             }
 
+            // @media (min-width: 768px) {
+            //     display: grid;
+            //     justify-content: center;
+            //     grid-template-columns: repeat(auto-fit, 330px);
+            //     grid-template-rows: repeat(auto-fit, minmax(285px, 320px));
+            //     gap: 16px;
+            // }
+            // @media (min-width: 1024px) {
+            //     grid-template-columns: repeat(auto-fit, minmax(338px, 316px));
+            //     grid-template-rows: repeat(auto-fit, minmax(285px, 320px));
+            //     gap: 20px;
+            // }
+
             &__item {
+                width: 100%;
                 height: 285px;
                 @extend %service-card-style;
                 padding: 20px;
@@ -3821,6 +3851,22 @@ body#main-page {
                 margin-bottom: 16px;
                 background-color: $service-card-color;
                 cursor: pointer;
+
+                @media (min-width: 768px) {
+                    width: 345px;
+                }
+
+                @media (min-width: 1024px) {
+                    width: 310px;
+                }
+
+                @media (min-width: 1200px) {
+                    width: 345px;
+                }
+
+                @media (min-width: 1400px) {
+                    width: 415px;
+                }
 
                 .icon {
                     img {
@@ -4105,7 +4151,7 @@ body#main-page {
                         padding-right: 35px;
                         margin-top: 27px;
                         display: flex;
-                        justify-content: center;
+                        justify-content: flex-start;
                         flex-wrap: wrap;
                         gap: 16px;
 
@@ -4317,7 +4363,7 @@ body#main-page {
             .industries-page__list-item {
                 transform: scale(1);
                 opacity: 1;
-                transition: all 0.8s ease 0s;
+                transition: transform 0.8s ease 0s;
             }
         }
         &-item {
@@ -4459,8 +4505,16 @@ body#main-page {
             align-items: center;
         }
         @media (min-width: 1200px) {
-            padding-left: 82px;
-            padding-right: 82px;
+            padding-left: 0;
+            padding-right: 0;
+            max-width: 1155px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        @media (min-width: 1400px) {
+            max-width: 1275px;
+            margin-right: auto;
+            margin-left: auto;
         }
         h1 {
             transform: translate(0, -20%);
@@ -4686,8 +4740,13 @@ body#main-page {
                 display: grid;
                 grid-template-columns: minmax(105px, 418px) minmax(148px, 520px);
                 align-items: center;
+
                 @media (min-width: 1024px) {
                     padding: 80px 76px;
+                }
+
+                @media (min-width: 1200px) {
+                    gap: 32px;
                 }
             }
             h3 {
@@ -4807,6 +4866,11 @@ body#main-page {
             padding-bottom: 170px;
         }
 
+        @media (min-width: 1224px) {
+            padding-left: 85px;
+            padding-right: 85px;
+        }
+
         &-list {
             overflow-x: hidden;
             &._active {
@@ -4837,7 +4901,7 @@ body#main-page {
             }
 
             @media (min-width: 1400px) {
-                justify-content: center;
+                justify-content: space-between;
             }
             .item {
                 &:nth-child(1) {
@@ -5088,6 +5152,7 @@ body#main-page {
                 @media (min-width: 768px) {
                     display: flex;
                     flex-direction: row;
+                    justify-content: center;
                     gap: 8px;
                 }
                 @media (min-width: 1024px) {
