@@ -4513,7 +4513,6 @@ body#main-page {
 }
 .industries-page__list-item:hover {
   cursor: pointer;
-  transition: all 0.2s ease;
   background-color: #3769f1;
   border-radius: 16px;
   padding-left: 16px;
@@ -4523,6 +4522,12 @@ body#main-page {
   .industries-page__list-item:hover {
     padding-left: 32px;
     padding-right: 32px;
+  }
+}
+@media (min-width: 768px) {
+  .industries-page__list-item:hover {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 .industries-page__list-item:hover .header h3 {

@@ -4371,7 +4371,6 @@ body#main-page {
             opacity: 0;
             &:hover {
                 cursor: pointer;
-                transition: all 0.2s ease;
                 background-color: $main-dark-blue-color;
                 border-radius: 16px;
                 padding-left: 16px;
@@ -4379,6 +4378,10 @@ body#main-page {
                 @media (min-width: 768px) {
                     padding-left: 32px;
                     padding-right: 32px;
+                }
+                @media (min-width: 768px) {
+                   padding-left: 0;
+                   padding-right: 0;
                 }
                 .header {
                     h3 {
