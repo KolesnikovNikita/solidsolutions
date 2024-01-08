@@ -499,6 +499,12 @@ body#main-page {
 }
 
 .main-video {
+    video {
+        border-radius: 20px;
+        @media (min-width: 1200px) {
+            border-radius: 40px;
+        }
+    }
     padding-left: 12px;
     padding-right: 12px;
     @media (min-width: 768px) {
@@ -2076,7 +2082,8 @@ body#main-page {
         }
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        gap: 20px;
+        column-gap: 20px;
+        grid-row-gap: 35px;
         align-items: stretch;
 
         @media (min-width: 768px) {
@@ -4380,8 +4387,8 @@ body#main-page {
                     padding-right: 32px;
                 }
                 @media (min-width: 768px) {
-                   padding-left: 0;
-                   padding-right: 0;
+                    padding-left: 0;
+                    padding-right: 0;
                 }
                 .header {
                     h3 {
@@ -5387,7 +5394,7 @@ body#main-page {
     .desktop-view {
         @media (min-width: 1200px) {
             display: grid;
-            grid-template-columns: 50% 50%;
+            grid-template-columns: minmax(600px, 618px) minmax(600px, 618px);
             gap: 2%;
             align-items: center;
         }
@@ -5494,6 +5501,42 @@ body#main-page {
             line-height: 24.8px; /* 155% */
             color: $main-text-color;
             padding-left: 16px;
+        }
+    }
+
+    #techs-container {
+        margin-bottom: 52px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        transform: translate(-120%, 0) scale(1.4);
+        transition: all 0.8s ease 0s;
+        opacity: 0;
+
+        &._active {
+            transform: translate(0, 0) scale(1);
+            opacity: 1;
+        }
+
+        .select-button {
+            cursor: pointer;
+            border: 1px solid $input-text-color;
+            padding: 8px 12px;
+            border-radius: 40px;
+            font-size: 14px;
+            color: $input-text-color;
+            font-weight: 500;
+
+            &.active-select {
+                background-color: $main-dark-blue-color;
+                color: #fff;
+                border-color: transparent;
+            }
+        }
+
+        input {
+            display: none;
         }
     }
 }

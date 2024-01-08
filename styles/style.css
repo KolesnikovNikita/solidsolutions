@@ -690,6 +690,14 @@ body#main-page {
   padding-left: 12px;
   padding-right: 12px;
 }
+.main-video video {
+  border-radius: 20px;
+}
+@media (min-width: 1200px) {
+  .main-video video {
+    border-radius: 40px;
+  }
+}
 @media (min-width: 768px) {
   .main-video {
     padding-left: 38px;
@@ -2249,7 +2257,8 @@ body#main-page {
 .projects-list__cards {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
+  column-gap: 20px;
+  grid-row-gap: 35px;
   align-items: stretch;
 }
 .projects-list__cards._active .card {
@@ -5541,7 +5550,7 @@ body#main-page {
 @media (min-width: 1200px) {
   .post-page .desktop-view {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: minmax(600px, 618px) minmax(600px, 618px);
     gap: 2%;
     align-items: center;
   }
@@ -5647,6 +5656,36 @@ body#main-page {
 .post-page__info ul._active {
   transform: translate(0, 0);
   opacity: 1;
+}
+.post-page #techs-container {
+  margin-bottom: 52px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  transform: translate(-120%, 0) scale(1.4);
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+}
+.post-page #techs-container._active {
+  transform: translate(0, 0) scale(1);
+  opacity: 1;
+}
+.post-page #techs-container .select-button {
+  cursor: pointer;
+  border: 1px solid #b7b6c2;
+  padding: 8px 12px;
+  border-radius: 40px;
+  font-size: 14px;
+  color: #b7b6c2;
+  font-weight: 500;
+}
+.post-page #techs-container .select-button.active-select {
+  background-color: #3769f1;
+  color: #fff;
+  border-color: transparent;
+}
+.post-page #techs-container input {
+  display: none;
 }
 
 .post-page-news {
