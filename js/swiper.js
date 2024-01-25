@@ -3,7 +3,7 @@ function updateSlidesPerView() {
     var slidesPerView = 1;
 
     if (windowWidth >= 768) {
-        slidesPerView = 3;
+        slidesPerView = 2;
     }
 
     swiper.params.slidesPerView = slidesPerView;
@@ -27,6 +27,18 @@ const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
     slidesPerGroup: 1,
 
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+const swiperHistory = new Swiper('.swiper-of-history', {
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    centeredSlides: true,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
