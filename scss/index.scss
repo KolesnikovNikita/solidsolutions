@@ -2871,6 +2871,18 @@ body#main-page {
                         &:nth-child(3) {
                             transition: all 0.8s ease 0.4s;
                         }
+                        &:nth-child(4) {
+                            transition: all 0.8s ease 0.6s;
+                        }
+                        &:nth-child(5) {
+                            transition: all 0.8s ease 0.8s;
+                        }
+                        &:nth-child(6) {
+                            transition: all 0.8s ease 1s;
+                        }
+                        &:nth-child(7) {
+                            transition: all 0.8s ease 1.2s;
+                        }
                     }
                 }
                 &-item {
