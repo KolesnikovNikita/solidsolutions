@@ -2,14 +2,17 @@ function dropDownMenu() {
     const btn = document.querySelector('.burger');
     const burgerImg = document.querySelector('.burger-icon img');
     const header = document.querySelector('.page-header__navigation');
+    const dropList = document.querySelector('.list-container');
 
     btn.addEventListener('click', function () {
         if (!header.classList.contains('active-header')) {
             header.classList.add('active-header');
             burgerImg.src = '../../assets/images/burger-close.svg';
+            dropList.style.visibility = 'visible';
         } else {
             header.classList.remove('active-header');
             burgerImg.src = '../../assets/images/burger-open.svg';
+            dropList.style.visibility = 'hidden';
         }
     });
 }
@@ -57,10 +60,20 @@ function scrollUp() {
     });
 }
 
+function navigationDropdown() {
+    const btn = document.querySelector('.dropdown-button');
+    const dropdown = document.querySelector('.dropdown-list');
+
+    btn.addEventListener('click', function () {
+        dropdown.classList.toggle('active-dropdown');
+    });
+}
+
 function initFunctions() {
     dropDownMenu();
     activateLink();
     scrollUp();
+    navigationDropdown();
 }
 
 initFunctions();

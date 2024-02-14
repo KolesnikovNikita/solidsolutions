@@ -65,6 +65,7 @@ body#main-page {
     max-width: 2560px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
     @media (min-width: 768px) {
         background-image: url('../assets/images/tablet.png');
         background-repeat: no-repeat;
@@ -124,8 +125,47 @@ body#main-page {
         visibility: visible;
         opacity: 1;
     }
+    .dropdown-button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 400;
+        img {
+            position: absolute;
+            left: 175px;
+            bottom: 3px;
+        }
+    }
+
+    .dropdown-list {
+        min-width: 160px;
+        border-radius: 0px 0px 12px 12px;
+        box-shadow: -45.533px 45.533px 45.533px 0px rgba(255, 255, 255, 0.1) inset,
+            45.533px -45.533px 45.533px 0px rgba(194, 194, 194, 0.1) inset;
+        padding: 16px;
+        position: absolute;
+        background-color: #f9f9f9;
+        top: 44px;
+        left: 100px;
+        display: none;
+        div {
+            &:first-child {
+                margin-bottom: 16px;
+            }
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+
+    .dropdown-list.active-dropdown {
+        display: block;
+    }
+
     &__desktop {
-        overflow: hidden;
+        .header-links {
+            position: relative;
+        }
 
         transform: scale(1.5);
         opacity: 0;
@@ -228,7 +268,7 @@ body#main-page {
         z-index: 2;
         transform: scale(1.5);
         opacity: 0;
-        transition: all 0.8s ease 0s;
+        transition: transform 0.8s ease 0s, opacity 0.8s ease 0s;
 
         &._active {
             transform: scale(1);
@@ -241,6 +281,7 @@ body#main-page {
 
         &.active-header {
             border-radius: 36px 36px 0 0;
+            visibility: visible;
         }
 
         border-radius: 36px;
@@ -262,11 +303,9 @@ body#main-page {
 
     .mobile-list {
         position: relative;
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 0.38s;
 
         .list-container {
+            visibility: hidden;
             padding-left: 16px;
             padding-right: 16px;
             padding-bottom: 20px;
@@ -2538,7 +2577,7 @@ body#main-page {
         &._active {
             label {
                 transform: translate(0, 0);
-                transition: all 0.8s ease 0s;
+                transition: transform 0.8s ease 0s, opacity 0.8s ease 0.4s;
                 opacity: 1;
             }
         }
@@ -2778,7 +2817,6 @@ body#main-page {
 
     @media (min-width: 1800px) {
         padding-top: 200px;
-        max-width: 1755px;
     }
 
     &__back {
@@ -3897,7 +3935,6 @@ body#main-page {
                 opacity: 0;
                 width: 100%;
                 margin-right: 10px;
-                max-height: 305px;
 
                 img {
                     width: 100%;
@@ -3936,9 +3973,6 @@ body#main-page {
 
         position: relative;
 
-        @media (min-width: 1024px) {
-            background-color: $header-background-color;
-        }
         h4 {
             transform: translate(0, -100%);
             opacity: 0;
@@ -5364,10 +5398,7 @@ body#main-page {
     &__leadership {
         padding-left: 16px;
         padding-bottom: 56px;
-        @media (min-width: 768px) {
-            padding-left: 35px;
-        }
-        max-width: 1275px;
+
         margin-right: auto;
         margin-left: auto;
         @media (min-width: 1800px) {

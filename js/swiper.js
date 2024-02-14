@@ -14,7 +14,7 @@ function updateSlidesCasesPerView() {
     var slidesPerView = 1;
 
     if (windowWidth >= 1024) {
-        slidesPerView = 2;
+        slidesPerView = 3;
     }
 
     swiperCase.params.slidesPerView = slidesPerView;

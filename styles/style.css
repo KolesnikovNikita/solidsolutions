@@ -253,6 +253,7 @@ body#main-page {
   max-width: 2560px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 @media (min-width: 768px) {
   body#main-page {
@@ -312,8 +313,40 @@ body#main-page {
   visibility: visible;
   opacity: 1;
 }
+.page-header .dropdown-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+}
+.page-header .dropdown-button img {
+  position: absolute;
+  left: 175px;
+  bottom: 3px;
+}
+.page-header .dropdown-list {
+  min-width: 160px;
+  border-radius: 0px 0px 12px 12px;
+  box-shadow: -45.533px 45.533px 45.533px 0px rgba(255, 255, 255, 0.1) inset, 45.533px -45.533px 45.533px 0px rgba(194, 194, 194, 0.1) inset;
+  padding: 16px;
+  position: absolute;
+  background-color: #f9f9f9;
+  top: 44px;
+  left: 100px;
+  display: none;
+}
+.page-header .dropdown-list div {
+  font-size: 16px;
+  font-weight: 400;
+}
+.page-header .dropdown-list div:first-child {
+  margin-bottom: 16px;
+}
+.page-header .dropdown-list.active-dropdown {
+  display: block;
+}
 .page-header__desktop {
-  overflow: hidden;
   transform: scale(1.5);
   opacity: 0;
   transition: transform 0.8s ease 0s;
@@ -323,6 +356,9 @@ body#main-page {
   z-index: 3;
   width: 100%;
   padding-right: 35px;
+}
+.page-header__desktop .header-links {
+  position: relative;
 }
 .page-header__desktop._active {
   transform: scale(1);
@@ -420,7 +456,7 @@ body#main-page {
   z-index: 2;
   transform: scale(1.5);
   opacity: 0;
-  transition: all 0.8s ease 0s;
+  transition: transform 0.8s ease 0s, opacity 0.8s ease 0s;
   border-radius: 36px;
 }
 .page-header__navigation._active {
@@ -434,6 +470,7 @@ body#main-page {
 }
 .page-header__navigation.active-header {
   border-radius: 36px 36px 0 0;
+  visibility: visible;
 }
 .page-header__navigation .container-list {
   padding: 16px;
@@ -449,11 +486,9 @@ body#main-page {
 }
 .page-header .mobile-list {
   position: relative;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.38s;
 }
 .page-header .mobile-list .list-container {
+  visibility: hidden;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 20px;
@@ -2852,7 +2887,7 @@ body#main-page {
 }
 .cases-list .cases-filter._active label {
   transform: translate(0, 0);
-  transition: all 0.8s ease 0s;
+  transition: transform 0.8s ease 0s, opacity 0.8s ease 0.4s;
   opacity: 1;
 }
 .cases-list .cases-filter label {
@@ -3070,7 +3105,6 @@ body#main-page {
 @media (min-width: 1800px) {
   .case-content {
     padding-top: 200px;
-    max-width: 1755px;
   }
 }
 .case-content__back {
@@ -4210,7 +4244,6 @@ body#main-page {
   opacity: 0;
   width: 100%;
   margin-right: 10px;
-  max-height: 305px;
 }
 .case-content__more .swiper-of-cases .swiper-slide img {
   width: 100%;
@@ -4244,11 +4277,6 @@ body#main-page {
 }
 .case-content__more .swiper-of-cases:hover .navigation-container {
   display: block;
-}
-@media (min-width: 1024px) {
-  .case-content__more {
-    background-color: #f8f8f8;
-  }
 }
 .case-content__more h4 {
   transform: translate(0, -100%);
@@ -5724,14 +5752,8 @@ body#main-page {
 .aboutUs-page__leadership {
   padding-left: 16px;
   padding-bottom: 56px;
-  max-width: 1275px;
   margin-right: auto;
   margin-left: auto;
-}
-@media (min-width: 768px) {
-  .aboutUs-page__leadership {
-    padding-left: 35px;
-  }
 }
 @media (min-width: 1800px) {
   .aboutUs-page__leadership {
