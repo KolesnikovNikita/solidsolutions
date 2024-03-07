@@ -3,7 +3,6 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.from('.cards-list__item', {
     scrollTrigger: {
         trigger: '.head-content',
-
         start: '-500px top',
     },
     x: -100,

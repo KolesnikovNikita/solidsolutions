@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const items = document.querySelectorAll('.industries-page__list-item');
     const screenWidth = window.innerWidth;
+    console.log(screenWidth);
 
     if (screenWidth > 1200) {
         items.forEach(function (item) {
